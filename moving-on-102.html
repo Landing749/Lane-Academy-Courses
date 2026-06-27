@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moving On 102 — Lane Academy</title>
+<meta name="description" content="Breaking Patterns & Building Emotional Strength. Understand Yourself. Break Old Patterns. Build Healthier Relationships.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+:root{
+--bg:#F3F0F8;--surface:#FDFCFF;--surface-2:#EAE5F5;--surface-3:#DDD7EE;
+--border:#CFC9E3;--border-2:#BDB5D6;
+--text:#1A1626;--text-2:#4A4468;--text-3:#8C86A8;
+--primary:#6B4E9A;--primary-h:#573D7E;--primary-l:#EDE6F8;--primary-m:rgba(107,78,154,.10);
+--teal:#3A8C8C;--teal-l:#E0F3F3;--teal-m:rgba(58,140,140,.10);
+--rose:#A84E6B;--rose-l:#F8E6ED;--rose-m:rgba(168,78,107,.10);
+--gold:#8A7020;--gold-l:#F5F0D8;
+--amber:#9A6B2A;--amber-l:#F5EBD8;--amber-m:rgba(154,107,42,.10);
+--danger:#B33A3A;--danger-l:#F5E6E6;
+--phase1:#6B4E9A;--phase2:#3A8C8C;--phase3:#A84E6B;--phase4:#8A7020;--phase5:#4E7A9A;
+--sidebar-w:272px;--nav-h:56px;--prog-h:3px;
+--r:10px;--r-sm:6px;--r-lg:16px;--r-xl:24px;
+--sh:0 1px 6px rgba(0,0,0,.06),0 0 1px rgba(0,0,0,.04);
+--sh-md:0 4px 20px rgba(0,0,0,.09);--sh-lg:0 10px 44px rgba(0,0,0,.13);
+--fb:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+--fd:'Fraunces','Georgia',serif;--fl:'Lora','Georgia',serif;
+--ease:cubic-bezier(.4,0,.2,1);--dur:.2s
+}
+[data-theme="dark"]{
+--bg:#100D1A;--surface:#181326;--surface-2:#20192E;--surface-3:#2A2238;
+--border:#332B48;--border-2:#42385C;
+--text:#EDE9FA;--text-2:#9A94BA;--text-3:#60587A;
+--primary:#9B78D4;--primary-h:#8660C0;--primary-l:#1A1030;--primary-m:rgba(155,120,212,.12);
+--teal:#5ABABA;--teal-l:#0A2020;--teal-m:rgba(90,186,186,.12);
+--rose:#D07090;--rose-l:#2A0A14;--rose-m:rgba(208,112,144,.12);
+--amber:#C89050;--amber-l:#2A1E0A;--amber-m:rgba(200,144,80,.12);
+--gold:#C8B050;--gold-l:#1E1B04;
+--danger:#D06060;--danger-l:#2E1010;
+--sh:0 1px 6px rgba(0,0,0,.3);--sh-md:0 4px 20px rgba(0,0,0,.4);--sh-lg:0 10px 44px rgba(0,0,0,.6)
+}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--text-3)}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
+h1,h2,h3,h4{font-family:var(--fd);font-weight:400;line-height:1.25}
+p{font-family:var(--fl);line-height:1.8;color:var(--text-2)}
+a{color:var(--primary);text-decoration:none}
+button{cursor:pointer;font-family:var(--fb)}
+textarea{font-family:var(--fb)}
+
+/* GATE SCREEN */
+.gate{position:fixed;inset:0;background:var(--bg);z-index:9000;display:flex;align-items:center;justify-content:center;padding:24px}
+.gate-box{max-width:500px;width:100%;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:48px 40px;text-align:center;box-shadow:var(--sh-lg)}
+.gate-icon{font-size:56px;margin-bottom:20px;display:block}
+.gate-title{font-family:var(--fd);font-size:2rem;font-weight:400;color:var(--text);margin-bottom:10px}
+.gate-sub{font-family:var(--fl);font-size:.97rem;line-height:1.75;color:var(--text-2);margin-bottom:28px}
+.gate-pill{display:inline-flex;align-items:center;gap:6px;background:var(--primary-l);color:var(--primary);font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:20px}
+.gate-note{font-size:.78rem;color:var(--text-3);margin-top:16px;font-family:var(--fl);font-style:italic}
+
+/* CERTIFICATE OVERLAY */
+.cert-ov{position:fixed;inset:0;background:rgba(16,13,26,.75);z-index:8000;display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(8px)}
+.cert-ov.on{display:flex}
+.cert-wrap{max-width:720px;width:100%}
+.cert-close-row{display:flex;justify-content:flex-end;margin-bottom:10px}
+.cert-cls-btn{background:rgba(255,255,255,.15);border:none;color:#fff;padding:7px 14px;border-radius:var(--r-sm);font-size:.84rem;cursor:pointer}
+.cert-cls-btn:hover{background:rgba(255,255,255,.25)}
+#certCanvas{width:100%;border-radius:var(--r-lg);box-shadow:var(--sh-lg);display:block}
+.cert-actions{display:flex;gap:10px;margin-top:14px;justify-content:center;flex-wrap:wrap}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 18px;z-index:1000;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nav-brand{display:flex;align-items:center;gap:10px;font-family:var(--fd);font-size:1rem;color:var(--text);cursor:pointer;user-select:none}
+.nav-logo{width:32px;height:32px;border-radius:50%;overflow:hidden;flex-shrink:0;box-shadow:0 2px 8px rgba(107,78,154,.25)}
+.nav-logo img{width:100%;height:100%;object-fit:cover;display:block}
+.nav-title{font-weight:300;letter-spacing:.01em}
+.nav-right{display:flex;align-items:center;gap:3px}
+.nav-btn{background:none;border:none;color:var(--text-3);padding:7px;border-radius:var(--r-sm);font-size:17px;display:flex;align-items:center;justify-content:center;transition:background var(--dur) var(--ease),color var(--dur) var(--ease);position:relative}
+.nav-btn:hover{background:var(--surface-2);color:var(--text)}
+.nav-btn.on{color:var(--primary)}
+.nav-btn .badge-dot{position:absolute;top:4px;right:4px;width:8px;height:8px;background:var(--primary);border-radius:50%;border:2px solid var(--surface)}
+body.sb-closed .sidebar{transform:translateX(-100%)}
+body.sb-closed .main{margin-left:0}
+.sb-toggle{position:fixed;top:calc(var(--nav-h) + var(--prog-h) + 56px);left:var(--sidebar-w);z-index:101;width:16px;height:44px;background:var(--surface);border:1px solid var(--border);border-left:none;border-radius:0 var(--r-sm) var(--r-sm) 0;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:left var(--dur) var(--ease),background var(--dur) var(--ease);box-shadow:2px 0 6px rgba(0,0,0,.07);padding:0}
+.sb-toggle:hover{background:var(--surface-2)}
+.sb-toggle-ic{font-size:10px;color:var(--text-3);line-height:1;transition:transform .2s var(--ease);display:block;font-style:normal}
+body.sb-closed .sb-toggle{left:0}
+body.sb-closed .sb-toggle-ic{transform:rotate(180deg)}
+.prog-wrap{position:fixed;top:var(--nav-h);left:0;right:0;height:var(--prog-h);background:var(--surface-3);z-index:999}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--primary),var(--teal));transition:width .5s var(--ease);border-radius:0 2px 2px 0}
+.layout{display:flex;min-height:100vh;padding-top:calc(var(--nav-h) + var(--prog-h))}
+.sidebar{width:var(--sidebar-w);background:var(--surface);border-right:1px solid var(--border);position:fixed;top:calc(var(--nav-h) + var(--prog-h));left:0;bottom:0;overflow-y:auto;z-index:100;transition:transform var(--dur) var(--ease);padding-bottom:60px}
+.sb-head{padding:14px 14px 10px;border-bottom:1px solid var(--border)}
+.sb-label{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:3px}
+.sb-course-name{font-size:.82rem;font-weight:500;color:var(--text);line-height:1.3;margin-bottom:6px}
+.sb-prog-row{display:flex;align-items:center;gap:8px;margin-top:4px}
+.sb-prog-bar{flex:1;height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.sb-prog-fill{height:100%;background:var(--primary);border-radius:2px;transition:width .4s var(--ease)}
+.sb-prog-pct{font-size:.7rem;color:var(--text-3);white-space:nowrap}
+.sb-home-btn{display:flex;align-items:center;gap:8px;padding:9px 12px;margin:8px 8px 0;border:none;background:none;color:var(--text-2);font-size:.82rem;border-radius:var(--r-sm);width:calc(100% - 16px);text-align:left;transition:background var(--dur) var(--ease),color var(--dur) var(--ease)}
+.sb-home-btn:hover,.sb-home-btn.act{background:var(--primary-l);color:var(--primary);font-weight:500}
+.phase-lbl{padding:12px 14px 4px;font-size:.63rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text-3);display:flex;align-items:center;gap:6px;margin-top:4px}
+.phase-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.mod-group{margin:2px 8px}
+.mod-hd{display:flex;align-items:center;gap:7px;padding:7px 9px;border:none;background:none;color:var(--text-2);font-size:.79rem;font-weight:500;border-radius:var(--r-sm);width:100%;text-align:left;transition:background var(--dur) var(--ease),color var(--dur) var(--ease);user-select:none}
+.mod-hd:hover{background:var(--surface-2);color:var(--text)}
+.mod-hd.done{color:var(--primary)}
+.mod-chev{margin-left:auto;transition:transform .18s;font-size:11px;color:var(--text-3)}
+.mod-hd.open .mod-chev{transform:rotate(90deg)}
+.mod-lessons{padding:0 0 4px 10px;display:none}
+.mod-lessons.open{display:block}
+.ll{display:flex;align-items:center;gap:7px;padding:5px 8px;border:none;background:none;color:var(--text-3);font-size:.76rem;border-radius:var(--r-sm);width:100%;text-align:left;transition:background var(--dur) var(--ease),color var(--dur) var(--ease);user-select:none;line-height:1.3}
+.ll:hover{background:var(--surface-2);color:var(--text-2)}
+.ll.cur{background:var(--primary-l);color:var(--primary);font-weight:500}
+.ll.done{color:var(--text-2)}
+.ll.locked{opacity:.42;cursor:not-allowed}
+.ll.locked:hover{background:none;color:var(--text-3)}
+.ll-ic{font-size:10px;min-width:12px;color:var(--border)}
+.ll-ic.ok{color:var(--primary)}
+.ll-ic.bk{color:var(--amber)}
+.ll-num{font-family:var(--fd);font-style:italic;font-size:.68rem;color:var(--text-3);min-width:22px}
+.ll-name{flex:1;line-height:1.35}
+.privacy{font-size:.68rem;color:var(--text-3);padding:10px 14px;display:flex;align-items:center;gap:5px}
+.main{flex:1;margin-left:var(--sidebar-w);min-height:100vh;max-width:100%;transition:margin-left var(--dur) var(--ease)}
+.home{max-width:820px;margin:0 auto;padding:44px 36px 80px;display:none}
+.home.act{display:block}
+.hero{display:flex;align-items:flex-start;gap:28px;margin-bottom:40px}
+.hero-cover{width:140px;height:176px;background:linear-gradient(145deg,#6B4E9A 0%,#4A3370 60%,#32225A 100%);border-radius:var(--r-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;box-shadow:var(--sh-md);position:relative;overflow:hidden}
+.hero-cover::before{content:'';position:absolute;top:-32px;right:-32px;width:100px;height:100px;background:rgba(255,255,255,.05);border-radius:50%}
+.cover-em{font-size:40px;margin-bottom:6px;filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))}
+.cover-num{font-family:var(--fd);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:2px}
+.cover-badge{font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);font-family:var(--fb);font-weight:600}
+.hero-txt{flex:1;padding-top:2px}
+.hero-tag{display:inline-flex;align-items:center;gap:5px;font-size:.65rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--primary);background:var(--primary-l);padding:4px 10px;border-radius:20px;margin-bottom:10px}
+.hero-title{font-family:var(--fd);font-size:2.2rem;font-weight:400;line-height:1.15;color:var(--text);margin-bottom:8px}
+.hero-sub{font-family:var(--fd);font-style:italic;font-size:.97rem;color:var(--text-2);line-height:1.6;margin-bottom:18px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:14px}
+.meta-it{display:flex;align-items:center;gap:5px;font-size:.78rem;color:var(--text-3)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:32px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px 12px;text-align:center;box-shadow:var(--sh)}
+.stat-val{font-family:var(--fd);font-size:1.9rem;font-weight:300;color:var(--primary);line-height:1}
+.stat-lbl{font-size:.68rem;color:var(--text-3);margin-top:3px;font-weight:500;text-transform:uppercase;letter-spacing:.04em}
+.resume-bar{display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);margin-bottom:32px;box-shadow:var(--sh)}
+.resume-txt{flex:1}
+.resume-label{font-size:.7rem;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
+.resume-lesson{font-size:.88rem;font-weight:500;color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;border-radius:var(--r);font-size:.86rem;font-weight:500;border:none;transition:all var(--dur) var(--ease);font-family:var(--fb);white-space:nowrap;text-decoration:none}
+.btn-p{background:var(--primary);color:#fff}
+.btn-p:hover{background:var(--primary-h);transform:translateY(-1px);box-shadow:var(--sh-md)}
+.btn-p:active{transform:translateY(0)}
+.btn-s{background:var(--surface);color:var(--text);border:1px solid var(--border)}
+.btn-s:hover{background:var(--surface-2)}
+.btn-g{background:none;color:var(--text-2)}
+.btn-g:hover{background:var(--surface-2);color:var(--text)}
+.btn-sm{padding:6px 12px;font-size:.78rem}
+.btn-lg{padding:13px 26px;font-size:.95rem}
+.btn-cert{background:linear-gradient(135deg,#6B4E9A,#3A8C8C);color:#fff}
+.btn-cert:hover{opacity:.9;transform:translateY(-1px);box-shadow:var(--sh-md)}
+.phase-sec{margin-bottom:36px}
+.phase-sec-hd{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.phase-em{font-size:18px}
+.phase-sec-title{font-family:var(--fd);font-size:1.1rem;font-weight:400;color:var(--text)}
+.phase-sec-count{margin-left:auto;font-size:.75rem;color:var(--text-3)}
+.modules-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.mod-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;cursor:pointer;transition:all var(--dur) var(--ease);box-shadow:var(--sh)}
+.mod-card:hover{border-color:var(--primary);box-shadow:var(--sh-md);transform:translateY(-1px)}
+.mod-card.locked{opacity:.45;cursor:not-allowed;filter:grayscale(.35)}
+.mod-card.locked:hover{border-color:var(--border);box-shadow:var(--sh);transform:none}
+.mod-card-num{font-size:.65rem;font-weight:600;color:var(--text-3);letter-spacing:.07em;text-transform:uppercase;margin-bottom:4px}
+.mod-card-title{font-weight:500;font-size:.86rem;color:var(--text);margin-bottom:10px;line-height:1.4}
+.mod-card-prog{display:flex;align-items:center;gap:8px}
+.mcp-bar{flex:1;height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.mcp-fill{height:100%;border-radius:2px;transition:width .4s var(--ease)}
+.mcp-txt{font-size:.68rem;color:var(--text-3)}
+.mood-widget{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;margin-bottom:28px;box-shadow:var(--sh)}
+.mood-wd-title{font-size:.84rem;font-weight:500;color:var(--text);margin-bottom:2px}
+.mood-wd-sub{font-size:.73rem;color:var(--text-3);margin-bottom:12px}
+.mood-opts{display:flex;gap:6px;align-items:center}
+.mood-btn{font-size:26px;padding:5px;border:2px solid transparent;border-radius:var(--r-sm);background:none;transition:all var(--dur) var(--ease);line-height:1}
+.mood-btn:hover{background:var(--surface-2);transform:scale(1.1)}
+.mood-btn.sel{border-color:var(--primary);background:var(--primary-l)}
+.mood-done-msg{font-size:.76rem;color:var(--text-3);margin-left:auto;font-style:italic}
+.mood-hist{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+.mhi{display:flex;flex-direction:column;align-items:center;gap:1px}
+.mhi-em{font-size:16px}
+.mhi-d{font-size:.58rem;color:var(--text-3)}
+.lesson{max-width:700px;margin:0 auto;padding:40px 36px 100px;display:none}
+.lesson.act{display:block}
+.l-bc{font-size:.72rem;color:var(--text-3);margin-bottom:16px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.l-bc-sep{color:var(--border)}
+.l-bc-link{cursor:pointer;transition:color var(--dur)}
+.l-bc-link:hover{color:var(--text)}
+.l-meta{display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.l-num{font-family:var(--fd);font-style:italic;font-size:.88rem;color:var(--text-3)}
+.badge{display:inline-flex;align-items:center;gap:4px;font-size:.69rem;font-weight:500;padding:3px 8px;border-radius:12px;background:var(--surface-2);color:var(--text-2)}
+.badge-time{background:var(--teal-l);color:var(--teal)}
+.badge-diff{background:var(--primary-l);color:var(--primary)}
+.l-title{font-family:var(--fd);font-size:1.9rem;font-weight:400;line-height:1.2;color:var(--text);margin-bottom:28px}
+.phase-stripe{height:3px;background:var(--phase-color,var(--primary));border-radius:2px;margin-bottom:24px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:22px;margin-bottom:18px;box-shadow:var(--sh)}
+.card-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.card-ttl{font-size:.66rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);display:flex;align-items:center;gap:6px}
+.lc-p{font-family:var(--fl);font-size:.97rem;line-height:1.82;color:var(--text-2);margin-bottom:14px}
+.lc-p:last-child{margin-bottom:0}
+.lc-h{font-family:var(--fd);font-size:1.22rem;font-weight:400;color:var(--text);margin:26px 0 10px;line-height:1.3}
+.lc-q{border-left:3px solid var(--primary);padding:11px 18px;margin:18px 0;background:var(--primary-m);border-radius:0 var(--r-sm) var(--r-sm) 0}
+.lc-q-text{font-family:var(--fd);font-style:italic;font-size:1.08rem;line-height:1.6;color:var(--text);margin-bottom:4px}
+.lc-q-auth{font-size:.73rem;color:var(--text-3);font-weight:500}
+.lc-call{padding:13px 15px;border-radius:var(--r-sm);margin:18px 0;display:flex;gap:11px;align-items:flex-start}
+.lc-call.tip{background:var(--primary-l);border-left:3px solid var(--primary)}
+.lc-call.info{background:var(--teal-l);border-left:3px solid var(--teal)}
+.lc-call.warn{background:var(--amber-l);border-left:3px solid var(--amber)}
+.lc-call.important{background:var(--gold-l);border-left:3px solid var(--gold)}
+.call-icon{font-size:17px;flex-shrink:0;margin-top:1px}
+.call-body{flex:1}
+.call-ttl{font-size:.79rem;font-weight:600;color:var(--text);margin-bottom:3px}
+.call-txt{font-size:.88rem;line-height:1.6;color:var(--text-2);font-family:var(--fl)}
+.lc-ul{list-style:none;margin:10px 0 14px;padding:0}
+.lc-ul li{display:flex;align-items:flex-start;gap:9px;padding:4px 0;font-size:.9rem;color:var(--text-2);line-height:1.6;font-family:var(--fl)}
+.lc-ul li::before{content:'·';color:var(--primary);font-size:22px;line-height:1;flex-shrink:0;margin-top:-4px}
+.lc-ol{counter-reset:item;list-style:none;margin:10px 0 14px;padding:0}
+.lc-ol li{display:flex;align-items:flex-start;gap:10px;padding:5px 0;font-size:.9rem;color:var(--text-2);line-height:1.6;counter-increment:item;font-family:var(--fl)}
+.lc-ol li::before{content:counter(item);background:var(--primary-l);color:var(--primary);width:21px;height:21px;border-radius:50%;font-size:.72rem;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-family:var(--fb)}
+.lc-hl{background:var(--primary-m);border-radius:var(--r-sm);padding:14px 18px;margin:18px 0;font-family:var(--fd);font-style:italic;font-size:1.02rem;line-height:1.7;color:var(--text);text-align:center;border:1px solid var(--primary-l)}
+.lc-div{height:1px;background:var(--border);margin:24px 0}
+.obj-list{list-style:none;padding:0}
+.obj-list li{display:flex;align-items:flex-start;gap:9px;padding:5px 0;font-size:.88rem;color:var(--text-2);line-height:1.5;font-family:var(--fl)}
+.obj-list li::before{content:'→';color:var(--primary);font-weight:700;flex-shrink:0;margin-top:1px;font-family:var(--fb);font-size:.8rem}
+.refl-q{margin-bottom:14px}
+.refl-q:last-child{margin-bottom:0}
+.q-lbl{font-size:.87rem;font-weight:500;color:var(--text);margin-bottom:7px;line-height:1.5;font-family:var(--fb)}
+.refl-ta,.journal-ta{width:100%;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface-2);color:var(--text);font-size:.88rem;line-height:1.65;padding:11px 13px;resize:vertical;outline:none;transition:all var(--dur) var(--ease);font-family:var(--fl)}
+.refl-ta{min-height:90px}
+.journal-ta{min-height:120px}
+.refl-ta:focus,.journal-ta:focus{border-color:var(--primary);background:var(--surface);box-shadow:0 0 0 3px var(--primary-m)}
+.refl-ta::placeholder,.journal-ta::placeholder{color:var(--text-3)}
+.save-ind{font-size:.68rem;color:var(--text-3);text-align:right;margin-top:3px;height:14px;transition:color var(--dur)}
+.save-ind.saving{color:var(--amber)}
+.save-ind.saved{color:var(--primary)}
+.j-prompt{font-family:var(--fd);font-style:italic;font-size:.9rem;color:var(--text-2);margin-bottom:10px}
+.j-meta{display:flex;align-items:center;justify-content:space-between;margin-top:4px}
+.j-ts{font-size:.68rem;color:var(--text-3)}
+.chal-item{display:flex;align-items:flex-start;gap:12px;padding:8px 0}
+.chal-cb{width:22px;height:22px;border:2px solid var(--border);border-radius:var(--r-sm);flex-shrink:0;margin-top:2px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--dur) var(--ease);font-size:13px;color:transparent}
+.chal-cb.done{border-color:var(--primary);background:var(--primary);color:#fff}
+.chal-title{font-weight:600;font-size:.88rem;color:var(--text);margin-bottom:3px}
+.chal-desc{font-size:.84rem;color:var(--text-2);line-height:1.55;font-family:var(--fl)}
+.tk-list{list-style:none;padding:0}
+.tk-list li{display:flex;align-items:flex-start;gap:10px;padding:7px 0;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--text-2);line-height:1.5;font-family:var(--fl)}
+.tk-list li:last-child{border-bottom:none}
+.tk-list li::before{content:'💡';flex-shrink:0;font-size:14px}
+.l-nav{display:flex;justify-content:space-between;align-items:center;margin-top:32px;padding-top:24px;border-top:1px solid var(--border)}
+.l-nav-r{display:flex;gap:8px;align-items:center}
+.btn-cpl{background:var(--surface);border:1px solid var(--border);color:var(--text-2)}
+.btn-cpl:hover{background:var(--surface-2)}
+.btn-cpl.done{background:var(--primary-l);border-color:var(--primary);color:var(--primary)}
+.comp{max-width:620px;margin:0 auto;padding:80px 36px;text-align:center;display:none}
+.comp.act{display:block}
+.comp-em{font-size:64px;margin-bottom:20px;display:block;animation:pop .5s var(--ease)}
+@keyframes pop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
+.comp-title{font-family:var(--fd);font-size:2.8rem;font-weight:400;color:var(--text);margin-bottom:12px}
+.comp-sub{font-family:var(--fl);font-size:1rem;color:var(--text-2);line-height:1.7;margin-bottom:28px}
+.comp-stats{display:flex;gap:12px;justify-content:center;margin-bottom:28px;flex-wrap:wrap}
+.cs{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:16px 22px;text-align:center;box-shadow:var(--sh)}
+.cs-v{font-family:var(--fd);font-size:2rem;font-weight:300;color:var(--primary);line-height:1}
+.cs-l{font-size:.68rem;color:var(--text-3);margin-top:3px;text-transform:uppercase;letter-spacing:.04em}
+.panel{position:fixed;top:0;right:0;bottom:0;width:360px;background:var(--surface);border-left:1px solid var(--border);z-index:500;transform:translateX(100%);transition:transform .25s var(--ease);display:flex;flex-direction:column;box-shadow:var(--sh-lg)}
+.panel.open{transform:translateX(0)}
+.panel-hd{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--border);flex-shrink:0}
+.panel-ttl{font-weight:600;font-size:.9rem;color:var(--text)}
+.panel-cls{background:none;border:none;color:var(--text-3);font-size:16px;padding:4px 8px;border-radius:var(--r-sm)}
+.panel-cls:hover{background:var(--surface-2);color:var(--text)}
+.panel-tabs{display:flex;border-bottom:1px solid var(--border);flex-shrink:0}
+.ptab{flex:1;padding:10px 4px;font-size:.72rem;font-weight:500;background:none;border:none;color:var(--text-3);border-bottom:2px solid transparent;transition:all var(--dur) var(--ease)}
+.ptab:hover{color:var(--text)}
+.ptab.act{color:var(--primary);border-bottom-color:var(--primary)}
+.panel-body{flex:1;overflow-y:auto;padding:16px}
+.modal-ov{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:700;display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(4px)}
+.modal-ov.on{display:flex}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:30px;max-width:480px;width:100%;position:relative;box-shadow:var(--sh-lg)}
+.modal-cls{position:absolute;top:12px;right:12px;background:none;border:none;color:var(--text-3);font-size:18px;padding:4px 8px;border-radius:var(--r-sm)}
+.modal-cls:hover{background:var(--surface-2);color:var(--text)}
+.modal-ttl{font-family:var(--fd);font-size:1.3rem;font-weight:400;color:var(--text);margin-bottom:6px}
+.modal-sub{font-size:.84rem;color:var(--text-2);line-height:1.65;font-family:var(--fl);margin-bottom:20px}
+.modal-ft{display:flex;gap:10px;justify-content:flex-end;margin-top:20px;flex-wrap:wrap}
+.sb-ov{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:99;display:none}
+.sb-ov.on{display:block}
+.toast-wrap{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:2000;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.toast{background:var(--text);color:var(--bg);padding:10px 18px;border-radius:var(--r);font-size:.82rem;white-space:nowrap;box-shadow:var(--sh-md);opacity:1;transition:opacity .3s}
+@media(max-width:1024px){
+  .sidebar{transform:translateX(-100%);top:0;z-index:200}
+  .sidebar.open{transform:translateX(0)}
+  .main{margin-left:0}
+  .sb-toggle{display:none}
+}
+@media(max-width:640px){
+  .home,.lesson,.comp{padding-left:18px;padding-right:18px}
+  .hero{flex-direction:column;gap:16px}
+  .hero-cover{width:100%;height:100px;flex-direction:row;gap:14px;border-radius:var(--r)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .panel{width:100%;border-radius:var(--r-xl) var(--r-xl) 0 0;top:auto;height:85vh;transform:translateY(100%)}
+  .panel.open{transform:translateY(0)}
+  .cert-wrap{max-width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- GATE SCREEN (shown if MO101 not completed) -->
+<div class="gate" id="gateScreen">
+  <div class="gate-box">
+    <span class="gate-icon">🔐</span>
+    <div class="gate-pill">📋 Prerequisite Required</div>
+    <h2 class="gate-title">Moving On 102</h2>
+    <p class="gate-sub">
+      This course is the continuation of <strong>Moving On 101</strong>.<br>
+      To access it, you need to have completed Moving On 101 first — so you're building on a real foundation, not just jumping ahead.
+    </p>
+  </div>
+</div>
+
+<!-- CERTIFICATE OVERLAY -->
+<div class="cert-ov" id="certOverlay">
+  <div class="cert-wrap">
+    <div class="cert-close-row">
+      <button class="cert-cls-btn" onclick="app.closeCert()">✕ Close</button>
+    </div>
+    <canvas id="certCanvas" width="900" height="636"></canvas>
+    <div class="cert-actions">
+      <button class="btn btn-cert" onclick="app.downloadCert()">⬇ Download Certificate</button>
+      <button class="btn btn-s" onclick="app.closeCert()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand" onclick="app.goHome()">
+    <div class="nav-logo">
+      <img src="logo.png" alt="Lane Academy" onerror="this.parentElement.innerHTML='🌱'">
+    </div>
+    <span class="nav-title">Lane Academy</span>
+  </div>
+  <div class="nav-right">
+    <button class="nav-btn" id="notesBtn" onclick="app.openPanel('nt')" title="Notes">📝</button>
+    <button class="nav-btn" id="bkListBtn" onclick="app.openPanel('bk')" title="Bookmarks">🔖</button>
+    <button class="nav-btn" id="moodNavBtn" onclick="app.openMoodModal()" title="Mood Check-In">💜</button>
+    <button class="nav-btn" id="themeBtn" onclick="app.toggleTheme()" title="Toggle theme">🌙</button>
+    <button class="nav-btn" id="menuBtn" onclick="app.toggleSidebar()" title="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- PROGRESS BAR -->
+<div class="prog-wrap"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+
+<div class="layout">
+  <!-- SIDEBAR -->
+  <div class="sb-ov" id="sbOv" onclick="app.closeSidebar()"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sb-head">
+      <div class="sb-label">Lane Academy</div>
+      <div class="sb-course-name">Moving On 102</div>
+      <div class="sb-prog-row">
+        <div class="sb-prog-bar"><div class="sb-prog-fill" id="sbProgFill" style="width:0%"></div></div>
+        <span class="sb-prog-pct" id="sbProgPct">0%</span>
+      </div>
+    </div>
+    <button class="sb-home-btn" id="sbHomeBtn" onclick="app.goHome()">🏠 Course Overview</button>
+    <div id="sbTree"></div>
+    <div style="padding:14px 14px 0;border-top:1px solid var(--border);margin-top:8px">
+      <div class="privacy">🔒 Your data stays on this device only.</div>
+    </div>
+  </aside>
+
+  <!-- SIDEBAR EDGE TOGGLE -->
+  <button class="sb-toggle" id="sbToggle" onclick="app.toggleSidebar()" title="Toggle sidebar">
+    <i class="sb-toggle-ic">‹</i>
+  </button>
+
+  <!-- MAIN CONTENT -->
+  <main class="main" id="mainContent">
+
+    <!-- HOME -->
+    <section class="home" id="homeView">
+      <div class="hero">
+        <div class="hero-cover">
+          <div class="cover-num">102</div>
+          <div class="cover-em">🌿</div>
+          <div class="cover-badge">Moving On</div>
+        </div>
+        <div class="hero-txt">
+          <span class="hero-tag">✨ Advanced Growth Course</span>
+          <h1 class="hero-title">Moving On 102</h1>
+          <p class="hero-sub">Breaking Patterns &amp; Building Emotional Strength</p>
+          <div class="hero-meta">
+            <span class="meta-it">⏱ 8–10 hours total</span>
+            <span class="meta-it">📚 5 Phases</span>
+            <span class="meta-it">📖 15 Modules</span>
+            <span class="meta-it">✏️ 45 Lessons</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mood-widget">
+        <div class="mood-wd-title">How are you feeling today?</div>
+        <div class="mood-wd-sub">Self-awareness is the foundation of everything you'll build in this course.</div>
+        <div class="mood-opts" id="homeMoodOpts">
+          <button class="mood-btn" data-mood="😊" data-label="Great" onclick="app.logMood('😊','Great',this)">😊</button>
+          <button class="mood-btn" data-mood="🙂" data-label="Good" onclick="app.logMood('🙂','Good',this)">🙂</button>
+          <button class="mood-btn" data-mood="😐" data-label="Okay" onclick="app.logMood('😐','Okay',this)">😐</button>
+          <button class="mood-btn" data-mood="😞" data-label="Low" onclick="app.logMood('😞','Low',this)">😞</button>
+          <button class="mood-btn" data-mood="😢" data-label="Struggling" onclick="app.logMood('😢','Struggling',this)">😢</button>
+          <span class="mood-done-msg" id="moodDoneMsg" style="display:none">Logged ✓</span>
+        </div>
+        <div class="mood-hist" id="moodHist"></div>
+      </div>
+
+      <div class="stats" id="homeStats"></div>
+      <div class="resume-bar" id="resumeBar" style="display:none">
+        <div class="resume-txt">
+          <div class="resume-label">Continue where you left off</div>
+          <div class="resume-lesson" id="resumeLessonName">—</div>
+        </div>
+        <button class="btn btn-p btn-sm" onclick="app.resumeLesson()">Continue →</button>
+      </div>
+      <div id="homePhases"></div>
+    </section>
+
+    <!-- LESSON -->
+    <section class="lesson" id="lessonView">
+      <div class="privacy">🔒 Everything you write stays on your device. No accounts. No tracking.</div>
+      <div class="l-bc" id="lBc"></div>
+      <div class="l-meta" id="lMeta"></div>
+      <div class="phase-stripe" id="lStripe"></div>
+      <h1 class="l-title" id="lTitle"></h1>
+      <div class="card" id="objCard">
+        <div class="card-hd">
+          <span class="card-ttl">🎯 Learning Objectives</span>
+          <button class="btn btn-g btn-sm" onclick="app.toggleBookmark()" id="bkBtn">🔖 Bookmark</button>
+        </div>
+        <ul class="obj-list" id="lObjs"></ul>
+      </div>
+      <div class="card" id="contentCard">
+        <div class="card-hd"><span class="card-ttl">📖 Lesson Content</span></div>
+        <div id="lContent"></div>
+      </div>
+      <div class="card" id="reflCard">
+        <div class="card-hd"><span class="card-ttl">💭 Reflection</span></div>
+        <div id="lRefl"></div>
+      </div>
+      <div class="card" id="journalCard">
+        <div class="card-hd"><span class="card-ttl">📓 Journal Entry</span></div>
+        <p class="j-prompt">"What is this lesson stirring in you?"</p>
+        <textarea class="journal-ta" id="lJournal" placeholder="Write freely here. No one else will read this..."></textarea>
+        <div class="j-meta">
+          <span class="j-ts" id="lJournalTs"></span>
+          <span class="save-ind" id="lJournalSave"></span>
+        </div>
+      </div>
+      <div class="card" id="chalCard">
+        <div class="card-hd"><span class="card-ttl">⚡ Today's Challenge</span></div>
+        <div class="chal-item">
+          <div class="chal-cb" id="chalCb" onclick="app.toggleChallenge()"></div>
+          <div class="chal-txt">
+            <div class="chal-title" id="chalTitle"></div>
+            <div class="chal-desc" id="chalDesc"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="tkCard">
+        <div class="card-hd"><span class="card-ttl">💡 Key Takeaways</span></div>
+        <ul class="tk-list" id="lTk"></ul>
+      </div>
+      <div class="l-nav" id="lNav">
+        <div class="l-nav-l">
+          <button class="btn btn-s btn-sm" id="prevBtn" onclick="app.prevLesson()">← Previous</button>
+        </div>
+        <div class="l-nav-r">
+          <button class="btn btn-cpl btn-sm" id="cplBtn" onclick="app.markComplete()">✓ Mark Complete</button>
+          <button class="btn btn-p btn-sm" id="nextBtn" onclick="app.nextLesson()">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLETION -->
+    <section class="comp" id="compView">
+      <div class="comp-em">🎓</div>
+      <h1 class="comp-title">You've grown.</h1>
+      <p class="comp-sub">You've completed Moving On 102. You didn't just heal — you evolved.<br>That's a different kind of achievement entirely.</p>
+      <div class="comp-stats" id="compStats"></div>
+      <p style="font-family:var(--fl);font-size:.92rem;color:var(--text-2);line-height:1.7;margin-bottom:28px">
+        You now understand the patterns that shaped you, the beliefs that held you back, and the tools to build something genuinely different.
+        The work you've done here is the work most people never do. Carry it forward with intention.
+      </p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-cert btn-lg" onclick="app.showCertificate()">🎓 View My Certificate</button>
+        <button class="btn btn-s btn-lg" onclick="app.goHome()">↩ Back to Course</button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- SLIDE PANEL -->
+<div class="panel" id="slidePanel">
+  <div class="panel-hd">
+    <span class="panel-ttl" id="panelTitle">Notes</span>
+    <button class="panel-cls" onclick="app.closePanel()">✕</button>
+  </div>
+  <div class="panel-tabs">
+    <button class="ptab" data-tab="nt" onclick="app.switchTab('nt')">✏️ Notes</button>
+    <button class="ptab" data-tab="jn" onclick="app.switchTab('jn')">📓 Journal</button>
+    <button class="ptab" data-tab="bk" onclick="app.switchTab('bk')">🔖 Saves</button>
+  </div>
+  <div class="panel-body" id="panelBody"></div>
+</div>
+
+<!-- MOOD MODAL -->
+<div class="modal-ov" id="moodModal">
+  <div class="modal" style="max-width:400px">
+    <button class="modal-cls" onclick="app.closeModal('moodModal')">✕</button>
+    <div class="modal-ttl">Daily Mood Check-In</div>
+    <div class="modal-sub">How are you feeling right now? Being honest with yourself is the practice.</div>
+    <div class="mood-opts" id="modalMoodOpts" style="gap:10px;justify-content:center;margin-bottom:20px">
+      <button class="mood-btn" data-mood="😊" data-label="Great" onclick="app.logMood('😊','Great',this,true)" style="font-size:36px">😊</button>
+      <button class="mood-btn" data-mood="🙂" data-label="Good" onclick="app.logMood('🙂','Good',this,true)" style="font-size:36px">🙂</button>
+      <button class="mood-btn" data-mood="😐" data-label="Okay" onclick="app.logMood('😐','Okay',this,true)" style="font-size:36px">😐</button>
+      <button class="mood-btn" data-mood="😞" data-label="Low" onclick="app.logMood('😞','Low',this,true)" style="font-size:36px">😞</button>
+      <button class="mood-btn" data-mood="😢" data-label="Struggling" onclick="app.logMood('😢','Struggling',this,true)" style="font-size:36px">😢</button>
+    </div>
+    <div id="modalMoodHist"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast-wrap" id="toastWrap"></div>
+
+<script>
+// ═══════════════════════════════════════════════
+// COURSE DATA — MOVING ON 102
+// ═══════════════════════════════════════════════
+const COURSE = {
+  id:'mo102',title:'Moving On 102',
+  subtitle:'Breaking Patterns & Building Emotional Strength.',
+  phases:[
+  {id:'p1',emoji:'🔍',title:'Self-Discovery',color:'var(--phase1)',modules:[
+    {id:'m1',title:'Welcome to Your Next Chapter',lessons:[
+      {id:'l1_1',num:'1.1',title:'Reflecting on How Far You\'ve Come',time:'6 min',diff:'Gentle',phase:'p1',
+       obj:['Acknowledge the real work you did in Moving On 101','Assess your current emotional baseline','Distinguish between recovering and growing'],
+       content:[
+        {t:'p',c:'There is a difference between surviving something and actually learning from it. You have already done the harder half — you survived. What Moving On 102 asks of you is the next layer: to look underneath the wound and understand what was there before it, and what you want to build now that it is healing.'},
+        {t:'q',c:'The privilege of a lifetime is to become who you truly are.',a:'Carl Jung'},
+        {t:'h',c:'Where Healing Ends and Growth Begins'},
+        {t:'p',c:'Healing from a breakup is about stabilizing. It is about restoring equilibrium, processing the acute pain, and finding your footing. That is critical work. But it is not the same as transformation. Transformation requires something more deliberate: an honest look at the patterns, beliefs, and emotional habits that you brought to that relationship — and that you will bring to the next one, unless something changes.'},
+        {t:'call',st:'tip',ic:'💜',ttl:'You Are Already Ahead',c:'The fact that you are here — choosing to go deeper — puts you in a small category of people. Most people repeat the same patterns for decades without ever examining them. You are choosing differently. That matters enormously.'},
+        {t:'hl',c:'You are not here because something is wrong with you. You are here because you are ready to understand yourself more fully.'}
+       ],
+       refl:['Since completing Moving On 101, what has genuinely shifted for you emotionally? What feels different?','What aspects of yourself — in relationships, in love, in conflict — do you still feel uncertain or confused about?'],
+       chal:{t:'The Honest Self-Assessment',d:'Rate yourself honestly from 1–10 in these areas: emotional regulation, communication, self-worth, trust, and boundary-setting. Write a sentence about each score. Not to judge — to know your starting point.'},
+       tks:['Healing and growth are sequential — you needed to stabilize before you could examine.','Coming back to grow, not just recover, is a conscious and courageous choice.','Your starting point here is not your brokenness — it is your readiness.']
+      },
+      {id:'l1_2',num:'1.2',title:'What Growth Actually Looks Like',time:'5 min',diff:'Gentle',phase:'p1',
+       obj:['Correct common misconceptions about personal growth','Understand that growth is nonlinear and often uncomfortable','Set realistic expectations for this course'],
+       content:[
+        {t:'p',c:'Most images of personal growth are misleading. They suggest a clean upward arc — less pain, more clarity, steadily rising confidence. Real growth does not work that way. Real growth is often disorienting, uncomfortable, and looks a lot like confusion before it looks like progress.'},
+        {t:'h',c:'What Growth Is Not'},
+        {t:'ul',items:['It is not the absence of difficult emotions — it is a different relationship with them','It is not never getting triggered — it is catching yourself sooner','It is not becoming a different person — it is becoming more fully yourself','It is not having no more wounds — it is developing new resources alongside them','It is not linear — it spirals, stalls, and sometimes looks like regression']},
+        {t:'call',st:'warn',ic:'⚠️',ttl:'The Discomfort Is the Sign',c:'In this course, if something is making you uncomfortable — if a module is making you squirm or resist — that is worth paying attention to. Discomfort is usually the signal that something real is being touched. Lean toward it, carefully.'},
+        {t:'hl',c:'Growth is not about feeling better. It is about becoming more honest, more aware, and more intentional — which often feels uncomfortable before it feels good.'}
+       ],
+       refl:['Where in your life have you been waiting for growth to feel comfortable before you pursue it?','Think of a time in your past where something uncomfortable ultimately became a turning point. What made it transformative?'],
+       chal:{t:'The Resistance Inventory',d:'List three things about yourself in relationships that you have avoided looking at honestly. Not to fix them right now — just to name them. Naming something is the first act of working with it.'},
+       tks:['Real growth is nonlinear and frequently uncomfortable — mistaking discomfort for regression is one of the most common traps.','Emotional triggers and difficult feelings do not disappear; your relationship with them evolves.','Naming what you have avoided is the beginning of transforming it.']
+      },
+      {id:'l1_3',num:'1.3',title:'Setting Your Intentions for This Course',time:'4 min',diff:'Gentle',phase:'p1',
+       obj:['Clarify what you want to take from Moving On 102','Write intentional, specific growth goals','Understand how intention shapes attention and outcome'],
+       content:[
+        {t:'p',c:'Intention is not the same as a wish. A wish is passive: "I hope I figure this out." An intention is active: "I am choosing to engage with this, even when it is hard." Setting clear intentions before a course like this is not a formality — it is a practice that shapes what you notice, what you retain, and what you do differently on the other side.'},
+        {t:'h',c:'How to Set Real Intentions'},
+        {t:'p',c:'The most useful intentions are specific and honest. They name something real, not something you think you should want. "I want to understand why I keep choosing people who are emotionally unavailable" is a real intention. "I want to be a better person" is not — it is too vague to act on and too broad to measure.'},
+        {t:'call',st:'important',ic:'✨',ttl:'Your Intentions Shape Your Experience',c:'What you bring into a learning experience determines what you get out of it. People who engage with clear personal intentions retain more, apply more, and change more. This is not motivational language — it is how directed attention works.'},
+        {t:'hl',c:'You are not here to fill in blanks. You are here to understand yourself well enough to make genuinely different choices.'}
+       ],
+       refl:['Write three specific things you hope to understand about yourself by the end of this course.','What would be different in your relationships six months from now if this course actually worked for you?'],
+       chal:{t:'The Letter of Intent',d:'Write a letter to yourself explaining exactly why you are taking this course and what you are hoping to discover. Seal it in a note app or document and only open it on the final lesson. This is your anchor.'},
+       tks:['Intentions work because they direct attention — you notice what you are looking for.','Specificity transforms vague hopes into actionable commitments.','Your letter of intent is a living document you can return to as evidence of your growth.']
+      }
+    ]},
+    {id:'m2',title:'Your Relationship Story',lessons:[
+      {id:'l2_1',num:'2.1',title:'Mapping Your Relationship Timeline',time:'8 min',diff:'Moderate',phase:'p1',
+       obj:['Create a clear picture of your significant relationships','Identify recurring emotional dynamics across them','Notice patterns that appear without judgment'],
+       content:[
+        {t:'p',c:'Most of us have not truly looked at our relationship history as a data set. We have felt each relationship individually — the particular person, the particular pain, the particular joy. But when you step back and look at them together, something that may have been invisible becomes visible: the throughline. The pattern that links them.'},
+        {t:'h',c:'Why the Pattern Matters More Than the Story'},
+        {t:'p',c:'Every relationship you have had has a story — the beginning, the dynamic, the ending. But underneath each story is a dynamic. And dynamics repeat. The specific characters change; the role you play, the way you love, the point at which things tend to break — these are often startlingly consistent. That consistency is important information, not a character flaw.'},
+        {t:'call',st:'info',ic:'🔎',ttl:'What to Look For',c:'As you map your timeline, notice: Who pursued whom? What drew you to them initially? What qualities did they share? How did conflict tend to unfold? What was your typical role — the one who gave more, pulled back, pursued, or withdrew? What was the typical reason things ended?'},
+        {t:'hl',c:'The pattern is not the problem. The pattern is the map. And you can only navigate a map you can see.'}
+       ],
+       refl:['List your significant romantic relationships chronologically. For each, write: what drew you to them, what the dynamic was like, and how it ended.','Looking across your list, what similarities do you notice — in the people, in your behavior, or in how things unfolded?'],
+       chal:{t:'The Timeline Map',d:'Create a visual timeline of your significant relationships. On a piece of paper (or a notes app), draw a line. Mark each relationship. Below each, write two words that capture the emotional dynamic. Step back and look at the whole thing.'},
+       tks:['Relationship patterns are not random — they reflect your unconscious expectations, fears, and definitions of love.','The dynamics (not the specific people) tend to repeat until they are consciously examined.','Seeing your timeline as data, rather than a series of stories, reveals what was previously invisible.']
+      },
+      {id:'l2_2',num:'2.2',title:'How Family Shaped What You Call Love',time:'9 min',diff:'Moderate',phase:'p1',
+       obj:['Understand how early family experiences create relationship blueprints','Identify specific messages about love you received in childhood','See how those early lessons influence adult relationship patterns'],
+       content:[
+        {t:'p',c:'Long before your first romantic relationship, you were already learning what love looks like. You learned it by watching the people around you — how they expressed care, how they argued, whether affection was verbal or physical or withheld, what happened when someone was upset, what was spoken and what was never spoken. All of that became your blueprint.'},
+        {t:'q',c:'The family is the first school for young children, and in that school, they learn how or whether to trust the world.',a:'Fred Rogers'},
+        {t:'h',c:'Your First Teachers'},
+        {t:'p',c:'Your first models of love were the adults who raised you. You learned whether love was conditional or unconditional, warm or withholding, safe or unpredictable. You learned whether your needs were heard or dismissed, whether emotional expression was welcomed or punished, whether people who love you leave or stay. None of these lessons were taught — they were absorbed.'},
+        {t:'call',st:'tip',ic:'💜',ttl:'This Is Not Blame',c:'Examining the family patterns that shaped you is not about assigning blame to the people who raised you. Most parents gave what they had, shaped by their own unexamined histories. This exploration is about understanding, not indictment. You cannot change what shaped you — but you can decide whether to keep acting from it unconsciously.'},
+        {t:'hl',c:'Understanding where your definition of love came from is the first step toward choosing a better one.'}
+       ],
+       refl:['How did the adults in your childhood express love? Was it verbal, physical, through acts of service, or largely absent?','What was the implicit rule in your family about showing emotion? About asking for needs to be met?'],
+       chal:{t:'The Family Portrait',d:'Write a paragraph describing the emotional climate of your childhood home — not the events, but the feeling of it. What was it like to need something? What was it like to be upset? What messages did you absorb about love?'},
+       tks:['Your first relationship experiences — in your family — created the template your nervous system uses in adult relationships.','These templates are not destiny; they are starting points that can be consciously revised.','Examining family patterns is about understanding the origin of your beliefs, not assigning fault.']
+      },
+      {id:'l2_3',num:'2.3',title:'Identifying Recurring Themes',time:'7 min',diff:'Moderate',phase:'p1',
+       obj:['Consolidate your self-discovery from this module','Name the two or three core themes in your relationship history','Begin seeing patterns as invitations to learn, not evidence of being broken'],
+       content:[
+        {t:'p',c:'By now, you have mapped your relationships and examined the family experiences that shaped your blueprint. The next step is synthesis — pulling what you have noticed into clear, nameable themes. Not to pathologize yourself, but to work with specific, identified material rather than a vague sense that "something always goes wrong."'},
+        {t:'h',c:'Common Recurring Themes'},
+        {t:'ul',items:['Choosing emotionally unavailable partners and hoping to become the exception','Being attracted to intensity, mistaking anxiety for chemistry','People-pleasing to earn love rather than expecting it freely','Abandoning your own needs to preserve the relationship','Becoming anxious when someone gets too close, or too distant','Ending relationships before they can end you']},
+        {t:'call',st:'important',ic:'✨',ttl:'Themes Are Not Flaws',c:'The presence of a recurring theme does not mean you are damaged or doomed to repeat it. It means there is material here — something learned, something unexamined — that wants your attention. Every theme has an origin you can understand and a new pattern you can consciously build.'},
+        {t:'hl',c:'You are not broken. You are patterned. And patterns, unlike damage, can be changed.'}
+       ],
+       refl:['What are the two or three most consistent themes you have noticed across your relationships?','For each theme: when did it first appear? What do you think it was protecting you from?'],
+       chal:{t:'Name Your Pattern',d:'Write one paragraph that begins: "In relationships, I have a tendency to..." Be specific and honest. This is not for anyone else to read. It is your most useful piece of self-knowledge for everything that follows in this course.'},
+       tks:['Synthesis — pulling patterns into nameable themes — is what transforms self-examination from emotional spiraling into actionable self-knowledge.','Recurring themes have origins that can be understood and learned from.','Naming your pattern honestly is the most important preparation for changing it.']
+      }
+    ]},
+    {id:'m3',title:'Understanding Attachment',lessons:[
+      {id:'l3_1',num:'3.1',title:'What Is Attachment and Why Does It Matter?',time:'7 min',diff:'Moderate',phase:'p1',
+       obj:['Understand the foundational theory of attachment','See how early bonds create relationship templates','Recognize why attachment is the key to understanding adult love patterns'],
+       content:[
+        {t:'p',c:'In the 1950s and 60s, psychiatrist John Bowlby observed something that changed how we understand human relationships forever: infants form powerful emotional bonds with their caregivers, and the quality of those bonds directly shapes how they navigate the world. Decades of subsequent research extended this finding to adults. How you attached as a child is a remarkably accurate predictor of how you attach as an adult.'},
+        {t:'h',c:'The Four Attachment Styles'},
+        {t:'p',c:'Researchers identified four broad patterns: secure, anxious, avoidant, and fearful-avoidant (sometimes called disorganized). These are not rigid boxes — they are tendencies that shift across relationships and can change with awareness and effort. Most people have a primary style with elements of another.'},
+        {t:'call',st:'info',ic:'🔬',ttl:'Why This Changes Everything',c:'Understanding attachment explains the things that have always seemed irrational about your love life: why you are attracted to certain types, why intimacy both draws you in and frightens you, why you respond to conflict in particular ways, why some relationship situations trigger outsized emotional responses. Attachment is the lens that makes these things coherent.'},
+        {t:'hl',c:'Attachment theory does not explain everything — but it explains more about adult relationships than almost anything else we have discovered.'}
+       ],
+       refl:['Before learning more about the specific styles, what is your instinctive sense of your own pattern in intimate relationships? Do you tend to pull people close, push them away, or some combination?','What is the relationship dynamic that you find most activating — most likely to trigger strong emotion?'],
+       chal:{t:'The Attachment Observation',d:'This week, notice one moment in a relationship (romantic, friendship, or family) where your emotional response feels bigger than the situation warrants. Write down what happened, what you felt, and what you wanted to do. You\'re looking for data, not judgment.'},
+       tks:['Early attachment bonds create neurological templates that shape how you experience intimacy, conflict, and separation throughout your life.','The four attachment styles are tendencies, not fixed identities — awareness enables change.','Understanding your attachment style is one of the most powerful pieces of self-knowledge you can develop.']
+      },
+      {id:'l3_2',num:'3.2',title:'Secure, Anxious, and Avoidant Attachment',time:'9 min',diff:'Moderate',phase:'p1',
+       obj:['Understand the three primary attachment styles in depth','Identify your primary tendencies across the styles','See how each style plays out in real relationship dynamics'],
+       content:[
+        {t:'p',c:'Each attachment style has a characteristic way of experiencing closeness, handling conflict, and responding to the threat of separation. Understanding them in detail is not about labeling yourself — it is about recognizing patterns that, once seen, you can begin to work with.'},
+        {t:'h',c:'Secure Attachment'},
+        {t:'p',c:'People with secure attachment are generally comfortable with both intimacy and independence. They believe they are worthy of love and that others are reliably available. They can express needs without catastrophizing, handle conflict without fearing abandonment, and return to baseline relatively quickly after relationship stress. About 50-60% of adults lean toward secure attachment.'},
+        {t:'h',c:'Anxious Attachment'},
+        {t:'p',c:'Anxiously attached people tend to crave closeness but fear it will be taken away. They may be hypervigilant to changes in a partner\'s mood or behavior, interpret ambiguity as danger, seek frequent reassurance, and become distressed quickly when they feel disconnected. Underneath the anxiety is usually a deep need for love and a fear that they are not quite enough to keep it.'},
+        {t:'h',c:'Avoidant Attachment'},
+        {t:'p',c:'Avoidantly attached people learned early that closeness was uncomfortable or untrustworthy, and developed self-reliance as a defense. They may value independence highly, feel smothered by too much emotional closeness, shut down under emotional pressure, and have difficulty expressing vulnerability. Underneath the distance is usually a person who wants connection but fears the cost of needing it.'},
+        {t:'call',st:'tip',ic:'💜',ttl:'The Anxious-Avoidant Dance',c:'One of the most common and painful relationship dynamics is the anxious-avoidant pairing. The anxious partner\'s need for closeness activates the avoidant partner\'s withdrawal, which intensifies the anxious partner\'s need — creating a cycle that is exhausting for both and feels impossible to escape without understanding what is driving it.'},
+        {t:'hl',c:'Your attachment style is not a life sentence. It is a map of your nervous system\'s learned responses to love — and nervous systems can learn new things.'}
+       ],
+       refl:['Which style resonates most with your experience in close relationships? What specific behaviors do you recognize in yourself?','If you have primarily been anxious or avoidant, what do you think you were protecting yourself from by developing that pattern?'],
+       chal:{t:'The Style Reflection',d:'Write a paragraph for each style (secure, anxious, avoidant) describing how that style experiences the moment when someone they love goes quiet or becomes distant. Notice which description most closely matches your own internal experience.'},
+       tks:['Secure attachment involves comfort with both intimacy and autonomy — it is learnable, not just innate.','Anxious attachment is characterized by hypervigilance to disconnection; avoidant attachment by self-protective emotional distance.','The anxious-avoidant pairing is one of the most common patterns in adult relationships, often recreating early relational experiences.']
+      },
+      {id:'l3_3',num:'3.3',title:'Moving Toward Earned Security',time:'8 min',diff:'Moderate',phase:'p1',
+       obj:['Understand the concept of earned secure attachment','Learn the practices that shift your attachment system toward greater security','See this as a long-term direction, not a quick fix'],
+       content:[
+        {t:'p',c:'Here is one of the most hopeful findings in attachment research: secure attachment is not only something you have if you were lucky enough to receive it in childhood. It is something you can develop as an adult — through therapy, through conscious relationship experiences, and through the kind of self-understanding you are building right now. Researchers call this "earned security."'},
+        {t:'h',c:'What Earned Security Looks Like'},
+        {t:'ul',items:['The ability to recognize when your attachment system is activated, before you act on it','Holding your emotional reaction long enough to choose a response','Tolerating some ambiguity in relationships without catastrophizing','Expressing needs directly rather than indirectly (through withdrawal, tests, or anger)','Being able to receive care without immediately dismissing it or becoming overwhelmed by it']},
+        {t:'call',st:'important',ic:'✨',ttl:'The Role of Awareness',c:'The shift toward security begins with awareness — specifically, the moment between trigger and response. When you can notice "I am in an anxious spiral right now" or "I am shutting down because I feel exposed" rather than simply acting from those states, you have created a space in which a different choice becomes possible.'},
+        {t:'hl',c:'Earned security is not the absence of triggers. It is the growing ability to hold yourself through them.'}
+       ],
+       refl:['What does it feel like in your body when your attachment system gets activated — when you feel suddenly anxious or suddenly disconnected in a relationship?','What one practice could you begin that would help you notice the moment between trigger and reaction?'],
+       chal:{t:'The Pause Practice',d:'For the next week, when you notice a strong emotional reaction in a relationship context, practice pausing for 60 seconds before responding. During that minute, ask yourself: "Is this reaction about the present moment, or is it older than this?" Just notice. You don\'t have to fix anything yet.'},
+       tks:['Earned security is developed through self-awareness, corrective experiences, and intentional practice — not just through childhood luck.','The gap between trigger and response is where all growth happens.','Earned security looks like holding yourself through difficult attachment moments, not eliminating them.']
+      }
+    ]}
+  ]},
+  {id:'p2',emoji:'🔓',title:'Breaking Patterns',color:'var(--phase2)',modules:[
+    {id:'m4',title:'Emotional Habits',lessons:[
+      {id:'l4_1',num:'4.1',title:'Understanding Your Emotional Triggers',time:'7 min',diff:'Moderate',phase:'p2',
+       obj:['Define what emotional triggers actually are (neurologically)','Identify your personal primary triggers in relationships','Understand triggers as information, not problems to eliminate'],
+       content:[
+        {t:'p',c:'A trigger is not a weakness. It is a neurological event: something in the present activates a memory pattern stored in the past, and your nervous system responds as though the old situation is happening now. The present-day stimulus might be small — a change in tone, a delayed message, someone pulling back — but the response belongs to an older story.'},
+        {t:'h',c:'How Triggers Work'},
+        {t:'p',c:'Triggers operate through the amygdala — the brain\'s threat-detection center. When it perceives a situation that resembles a past emotional threat, it fires before the thinking brain has a chance to evaluate whether the threat is real. This is why triggered reactions often feel outsized, sudden, and hard to control. They were designed for survival speed, not relational nuance.'},
+        {t:'call',st:'info',ic:'🔬',ttl:'The Body Keeps Score',c:'Emotional triggers are stored not just as memories but as body sensations. Many people notice their triggers first as physical experiences: a tightening in the chest, a sudden flush of heat, a cold hollow feeling in the stomach. Learning to recognize your body\'s early warning signals gives you a head start before the emotional intensity peaks.'},
+        {t:'hl',c:'Your triggers are not your enemies. They are the clearest evidence of where your past still believes the present is dangerous.'}
+       ],
+       refl:['What are your most reliable emotional triggers in close relationships? What situations, behaviors, or dynamics reliably produce a strong reaction?','For each trigger: what older situation does it remind you of? Can you trace it?'],
+       chal:{t:'Trigger Tracking',d:'For the next five days, when you notice a strong emotional reaction, write it down within an hour. Include: what happened, what you felt, where you felt it in your body, and what you wanted to do. By day five, look for patterns.'},
+       tks:['Triggers are neurological events — the amygdala responding to pattern-matches with the past, not accurate assessments of current danger.','The body registers triggers before the mind does — learning to read body signals gives you a crucial head start.','Identifying your triggers turns vague emotional reactivity into specific, workable material.']
+      },
+      {id:'l4_2',num:'4.2',title:'Overthinking and the Reassurance Loop',time:'6 min',diff:'Moderate',phase:'p2',
+       obj:['Understand why overthinkers overthink (and why they can\'t just stop)','See how reassurance-seeking maintains anxiety rather than resolving it','Learn pattern interrupts for the anxiety-rumination cycle'],
+       content:[
+        {t:'p',c:'Overthinking in relationships is rarely about the thing you are thinking about. It is usually about an underlying feeling of uncertainty that the mind is trying to resolve by processing — endlessly — a situation that has no resolution through thinking alone. The mind genuinely believes that if it just thinks about this enough, it will find an answer that makes the anxiety go away.'},
+        {t:'h',c:'The Problem With Reassurance-Seeking'},
+        {t:'p',c:'When anxiety is high, seeking reassurance from a partner feels like the obvious solution: if they just tell me it is okay, I will feel better. And it works — briefly. The relief is genuine but short-lived, because the underlying anxiety has not been addressed. Within hours, the doubt returns, often stronger. Over time, the reassurance-seeking can strain the relationship and deepen the anxiety rather than resolve it.'},
+        {t:'call',st:'warn',ic:'⚠️',ttl:'What Reassurance Actually Does',c:'Every time you seek reassurance and feel temporary relief, you are training your nervous system to treat the partner\'s response as the source of safety — rather than developing your own. The antidote is not to need reassurance (that is not realistic), but to develop internal soothing capacity alongside it.'},
+        {t:'hl',c:'The goal is not to never need reassurance. The goal is to also be able to reassure yourself.'}
+       ],
+       refl:['When anxiety is high, what is your default — do you seek reassurance, or do you withdraw and ruminate? What does each tend to produce?','What would you say to yourself if you could actually believe it when your mind is spinning? What do you need to hear?'],
+       chal:{t:'The Reassurance Delay',d:'When you feel the urge to seek reassurance from a partner, delay the reach-out by 30 minutes. During that time, write down what you are afraid of, then write down what you would tell a close friend who was afraid of the same thing. See if you can soothe yourself even a small degree before reaching out.'},
+       tks:['Overthinking in relationships is an anxiety management strategy — the mind believes that thinking more will produce certainty.','Reassurance-seeking provides short-term relief but trains the nervous system to depend on the partner for regulation.','Building internal soothing capacity runs parallel to (and gradually reduces) the need for external reassurance.']
+      },
+      {id:'l4_3',num:'4.3',title:'Emotional Reactivity vs. Emotional Responsiveness',time:'7 min',diff:'Moderate',phase:'p2',
+       obj:['Distinguish clearly between reactivity and responsiveness','Understand the neurological underpinning of reactivity','Practice the pause that makes responsiveness possible'],
+       content:[
+        {t:'p',c:'There is a crucial distinction between reacting and responding. A reaction is immediate, reflexive, and driven by the emotional brain — it happens before your reflective capacity has engaged. A response is considered, chosen, and includes some degree of awareness of what is actually happening. Both can happen within seconds of each other, but the difference between them shapes everything about how your relationships unfold.'},
+        {t:'q',c:'Between stimulus and response there is a space. In that space is our power to choose our response.',a:'Viktor Frankl'},
+        {t:'h',c:'What Reactivity Costs You'},
+        {t:'ul',items:['Words said in reactivity that you have to spend days repairing','Escalations that started as minor disagreements','Shutdown or withdrawal that communicates rejection when you just needed space','Accusations that pushed someone away when what you wanted was closeness','Decisions made from the spike of an emotion that you later regretted']},
+        {t:'call',st:'tip',ic:'💜',ttl:'The Physiological Reset',c:'Neuroscientist Lisa Feldman Barrett and others note that it takes approximately 90 seconds for the hormonal wave of a triggered emotional response to begin to metabolize. If you can pause for 90 seconds without feeding the reaction further, the peak begins to pass. This is not about stuffing the feeling — it is about not acting from the peak.'},
+        {t:'hl',c:'Responsiveness is not emotional suppression. It is the discipline of not acting from the loudest moment of a feeling.'}
+       ],
+       refl:['Recall a moment when you reacted rather than responded in a relationship. What was the cost? What would you have wanted to say or do differently?','What is your personal early warning sign that reactivity is building — and what could you do in that moment to create a pause?'],
+       chal:{t:'The 90-Second Rule',d:'This week, in any moment of rising emotional intensity, practice waiting 90 seconds before saying or doing anything. You can feel everything — you just delay the action. Notice what changes after the 90 seconds are up.'},
+       tks:['Reactivity is driven by the emotional brain before the reflective brain has engaged — it is neurological, not a moral failure.','The 90-second physiological window is the space where responding instead of reacting becomes possible.','Responsiveness requires no suppression — only a brief, deliberate pause before action.']
+      }
+    ]},
+    {id:'m5',title:'Self-Sabotage',lessons:[
+      {id:'l5_1',num:'5.1',title:'Recognizing Self-Sabotage',time:'7 min',diff:'Deep',phase:'p2',
+       obj:['Define self-sabotage with precision','Understand why the mind creates self-sabotaging patterns (as protection)','Identify your personal self-sabotaging tendencies'],
+       content:[
+        {t:'p',c:'Self-sabotage is one of the most confusing human behaviors: you want something, and then you systematically do things that prevent you from having it. From the outside, this looks irrational. From the inside, it usually feels like very reasonable responses to circumstances. What makes self-sabotage so difficult to see is that it rarely announces itself — it disguises itself as logic, pragmatism, or self-protection.'},
+        {t:'h',c:'Why the Mind Sabotages'},
+        {t:'p',c:'Self-sabotage is almost always protective in origin. The part of you that creates it is not trying to destroy your chances at happiness — it is trying to keep you safe from something it has learned to fear. That might be rejection, disappointment, vulnerability, the loss of identity that comes with deep connection, or the terrifying hope of something you might not get to keep.'},
+        {t:'call',st:'info',ic:'🔎',ttl:'Common Forms of Self-Sabotage in Relationships',c:'Starting unnecessary arguments as a relationship gets more serious. Suddenly finding flaws in someone who was perfect last week. Going cold when someone gets close. Avoiding commitment through perpetual "almost ready." Testing partners to see if they will leave. Choosing people who are objectively unavailable.'},
+        {t:'hl',c:'The most common self-sabotage is not dramatic or obvious. It is the quiet, habitual choosing of familiar discomfort over unfamiliar possibility.'}
+       ],
+       refl:['Where do you recognize self-sabotage in your relationship history? Be specific about what you did, even if the reasons were not clear at the time.','What was the self-sabotage protecting you from? What were you afraid would happen if you let things go well?'],
+       chal:{t:'The Protection Letter',d:'Write a letter from the part of you that sabotages relationships. Let it speak honestly about what it is afraid of and what it is trying to prevent. This is a powerful exercise — many people discover they have much more compassion for this part of themselves than they expected.'},
+       tks:['Self-sabotage is not irrational — it is protective, attempting to prevent a feared outcome that was once real.','The behaviors that sabotage your relationships often made perfect sense in an earlier context.','Recognizing self-sabotage requires looking at behavior (what you did) alongside the protection (what you were preventing).']
+      },
+      {id:'l5_2',num:'5.2',title:'Fear of Vulnerability and Perfectionism',time:'8 min',diff:'Deep',phase:'p2',
+       obj:['Understand vulnerability as a prerequisite for genuine connection','See perfectionism as a variant of vulnerability avoidance','Build a more functional relationship with imperfection and being seen'],
+       content:[
+        {t:'p',c:'Brené Brown\'s research on vulnerability contains a finding that many people find genuinely surprising: people who experience the deepest connection in relationships are not people who protect themselves from vulnerability — they are people who lean into it. Vulnerability is not the risk factor for connection; it is the mechanism of it.'},
+        {t:'q',c:'Vulnerability is not winning or losing; it\'s having the courage to show up and be seen when we have no control over the outcome.',a:'Brené Brown'},
+        {t:'h',c:'Perfectionism as Armor'},
+        {t:'p',c:'Perfectionism in relationships often masquerades as high standards. What it actually is, at its core, is a strategy for never being fully seen — because if you are never quite finished, never quite ready, never quite good enough to be truly known, you can never be truly rejected. Perfectionism creates an impossible standard and then uses falling short of it as a reason to stay hidden.'},
+        {t:'call',st:'tip',ic:'💜',ttl:'The Small Vulnerability Practice',c:'You do not need to begin with the most frightening revelation you carry. Vulnerability is built in small increments: sharing a preference before being asked, admitting uncertainty, saying "I missed you" when you feel it, acknowledging that something hurt. Each small act of being seen that goes okay teaches your nervous system that being seen is survivable.'},
+        {t:'hl',c:'Being imperfect and being known is not the risk. Being perfect and being lonely is.'}
+       ],
+       refl:['Where do you hold back in relationships — what do you keep behind a wall? What are you afraid would happen if that part of you were seen?','Describe a moment when you allowed yourself to be truly vulnerable with someone and it went well. What did that teach you?'],
+       chal:{t:'One True Thing',d:'This week, tell one person one true thing that you would normally keep private — nothing dramatic, just something real. Observe what happens when you say it and what you notice in the aftermath.'},
+       tks:['Vulnerability is not the risk to connection — it is the mechanism through which real connection happens.','Perfectionism functions as protection from being seen and rejected, but it also guarantees a kind of loneliness.','Vulnerability is built through small acts, not grand reveals — and each one that goes okay updates the nervous system\'s model of what is safe.']
+      },
+      {id:'l5_3',num:'5.3',title:'Rewriting Your Patterns',time:'7 min',diff:'Deep',phase:'p2',
+       obj:['Understand that patterns are neurological habits that can be reprogrammed','Learn the core process for creating new behavioral defaults','Begin applying this process to one identified self-sabotage pattern'],
+       content:[
+        {t:'p',c:'Here is something that neuroscience has confirmed that will matter to you: patterns are not fixed. They are neurological pathways that were built through repetition and can be rebuilt through different repetition. The brain\'s ability to reorganize itself — neuroplasticity — means that the patterns you developed in the past are not the patterns you must carry forever.'},
+        {t:'h',c:'The Rewriting Process'},
+        {t:'ol',items:['Name the pattern precisely (not "I sabotage" but "When a relationship gets serious, I find fault until I create distance")','Identify the trigger (the specific situation that activates the pattern)','Notice the old response before it becomes action','Insert a pause and consciously choose a different response','Repeat the new response in different contexts until it begins to feel natural']},
+        {t:'call',st:'important',ic:'✨',ttl:'Repetition Is the Method',c:'You cannot think your way into a new pattern. You have to do it, repeatedly, in real situations, with imperfection and error, until the new pathway becomes the default. This takes longer than a single insight. But the insight is where it begins.'},
+        {t:'hl',c:'Every time you catch a pattern before it runs to completion, you are literally building a new neural pathway. The catch is the work.'}
+       ],
+       refl:['Take one of the self-sabotage patterns you identified in this module. Walk through the rewriting process: name it, trace its trigger, describe the old response, and draft what the new response could look like.','What would have to be true about you for the new response to feel natural?'],
+       chal:{t:'The Pattern Interrupt',d:'Identify one situation this week where you anticipate your pattern might activate. When it does, instead of the default response, do one small thing differently. It does not have to be perfect. Just different.'},
+       tks:['Neuroplasticity means that patterns built through repetition can be changed through different repetition — the brain is not fixed.','The rewriting process requires a sequence: naming, triggering, noticing, pausing, and choosing differently.','Every caught pattern is a moment of real neurological change — the noticing is not preliminary work, it is the work.']
+      }
+    ]},
+    {id:'m6',title:'Limiting Beliefs',lessons:[
+      {id:'l6_1',num:'6.1',title:'"I\'m Not Enough" and Its Variations',time:'7 min',diff:'Deep',phase:'p2',
+       obj:['Examine the most common limiting belief in relationship contexts','Trace the origin and reinforcement history of "not enough"','Begin the dismantling process with evidence and reframe'],
+       content:[
+        {t:'p',c:'There is probably no more pervasive limiting belief in the territory of love than some version of "I am not enough." Not attractive enough. Not interesting enough. Not stable enough. Not lovable enough once someone really knows me. It appears in almost every person who has struggled with love, and it is almost never examined — it is simply believed, and acted on.'},
+        {t:'h',c:'Where "Not Enough" Comes From'},
+        {t:'p',c:'The "not enough" belief does not arrive fully formed. It is assembled from data — things that happened, things that were said, absences that were interpreted as judgments, moments where love was withdrawn and the self was blamed. The interpretation may have been inaccurate, but it felt like the only explanation at the time. And once the belief was formed, the mind began filtering experience through it: confirming the belief, dismissing evidence to the contrary.'},
+        {t:'call',st:'important',ic:'✨',ttl:'The Confirmation Bias of Limiting Beliefs',c:'Once you believe "I am not enough," your mind unconsciously prioritizes evidence that confirms it and minimizes evidence that contradicts it. Someone\'s distraction becomes proof. A compliment gets dismissed. A relationship ending becomes confirmation. The belief becomes self-sealing unless it is actively questioned.'},
+        {t:'hl',c:'The belief that you are not enough was once someone else\'s story about you. You adopted it. You can also put it down.'}
+       ],
+       refl:['In what specific contexts does the "not enough" belief activate for you? What does it sound like when it speaks?','Where did this belief come from? Can you trace the specific experiences that contributed to it?'],
+       chal:{t:'The Evidence Audit',d:'List five pieces of evidence that the "not enough" belief is accurate. Then list five pieces of evidence that contradict it. Notice how your mind responds differently to each list — which one does it resist, and which does it accept easily?'},
+       tks:['"I am not enough" is a belief, not a fact — and like all beliefs, it was assembled from data that can be reexamined.','Limiting beliefs self-seal through confirmation bias, filtering in evidence that confirms and filtering out evidence that contradicts.','The belief originated in someone else\'s response to you — often in circumstances that said more about them than about your worth.']
+      },
+      {id:'l6_2',num:'6.2',title:'Fear of Abandonment and Fear of Commitment',time:'8 min',diff:'Deep',phase:'p2',
+       obj:['Distinguish fear of abandonment from fear of commitment as core drivers of relationship behavior','See how both often coexist in the same person','Develop practices to work with both fears without being governed by them'],
+       content:[
+        {t:'p',c:'Two fears dominate the emotional landscape of adult romantic relationships: the fear that people will leave, and the fear of what it means to fully commit. They seem like opposites, but they often live in the same person simultaneously — which creates the exhausting, contradictory pattern of wanting closeness while being terrified of it.'},
+        {t:'h',c:'Fear of Abandonment'},
+        {t:'p',c:'People who carry a fear of abandonment are hypersensitive to the early signs that someone might leave. They may interpret normal relationship variation — someone having a hard week, needing space, being temporarily distracted — as meaningful signals of impending departure. The anxiety this creates can drive behaviors (clinginess, anger, testing) that ironically increase the likelihood of the very outcome they fear.'},
+        {t:'h',c:'Fear of Commitment'},
+        {t:'p',c:'The fear of commitment is often less about not wanting the relationship and more about what commitment seems to require: losing the exit, losing the self, being trapped, or being fully responsible for someone else\'s happiness. Sometimes it is a fear of intimacy dressed in the language of independence.'},
+        {t:'call',st:'tip',ic:'💜',ttl:'The Ambivalence Underneath',c:'When both fears are active — wanting closeness but fearing it — the result is ambivalence. You pull people close, then push them away. You want intimacy, but sabotage it when it arrives. Understanding that this ambivalence has roots (in attachment, in early experiences, in previous losses) is the beginning of working with it rather than being trapped by it.'},
+        {t:'hl',c:'The fear of being left and the fear of being trapped are both expressions of the same thing: not yet trusting that love can be both safe and free.'}
+       ],
+       refl:['Which fear is more dominant for you — abandonment or commitment? Or do you recognize both? In what situations does each activate?','What would it mean for love to be both safe and free? What would that look and feel like?'],
+       chal:{t:'The Fear Dialogue',d:'Write a dialogue between the part of you that fears being left and the part that fears being trapped. Let each one speak honestly about what it wants and what it is afraid of. What does each need to feel safer?'},
+       tks:['Fear of abandonment and fear of commitment are not opposites — they often coexist and fuel each other in the same person.','Abandonment fear drives hypersensitivity to early signs of withdrawal; commitment fear drives withdrawal to prevent being trapped.','Both fears have origins that can be understood and practices that can reduce their intensity and influence.']
+      },
+      {id:'l6_3',num:'6.3',title:'Building Healthier Beliefs',time:'6 min',diff:'Moderate',phase:'p2',
+       obj:['Understand how to replace limiting beliefs with functional ones','Learn why affirmations alone rarely work — and what does','Build a personal belief revision practice'],
+       content:[
+        {t:'p',c:'If limiting beliefs were as easy to replace as writing a new one and repeating it, no one would carry them for very long. The reason affirmations often fail is that they are trying to overwrite a belief with words alone, without engaging the emotional or experiential systems where beliefs are actually stored. Real belief change requires something different.'},
+        {t:'h',c:'What Actually Changes Beliefs'},
+        {t:'ul',items:['Repeated experiences that contradict the belief (letting someone see you and being accepted)','Cognitive questioning of the belief\'s evidence base (what actually proves this is true?)','Emotional processing of the original wound that created the belief','Behavioral experiments: acting as if the new belief were true and observing the outcome','Building a new identity narrative that incorporates a different sense of self']},
+        {t:'call',st:'tip',ic:'💜',ttl:'The Bridge Belief',c:'When a new belief feels completely unbelievable — when "I am worthy of love" lands as hollow because it is too far from your current experience — use a bridge belief instead. Something like "I am beginning to see evidence that I am more worthy of love than I have believed." This is credible enough to feel real, and it creates movement.'},
+        {t:'hl',c:'You do not have to believe the new belief fully yet. You only have to be willing to act as though it might be true — and then watch what happens.'}
+       ],
+       refl:['For your most persistent limiting belief, what would the contradicting experience look like? What would need to happen for you to genuinely update it?','What is a bridge belief — a step toward the new belief that actually feels believable to you right now?'],
+       chal:{t:'The Bridge Belief Practice',d:'Write your most limiting relationship belief. Then write the ideal belief you want to replace it with. Then write a bridge belief — something between the two that actually feels credible. Use the bridge belief in your self-talk for the next seven days, particularly when the original belief gets loud.'},
+       tks:['Affirmations fail because they try to change beliefs with words alone, without engaging the emotional and experiential systems where beliefs live.','Beliefs change through a combination of contradicting experiences, cognitive questioning, emotional processing, and behavioral experiments.','Bridge beliefs are more effective than ideal beliefs because they are credible — and credibility is what allows new beliefs to take hold.']
+      }
+    ]}
+  ]},
+  {id:'p3',emoji:'💪',title:'Emotional Strength',color:'var(--phase3)',modules:[
+    {id:'m7',title:'Emotional Regulation',lessons:[
+      {id:'l7_1',num:'7.1',title:'Understanding Your Emotional Landscape',time:'7 min',diff:'Moderate',phase:'p3',
+       obj:['Develop a richer vocabulary for emotional experience','Understand the function of difficult emotions (not just their cost)','Build the foundational skill of emotional labeling'],
+       content:[
+        {t:'p',c:'Most people operate with an extremely limited emotional vocabulary: happy, sad, angry, scared, fine. But human emotional experience is far more nuanced than this, and the inability to name what we are feeling precisely has real consequences. Research by neuroscientist Lisa Feldman Barrett found that people who have more granular emotional awareness — who can distinguish between "frustrated" and "irritated" and "humiliated" — regulate their emotions more effectively and make better decisions.'},
+        {t:'h',c:'The Function of Difficult Emotions'},
+        {t:'p',c:'Every emotion has a function — a reason it exists from an evolutionary standpoint. Anger signals a boundary violation and mobilizes energy to address it. Fear signals potential danger and prepares the body to respond. Shame signals social threat and motivates repair. Grief processes loss. When we simply suppress or avoid difficult emotions, we lose the information they carry and the function they serve.'},
+        {t:'call',st:'info',ic:'🔎',ttl:'Emotional Granularity',c:'Research shows that people who can label their feelings with precision — not just "stressed" but "overwhelmed and resentful because my needs are not being seen" — have significantly better emotional regulation, lower reactivity, and better mental health outcomes. The more precisely you can name what you feel, the better equipped you are to respond to it.'},
+        {t:'hl',c:'The goal is not to feel good. The goal is to feel accurately — and to know what to do with what you feel.'}
+       ],
+       refl:['Choose one difficult emotion you experience regularly in relationships. What does it actually feel like? Where does it live in your body? What specifically triggers it?','What do you think this emotion is trying to tell you or protect you from?'],
+       chal:{t:'The Emotion Journal',d:'For five days, keep a simple emotion log. Three times a day, pause and name what you are feeling with as much precision as possible — not just "stressed" but the most accurate specific word you can find. Notice how your vocabulary expands over the week.'},
+       tks:['Emotional granularity — the ability to label feelings precisely — is directly linked to better emotional regulation and decision-making.','Difficult emotions serve functions: anger signals boundary violations, fear signals threat, shame signals social disruption.','Precision in naming feelings is not a small skill — it is foundational to everything else in emotional regulation.']
+      },
+      {id:'l7_2',num:'7.2',title:'Calming Your Nervous System in Real Time',time:'8 min',diff:'Moderate',phase:'p3',
+       obj:['Learn evidence-based techniques for nervous system regulation','Understand the physiology behind each technique','Build a personal regulation toolkit for high-intensity moments'],
+       content:[
+        {t:'p',c:'When your nervous system is flooded — when the emotional intensity is so high that you cannot think clearly, speak carefully, or make good decisions — the first thing you need is not insight. It is regulation. The body needs to come down from the physiological peak before anything productive can happen. This is not avoiding the feeling; it is creating the conditions in which you can actually work with it.'},
+        {t:'h',c:'Evidence-Based Regulation Techniques'},
+        {t:'ol',items:['Physiological sigh: double inhale through the nose followed by long exhale through the mouth. This is the fastest known way to reduce acute stress via the vagus nerve.','Cold water on the face or wrists: activates the dive reflex, immediately slowing heart rate.','Grounding: name 5 things you can see, 4 you can touch, 3 you can hear. Brings attention back to the present moment.','Slow extended exhale: breathing in for 4 counts, out for 8. The longer exhale activates the parasympathetic system.','Movement: walking, shaking, or vigorous movement helps discharge the physical energy of the stress response.']},
+        {t:'call',st:'tip',ic:'💜',ttl:'Find Your Primary Technique',c:'Not every technique works equally well for every person or every type of activation. The time to discover which technique works for you is not in the middle of an emotional flood — it is now, in a calm moment, through practice. Build the skill before you need it.'},
+        {t:'hl',c:'Regulation is not suppression. It is creating the conditions in which you can choose what comes next.'}
+       ],
+       refl:['When you are flooded emotionally, what do you currently do to calm down? How effective is it?','Which of the techniques above feels most accessible to you? What would it take to practice it before you need it?'],
+       chal:{t:'The Toolkit Test',d:'This week, try at least two of the regulation techniques above in a calm state first. Then use whichever felt most natural the next time you notice your nervous system escalating. Build the habit before the crisis.'},
+       tks:['Regulation precedes reflection — the nervous system needs to come down from a physiological peak before clear thinking and good communication become possible.','The physiological sigh, cold water, grounding, extended exhale, and movement are all evidence-based nervous system interventions.','Regulation skills are built in practice, not discovered in crisis — the time to learn them is now.']
+      },
+      {id:'l7_3',num:'7.3',title:'Building Long-Term Emotional Stability',time:'7 min',diff:'Moderate',phase:'p3',
+       obj:['Understand the foundations of long-term emotional regulation','Distinguish between short-term coping and long-term stability','Create a personal emotional maintenance plan'],
+       content:[
+        {t:'p',c:'Emotional regulation is not only what you do when you are already activated — it is also what you do every day that determines your baseline resilience. Like physical fitness, emotional stability has a maintenance component: the daily practices that keep your window of tolerance wide enough that ordinary stressors do not flood your system.'},
+        {t:'h',c:'The Pillars of Emotional Stability'},
+        {t:'ul',items:['Sleep: emotional regulation is primarily a function of a rested brain. Sleep deprivation dramatically narrows the window of tolerance.','Movement: regular physical activity is one of the most evidence-supported emotional regulators available.','Connection: meaningful relationships and social support reduce the emotional cost of stress.','Solitude and reflection: time to process experience rather than simply accumulate it.','Meaning: having a sense of purpose or direction reduces the emotional weight of ordinary difficulties.','Limits on chronic stressors: relationship conflict, overwork, digital overstimulation — these are all emotional drains.']},
+        {t:'call',st:'important',ic:'✨',ttl:'The Maintenance Analogy',c:'You cannot get fit by exercising once and then expecting the benefits to last. You also cannot build emotional stability through a single breakthrough and expect it to persist without practice. Emotional stability is maintained through daily choices — most of them unglamorous, all of them cumulative.'},
+        {t:'hl',c:'Emotional stability is not a state you arrive at. It is a practice you maintain.'}
+       ],
+       refl:['Which of the stability pillars is most consistently present in your life? Which is most depleted?','What is one concrete daily practice you could commit to for the next 30 days that would most directly support your emotional baseline?'],
+       chal:{t:'The 30-Day Commitment',d:'Choose one emotional maintenance practice — anything from seven hours of sleep to a daily 20-minute walk to a weekly call with a friend. Commit to it for 30 days. At the end, evaluate whether it changed your emotional baseline.'},
+       tks:['Long-term emotional stability is a product of daily maintenance practices, not just crisis management.','Sleep, movement, connection, solitude, meaning, and reduced chronic stressors are the core pillars of emotional baseline health.','Stability is maintained, not achieved — it requires consistent daily investment rather than periodic intervention.']
+      }
+    ]},
+    {id:'m8',title:'Self-Worth',lessons:[
+      {id:'l8_1',num:'8.1',title:'The Difference Between Self-Worth and Self-Esteem',time:'7 min',diff:'Moderate',phase:'p3',
+       obj:['Distinguish self-worth from self-esteem (a critical and often confused distinction)','Understand why conditional self-esteem is unstable','Begin cultivating unconditional self-worth as a foundation'],
+       content:[
+        {t:'p',c:'Self-esteem and self-worth are often used interchangeably, but they are meaningfully different — and the difference matters enormously for your emotional health in relationships. Self-esteem is what you think and feel about yourself based on your performance, achievements, and how others respond to you. It is conditional and fluctuates. Self-worth is your fundamental sense that you have value simply because you exist. It is unconditional, and it is the more stable and important of the two.'},
+        {t:'h',c:'The Problem With Conditional Self-Esteem'},
+        {t:'p',c:'When self-esteem is condition-dependent — when it rises with success and falls with failure, rises when you are loved and falls when you are rejected — you are perpetually at the mercy of circumstances outside your control. Relationship endings become devastating not just because of loss, but because they threaten the entire structure of how you evaluate your worth.'},
+        {t:'call',st:'important',ic:'✨',ttl:'Worth Is Not Earned',c:'Unconditional self-worth is not something you earn through being good enough, accomplished enough, or loved enough. It is the baseline assumption that you have inherent value — the way a healthy parent loves a child not for what they do but for who they are. Building this kind of worth requires challenging the belief that it has to be earned, which for many people is among the most difficult work in this entire course.'},
+        {t:'hl',c:'Self-worth is not what you think of yourself when things are going well. It is what you return to when they are not.'}
+       ],
+       refl:['When is your sense of your own worth most stable? When is it most fragile? What does that tell you about where your worth is currently anchored?','What would it mean practically for your worth to be unconditional — to not fluctuate based on whether someone loves you or leaves you?'],
+       chal:{t:'The Unconditional Worth Statement',d:'Write a paragraph that describes your worth as unconditional — that does not mention any achievement, any relationship, or any quality that could be taken away. Just: who you are, in your most fundamental self. This is harder than it sounds. That difficulty is information.'},
+       tks:['Self-esteem (conditional, performance-based) is inherently unstable; self-worth (unconditional, existence-based) is the more durable foundation.','When self-esteem is the primary source of self-evaluation, relationship endings become threats to identity, not just losses.','Cultivating unconditional self-worth means practicing the belief that your value does not depend on being loved, chosen, or successful.']
+      },
+      {id:'l8_2',num:'8.2',title:'Self-Compassion as the Foundation',time:'8 min',diff:'Moderate',phase:'p3',
+       obj:['Understand what self-compassion actually is (and is not)','See the research supporting self-compassion as a predictor of mental health','Practice the three components of self-compassion in a relationship context'],
+       content:[
+        {t:'p',c:'Self-compassion is not self-pity. It is not lowering your standards, making excuses, or being soft on yourself. It is treating yourself with the same basic care you would extend to a close friend who was struggling — recognizing that suffering and imperfection are part of the shared human experience, and meeting your own pain with warmth rather than criticism.'},
+        {t:'q',c:'You can\'t hate yourself into a version of yourself you love.',a:'Lori Deschene'},
+        {t:'h',c:'Kristin Neff\'s Three Components'},
+        {t:'ol',items:['Self-kindness: meeting your pain, failure, and imperfection with warmth rather than harsh judgment.','Common humanity: recognizing that what you are experiencing is part of the shared human condition, not a sign of your unique inadequacy.','Mindfulness: holding your difficult experience in awareness without dramatizing it or suppressing it — seeing it clearly.']},
+        {t:'call',st:'info',ic:'🔬',ttl:'What the Research Shows',c:'Decades of research by Kristin Neff and others shows that self-compassion is a stronger predictor of mental health, resilience, and relationship quality than self-esteem. People with higher self-compassion recover faster from relationship breakdowns, report more authentic self-expression in relationships, and are less likely to engage in comparative self-evaluation.'},
+        {t:'hl',c:'The way you speak to yourself when you fail or fall short sets the floor of how you will feel in every relationship you enter.'}
+       ],
+       refl:['How do you typically speak to yourself when you make a mistake in a relationship context? Write down the actual inner voice — what does it say?','Now write what you would say to a close friend in the exact same situation. Notice the gap between the two.'],
+       chal:{t:'The Self-Compassion Letter',d:'Write a letter to yourself about your most tender point of struggle — the thing you are hardest on yourself about. Write it from the perspective of a wise, compassionate older version of you who has moved through this and understands. Read it aloud to yourself.'},
+       tks:['Self-compassion is not self-indulgence — it is the practice of treating yourself with the same basic care you would offer a struggling friend.','The three components (self-kindness, common humanity, mindfulness) create a complete framework for meeting your own pain.','Research consistently shows self-compassion outperforms self-esteem as a predictor of mental health and relational wellbeing.']
+      },
+      {id:'l8_3',num:'8.3',title:'Confidence That Comes From Within',time:'7 min',diff:'Moderate',phase:'p3',
+       obj:['Distinguish externally-sourced confidence from internally-sourced confidence','Understand the behavioral loop through which confidence is built','Create a personal confidence-building action plan'],
+       content:[
+        {t:'p',c:'There is a widespread misconception about confidence: that it is something you feel before you act. In reality, confidence is almost always the result of action — specifically, of doing things that are slightly difficult, surviving them, and updating your internal estimate of your own capability. "Feel the fear and do it anyway" is not just a motivational slogan; it describes the actual mechanism through which confidence is built.'},
+        {t:'h',c:'External vs. Internal Confidence'},
+        {t:'p',c:'External confidence depends on validation: compliments, success, approval, being chosen. It can feel wonderful — and it is genuinely depleting when it is withdrawn. Internal confidence is built through your relationship with your own actions and judgments. It asks: "Did I show up in a way I respect?" rather than "Did they like me?"'},
+        {t:'call',st:'tip',ic:'💜',ttl:'The Daily Evidence Practice',c:'Each day, before bed, write down one thing you did that required some degree of courage, persistence, or honesty — however small. Over time, this creates a body of evidence about who you are and what you are capable of. When self-doubt rises, you have something concrete to point to.'},
+        {t:'hl',c:'You do not need to feel confident to act with integrity. Act first. The feeling is a result, not a prerequisite.'}
+       ],
+       refl:['What is the difference between how you feel when someone compliments you and how you feel when you do something you are genuinely proud of? Which one lasts longer?','What is one area of your life where you have been waiting for confidence before acting? What would happen if you acted first?'],
+       chal:{t:'The Confidence Log',d:'For the next two weeks, write one "evidence entry" each evening: something you did that day that required showing up, even when it was hard. Be specific and small — it does not have to be dramatic. At the end of two weeks, read the whole list.'},
+       tks:['Confidence is the product of action, not the prerequisite — it is built through doing difficult things and surviving them.','External confidence (validation-based) is inherently unstable; internal confidence (integrity-based) is self-replenishing.','The daily evidence practice creates a concrete, sustainable source of internal confidence that does not depend on others\' responses.']
+      }
+    ]},
+    {id:'m9',title:'Trust',lessons:[
+      {id:'l9_1',num:'9.1',title:'Trusting Yourself Again',time:'7 min',diff:'Deep',phase:'p3',
+       obj:['Understand how relationship experiences erode self-trust','Rebuild the foundation of trust in your own perceptions and judgment','Learn to distinguish self-doubt from genuine discernment'],
+       content:[
+        {t:'p',c:'One of the subtler casualties of difficult relationship experiences — especially those involving betrayal, manipulation, or dismissal of your feelings — is trust in your own perceptions. When you were repeatedly told that what you saw was not real, that what you felt was an overreaction, or when your judgment led you to someone who hurt you, the result can be a deep uncertainty about whether you can trust what you see and feel.'},
+        {t:'h',c:'Rebuilding Self-Trust'},
+        {t:'p',c:'Self-trust begins with small things. Notice what you feel before the feeling is explained away. Make small decisions from your gut and observe the outcomes. Practice saying "I don\'t know yet" instead of defaulting to someone else\'s reading of a situation. Begin treating your perceptions as valid data worth examining, rather than errors to be corrected.'},
+        {t:'call',st:'important',ic:'✨',ttl:'Self-Trust vs. Certainty',c:'Rebuilding self-trust does not mean becoming certain about everything. It means trusting that your perceptions are worth taking seriously — as a starting point, not a final verdict. You can investigate your intuition rather than dismissing it or blindly following it. That investigative stance is healthy self-trust in action.'},
+        {t:'hl',c:'Self-trust is not arrogance. It is the willingness to treat your own experience as real and worth understanding.'}
+       ],
+       refl:['In what areas of your relationship life do you most distrust your own judgment or perceptions? Where do you most often defer to someone else\'s reading of a situation?','What is one situation from your past where you ignored what you sensed and later wished you had listened? What was the cost of not trusting yourself?'],
+       chal:{t:'The Intuition Log',d:'For one week, keep a log of your gut reactions to situations and people. Write them down before you analyze or explain them. At the end of the week, review: how often were your initial perceptions accurate? What do you notice?'},
+       tks:['Difficult relationships — especially those involving dismissal of feelings or manipulation — can erode trust in your own perceptions.','Rebuilding self-trust starts with small acts: noticing feelings before explaining them away, making minor gut-based decisions.','Self-trust is the willingness to treat your experience as valid data, not the claim that your perceptions are infallible.']
+      },
+      {id:'l9_2',num:'9.2',title:'Healthy Trust in Others',time:'6 min',diff:'Moderate',phase:'p3',
+       obj:['Distinguish healthy trust from blind trust or chronic distrust','Learn the behaviors that build trust over time','Understand trust as dynamic and action-based, not binary'],
+       content:[
+        {t:'p',c:'Trust is not a light switch — it is not simply present or absent. Healthy trust is calibrated: built incrementally through observation of consistent behavior, offered in proportion to the evidence available, and updated as new information arrives. The alternative extremes — trusting everyone immediately and completely, or trusting no one until proven otherwise — are both problems, though they look very different.'},
+        {t:'h',c:'What Trust Is Built On'},
+        {t:'ul',items:['Consistency between words and actions over time','Following through on small commitments, not just large ones','Honesty about small things (the big honesty is built from small honesty)','How they handle disagreement — do they respect your perspective or dismiss it?','How they respond when they get something wrong — accountability or defense?','How you feel in their presence — do you feel seen, or managed?']},
+        {t:'call',st:'tip',ic:'💜',ttl:'Trust Is Revealed in the Small Things',c:'The character of a person — and the trustworthiness of a relationship — is most accurately read in the ordinary moments: how they treat people who cannot do anything for them, whether they apologize, whether they show up when it is inconvenient. These small data points are more predictive than the big gestures.'},
+        {t:'hl',c:'Trust is not demanded. It is grown, carefully, through the accumulation of ordinary kept promises.'}
+       ],
+       refl:['Looking at past relationships, what were the early signs that someone was or was not trustworthy? How quickly did you notice them? Did you act on them?','What does "appropriate trust" look like to you — offering trust in proportion to what has been established, while remaining open to updating?'],
+       chal:{t:'The Trust Criteria',d:'Write a list of the specific behaviors that would need to be consistent before you would trust a new partner with something important. Be concrete — not "they should be honest" but "they follow through on what they say they will do, even when it is inconvenient." This is your trust map.'},
+       tks:['Healthy trust is calibrated and incremental, built through behavioral consistency over time — not granted wholesale or withheld permanently.','Character and trustworthiness are most clearly seen in ordinary small behaviors, not in grand gestures.','Having a concrete understanding of what you observe for trust helps protect against both naïveté and excessive defensiveness.']
+      },
+      {id:'l9_3',num:'9.3',title:'Practicing Healthy Vulnerability',time:'7 min',diff:'Deep',phase:'p3',
+       obj:['Define healthy vulnerability (distinguished from oversharing or chronic withholding)','Learn the graduated vulnerability model for new relationships','Build the capacity for authentic self-expression that deepens connection'],
+       content:[
+        {t:'p',c:'Healthy vulnerability is not the same as telling everyone everything immediately. It is the graduated, contextually appropriate sharing of yourself — offering more as trust is established, and holding some things until the relationship has demonstrated it is safe enough to hold them. Oversharing (revealing everything too soon) and undersharing (revealing almost nothing) are both responses to the same fear: they just protect against it differently.'},
+        {t:'h',c:'The Graduated Model'},
+        {t:'p',c:'Think of vulnerability as having layers. The outer layers — preferences, opinions, interests, humor — are shareable early and freely. The middle layers — values, life history, fears, struggles — are offered as connection deepens. The inner layers — the most tender wounds, the deepest fears, the things you have rarely spoken aloud — are offered when the relationship has established a real track record of being safe.'},
+        {t:'call',st:'info',ic:'🔎',ttl:'The Reciprocity Signal',c:'Healthy vulnerability is generally reciprocal. When you share something real and the other person responds by sharing something real in return — rather than just listening, advising, or deflecting — that is a signal that a genuine connection is building. Reciprocity is the indicator that trust is mutual rather than one-sided.'},
+        {t:'hl',c:'Real connection requires that you be known. You cannot be known if you never let yourself be seen.'}
+       ],
+       refl:['Where do you currently sit on the vulnerability spectrum — do you overshare, undershare, or is it contextual? What drives whichever pattern you notice?','What is something in the middle layer of vulnerability that you rarely share but that is important to who you are? What would it take to share it with the right person?'],
+       chal:{t:'One Layer Deeper',d:'In one relationship this week — a friendship, a romantic connection, or a family relationship — share something from one layer deeper than you normally would. Observe what happens. Did the relationship deepen? Did the other person reciprocate? What do you notice?'},
+       tks:['Healthy vulnerability is graduated — matched to the level of established trust — not either wholesale disclosure or permanent withholding.','Oversharing and undersharing are both fear responses to the risk of being seen and judged.','Reciprocity in vulnerability is a reliable signal of genuine mutual connection rather than one-sided emotional investment.']
+      }
+    ]}
+  ]},
+  {id:'p4',emoji:'🤝',title:'Healthy Relationships',color:'var(--phase4)',modules:[
+    {id:'m10',title:'Communication',lessons:[
+      {id:'l10_1',num:'10.1',title:'Active Listening and Being Truly Heard',time:'7 min',diff:'Moderate',phase:'p4',
+       obj:['Distinguish active listening from passive listening or response preparation','Practice the techniques of genuinely hearing another person','Understand why feeling heard is foundational to relationship health'],
+       content:[
+        {t:'p',c:'Most people listen to respond, not to understand. While someone is speaking, they are simultaneously formulating their counter-argument, planning what they will say next, or waiting for the part where they can relate to something. This is not listening — it is auditing. And the person speaking almost always knows the difference.'},
+        {t:'h',c:'What Active Listening Actually Involves'},
+        {t:'ul',items:['Giving your full attention — not split with a phone, a task, or your own next thought','Listening to understand, not to agree or disagree','Noticing the emotion underneath the words, not just the content','Reflecting back what you heard before responding — "What I am hearing is..."','Asking clarifying questions rather than drawing conclusions','Tolerating silence rather than rushing to fill it']},
+        {t:'call',st:'tip',ic:'💜',ttl:'The Simple Reflection',c:'Before responding, try saying: "Let me make sure I understand — what I\'m hearing you say is [X]. Is that right?" This single practice prevents the majority of communication breakdowns, because most conflicts are not about the actual issue — they are about each person feeling that the other person has not truly understood them.'},
+        {t:'hl',c:'Feeling heard is not a luxury in relationships. It is the experience that makes people feel safe enough to be honest.'}
+       ],
+       refl:['Think of someone in your life who makes you feel genuinely heard. What do they do specifically? What is different about being with them?','Where in your relationships do you notice yourself listening to respond rather than to understand? What drives that?'],
+       chal:{t:'The Full-Presence Conversation',d:'Have one conversation this week in which you do nothing but listen — no phone, no formulating responses, no advice unless asked. Just understand. Afterward, write about what you noticed.'},
+       tks:['Listening to respond (common) is fundamentally different from listening to understand (rare and deeply connecting).','The reflection practice — "What I\'m hearing is..." — prevents the majority of communication breakdowns by ensuring both people feel understood.','Feeling heard is a prerequisite for honesty, vulnerability, and genuine intimacy — not a nice-to-have.']
+      },
+      {id:'l10_2',num:'10.2',title:'Expressing Needs Without Demands',time:'7 min',diff:'Moderate',phase:'p4',
+       obj:['Understand the difference between needs and demands','Learn to express needs directly and without manipulation','Build the practice of communicating vulnerability rather than strategy'],
+       content:[
+        {t:'p',c:'Most people do not express their needs directly. They hint at them, test for them, become angry when they are not met without being stated, or deny having needs at all. Direct expression of needs feels risky — what if the answer is no? — but indirect expression almost always creates more conflict than it avoids, and it denies your partner the basic information they would need to actually meet the need.'},
+        {t:'h',c:'Needs vs. Demands'},
+        {t:'p',c:'A need is information about what you require to feel safe, loved, or functional. A demand is a need delivered with a threat (implied or explicit) attached: "You should know what I need" or "If you loved me, you would just do this." The difference is not in the content — it is in the delivery. Direct needs are invitations. Demands are ultimatums. Invitations tend to be accepted; ultimatums tend to create resentment.'},
+        {t:'call',st:'info',ic:'🔎',ttl:'The Nonviolent Communication Framework',c:'Developed by Marshall Rosenberg, NVC suggests this structure: Observation (what is happening, without judgment) + Feeling (how you feel about it) + Need (what you need) + Request (what you are asking for). Example: "When I haven\'t heard from you by evening (observation), I feel anxious and disconnected (feeling) because I need to know we\'re okay (need). Would you be willing to send me a brief message when you\'re going to be late? (request)"'},
+        {t:'hl',c:'Expressing a need is not weakness. It is the clearest possible invitation to connection.'}
+       ],
+       refl:['What needs do you typically find most difficult to express directly? What do you do instead?','Practice writing one unmet need using the NVC structure: Observation + Feeling + Need + Request.'],
+       chal:{t:'The Direct Need',d:'Identify one need that you have been expressing indirectly (through hints, tests, silence, or irritability). This week, express it directly and simply to the person involved. Observe the outcome.'},
+       tks:['Most people express needs indirectly because direct expression feels risky — but indirect expression almost always produces more conflict, not less.','Needs are invitations; demands are ultimatums — the same content delivered differently produces completely different relational outcomes.','The NVC framework (Observation + Feeling + Need + Request) is a practical structure for needs that can be learned and practiced.']
+      },
+      {id:'l10_3',num:'10.3',title:'Assertiveness and Healthy Conflict',time:'8 min',diff:'Moderate',phase:'p4',
+       obj:['Understand the spectrum from passivity to aggression and where assertiveness lives','Develop the core skills of assertive communication','Reframe conflict as a healthy and necessary component of close relationships'],
+       content:[
+        {t:'p',c:'Assertiveness sits precisely between passivity (giving up your needs for the sake of peace) and aggression (demanding your needs at the expense of the other person). It is the practice of speaking your truth, expressing your needs, and standing your ground — while maintaining respect for the other person and their reality. It sounds simple. In practice, for people who grew up in environments where either avoiding conflict or dominating it were the models, it requires real development.'},
+        {t:'h',c:'Conflict Is Healthy'},
+        {t:'p',c:'The research on lasting relationships consistently finds something counterintuitive: the goal is not to have no conflict. It is to handle conflict well. Couples who never disagree tend to have significant unexpressed resentment, distance, and diminished honesty. Conflict, when handled with mutual respect and genuine effort to understand, is one of the primary ways relationships deepen and trust is built.'},
+        {t:'call',st:'tip',ic:'💜',ttl:'The Attack/Assertion Distinction',c:'Assertive communication focuses on your experience: "I felt dismissed when that happened." Aggressive communication attacks the other person\'s character: "You are always dismissive — you never listen." The difference is not in the feeling being expressed — it is in whether you are describing your experience or making a judgment about theirs. The first opens conversation; the second closes it.'},
+        {t:'hl',c:'The measure of a relationship is not how little you fight. It is whether, when you fight, both people emerge feeling heard.'}
+       ],
+       refl:['Where on the spectrum from passivity to aggression do you typically land when conflict arises? What is driving that pattern?','Think of a conflict you handled badly. What would assertive communication have looked like in that moment?'],
+       chal:{t:'The Assertive Statement',d:'Write three scenarios from your relationships where you typically go passive or aggressive. For each, write what assertive communication would look like — using "I" statements, specific observations, and no character attacks. Practice saying them aloud.'},
+       tks:['Assertiveness is the middle path between passivity (your needs surrendered) and aggression (their dignity surrendered).','Conflict is a healthy component of close relationships when it is handled with mutual respect and genuine understanding.','The distinction between expressing your experience and attacking their character is the difference between conflicts that deepen connection and conflicts that damage it.']
+      }
+    ]},
+    {id:'m11',title:'Boundaries',lessons:[
+      {id:'l11_1',num:'11.1',title:'What Healthy Boundaries Actually Are',time:'7 min',diff:'Moderate',phase:'p4',
+       obj:['Correct common misconceptions about what boundaries are','Distinguish boundaries from walls, rules, or punishments','Understand where boundaries come from and why they matter for relationship health'],
+       content:[
+        {t:'p',c:'There is a great deal of confusion about what boundaries actually are. Boundaries are not rules you impose on other people ("You are not allowed to talk to your ex"). They are not walls that shut people out. They are not ultimatums designed to control. They are definitions of what you will and will not do — what you are available for and what you are not — expressed from a place of self-knowledge rather than fear.'},
+        {t:'h',c:'Boundaries Come From Values'},
+        {t:'p',c:'Healthy boundaries emerge from your values — from a clear sense of what matters to you, how you deserve to be treated, and what you are and are not willing to participate in. They are not reactive (set in anger or fear) but considered. They are not about controlling the other person\'s behavior but about defining your own response: "If X happens, I will do Y."'},
+        {t:'call',st:'important',ic:'✨',ttl:'The Boundary vs. Wall Distinction',c:'A wall keeps everyone out — it protects by eliminating closeness. A boundary is a door with a lock: it can be opened to people who demonstrate they can be trusted with access to you. Walls often develop as adaptations to past hurt. Boundaries develop from self-knowledge and intentional relationship design. Both can look like "not letting people in" — but the experience of them is completely different.'},
+        {t:'hl',c:'A boundary is not about keeping love out. It is about making sure love — when it enters — finds a self still intact.'}
+       ],
+       refl:['Where in your relationships have you operated with walls instead of boundaries? What were you protecting yourself from?','What are three values that would be the foundation of healthy limits in your relationships?'],
+       chal:{t:'The Values Audit',d:'List your five most important values in relationships (e.g., honesty, respect, reciprocity, space, humor). For each one, write: "A relationship that honors this value looks like..." This becomes the foundation of your limits.'},
+       tks:['Limits are not rules, walls, or punishments — they are definitions of what you will and will not do, rooted in self-knowledge.','Healthy limits emerge from values, not from fear or reactivity.','The boundary-wall distinction: walls eliminate closeness; limits define the terms on which closeness is welcome.']
+      },
+      {id:'l11_2',num:'11.2',title:'Setting and Holding Limits',time:'7 min',diff:'Moderate',phase:'p4',
+       obj:['Learn the practical mechanics of stating a limit','Understand why limits are uncomfortable to hold (and how to hold them anyway)','Develop the internal resources needed to follow through'],
+       content:[
+        {t:'p',c:'Setting a limit is one thing. Holding it is another. The most common pattern is to state a limit — "I need you to stop speaking to me that way" — and then back down when the other person pushes back, becomes upset, or ignores it. The limit becomes meaningless, and often the behavior it was addressing escalates, because the implicit signal sent is that your limits are negotiable with enough pressure.'},
+        {t:'h',c:'Why Limits Are Hard to Hold'},
+        {t:'ul',items:['Fear of the other person\'s anger or disappointment','Not wanting to seem difficult or high-maintenance','Guilt — especially if you have been taught that your needs are secondary','Uncertainty about whether your limit is "fair"','Fear of being alone if you hold the limit and the person leaves']},
+        {t:'call',st:'tip',ic:'💜',ttl:'The Broken Record',c:'When you state a limit and someone pushes back, you do not need to justify, explain, debate, or convince. You can simply restate it: "I understand you see it differently. My position is the same." Repeating your limit calmly, without escalation and without capitulation, is one of the most effective and respectful ways to hold it.'},
+        {t:'hl',c:'A limit you cannot hold is not a limit — it is a suggestion. And suggestions invite negotiation.'}
+       ],
+       refl:['Where do you most often back down from your limits? What fear is driving that?','What would it cost you (internally) to hold a limit that disappointed someone you care about? Is that cost worth the alternative?'],
+       chal:{t:'The Limit Test',d:'Identify one limit in a current relationship that you have stated but not consistently held. This week, hold it once — calmly, without justification, without negotiation. Notice how it feels to follow through. That feeling (discomfort, then steadiness) is what holding limits feels like until it becomes natural.'},
+       tks:['Stating a limit and holding it are two different skills — both are necessary.','Limits back down under pressure become invitations for behavior to escalate.','The broken record technique — calm restatement without justification or escalation — is among the most effective ways to hold a limit with dignity.']
+      },
+      {id:'l11_3',num:'11.3',title:'Limits in Different Relationships',time:'6 min',diff:'Moderate',phase:'p4',
+       obj:['Understand how limits appropriately vary across relationship types','Apply limit-setting to friendships, family, and professional relationships','Recognize when limits need to be renegotiated as relationships evolve'],
+       content:[
+        {t:'p',c:'The limits you maintain are not one-size-fits-all. What is appropriate in a romantic partnership is different from what is appropriate in a family relationship, a close friendship, or a professional context. This is not inconsistency — it is calibration. The core values behind your limits remain stable; what changes is how those values are expressed and what you need to protect in each specific context.'},
+        {t:'h',c:'Limits With Family'},
+        {t:'p',c:'Family limits are often among the hardest to establish and maintain because of the weight of history, loyalty, and guilt. Key areas where limits frequently need attention in family contexts include: how often and when you are available, what topics you will and will not discuss, what behaviors you will not be present for, and what level of intrusion into your life and choices you accept.'},
+        {t:'h',c:'Limits With Friends'},
+        {t:'p',c:'Friendship limits protect the friendship itself — they prevent the resentment that builds when one person consistently gives more than they have, when dynamics become unbalanced, or when the friendship has stopped being reciprocal. Stating a limit with a friend is an act of commitment to the friendship, not a rejection.'},
+        {t:'hl',c:'The clearer your limits across all relationships, the more genuine your presence in each of them becomes.'}
+       ],
+       refl:['Where do you find it hardest to maintain limits — with family, in romantic relationships, or with friends? What makes that particular context most difficult?','Identify one relationship where you have been overextending without a clear limit. What limit would make that relationship healthier for both of you?'],
+       chal:{t:'The Relationship Audit',d:'List your three most significant current relationships. For each, identify one area where your limits are unclear, inconsistent, or absent. Write what a clear limit would look like in each. You do not have to act on all of them this week — just naming them is the work.'},
+       tks:['Limits appropriately vary across relationship types while the core values remain stable — this is calibration, not inconsistency.','Family limits are often the most challenging because of history, loyalty, and guilt — but they are also among the most important.','Stating a limit within a friendship or family relationship is generally an act of commitment to the relationship, not a rejection of it.']
+      }
+    ]},
+    {id:'m12',title:'Choosing Better Relationships',lessons:[
+      {id:'l12_1',num:'12.1',title:'Compatibility vs. Chemistry',time:'7 min',diff:'Moderate',phase:'p4',
+       obj:['Distinguish chemistry from compatibility','Understand why chemistry alone is an unreliable selection criterion','Learn what compatibility actually looks like and why it matters more over time'],
+       content:[
+        {t:'p',c:'Chemistry is the feeling. Compatibility is the substance. Chemistry — that feeling of intensity, excitement, and electric connection — is real, and it is wonderful. But it is also one of the least reliable predictors of whether a relationship will be genuinely good for you. Chemistry is generated by novelty, familiarity with certain emotional dynamics, and neurochemical responses — and some of the most painful relationship patterns feel like intense chemistry.'},
+        {t:'h',c:'What Compatibility Actually Involves'},
+        {t:'ul',items:['Shared or complementary core values (how you think about honesty, loyalty, growth, family, finances)','Compatible life directions and practical priorities','Emotional availability — both people able to show up emotionally, consistently','Mutual respect — for each other\'s time, needs, boundaries, and personhood','How you handle conflict — not whether you disagree but whether disagreements are survivable','Whether you feel more yourself or less yourself in their presence']},
+        {t:'call',st:'warn',ic:'⚠️',ttl:'Anxiety Is Not Chemistry',c:'One of the most important distinctions to make: the anxiety of not knowing where you stand with someone — the uncertainty, the hot-and-cold, the constant wondering — can feel like chemistry because it produces the same neurochemical intensity. It is not chemistry. It is anxious attachment being activated. The difference matters because it determines what you choose.'},
+        {t:'hl',c:'The relationship that feels most exciting at the start is often not the relationship that feels most nourishing when the newness wears off.'}
+       ],
+       refl:['Think of a relationship that had intense chemistry but proved incompatible. In retrospect, what were the early signs of incompatibility that you minimized or ignored?','What does compatibility — as opposed to excitement — feel like for you? Have you ever experienced it? What was it like?'],
+       chal:{t:'The Compatibility Checklist',d:'Write your top ten compatibility criteria — not physical attraction, not chemistry, but values and practical factors that determine whether a relationship is genuinely good for your life. This is the list you use when the excitement of early dating makes it hard to evaluate clearly.'},
+       tks:['Chemistry is a feeling; compatibility is a structure — one fades, the other sustains.','Anxiety (not knowing where you stand, being activated by hot-and-cold dynamics) can feel identical to chemistry — and is much more destructive.','Compatibility is best evaluated not in the initial rush but at three to six months, when the neurochemistry of early attraction begins to settle.']
+      },
+      {id:'l12_2',num:'12.2',title:'Green Flags and Red Flags',time:'7 min',diff:'Gentle',phase:'p4',
+       obj:['Develop a concrete, personalized list of green and red flags','Understand why red flags are minimized (and how to stop doing it)','Build the habit of early, accurate evaluation'],
+       content:[
+        {t:'p',c:'Red flags are rarely invisible. The painful truth is that most people who end up in harmful relationships saw the flags early — and minimized, explained, or ignored them. The minimization is not stupidity; it is a very human and understandable response to wanting the relationship to work, to believing people can change, to the intensity of early chemistry overriding rational evaluation.'},
+        {t:'h',c:'Common Early Red Flags'},
+        {t:'ul',items:['Inconsistency between words and actions — says one thing, does another','Disrespect for your time, your feelings, or your other relationships','Moving very fast — intensity that pushes for commitment before trust is established','Dismissiveness or contempt toward others (staff, exes, family members)','Difficulty taking any responsibility when things go wrong','Your needs or feelings being regularly minimized, explained away, or turned into your problem']},
+        {t:'h',c:'Common Early Green Flags'},
+        {t:'ul',items:['Follows through on small commitments before big ones','Can acknowledge being wrong without extended defensiveness','Curious about your inner world — genuinely wants to know you','Treats people who cannot do anything for them with warmth','Has other meaningful relationships — not isolated or dependent on you for all needs','You feel more yourself, not less yourself, in their presence']},
+        {t:'hl',c:'The beginning of a relationship is a performance review. People show you who they are. Your job is to watch.'}
+       ],
+       refl:['What red flags have you minimized in past relationships? What told you they were there — and what made you explain them away?','Add three to five personal green and red flags to the lists above, based on your specific history and values.'],
+       chal:{t:'The Honest Review',d:'Think of someone you are currently close to or interested in. Using the green and red flag frameworks, write an honest assessment. Do not try to make the evidence fit what you want to be true. Just observe and record what is actually there.'},
+       tks:['Red flags are rarely invisible — they are minimized, and understanding the mechanics of minimization is what allows you to stop.','Early behavior is the most accurate predictor of sustained behavior — the beginning of a relationship is a preview, not a performance.','Developing a personal, concrete green/red flag list turns "something felt off" into specific, actionable awareness.']
+      },
+      {id:'l12_3',num:'12.3',title:'Choosing From Wholeness, Not Need',time:'8 min',diff:'Moderate',phase:'p4',
+       obj:['Understand the difference between choosing a relationship from wholeness vs. need','See how operating from need distorts relationship selection','Build the internal fullness that makes better choices possible'],
+       content:[
+        {t:'p',c:'There is a profound difference between entering a relationship because someone adds to an already meaningful life and entering one because the emptiness is unbearable. Both feel like love. Both involve real feelings. But the quality of the relationship they tend to produce is very different.'},
+        {t:'q',c:'Until you make the unconscious conscious, it will direct your life and you will call it fate.',a:'Carl Jung'},
+        {t:'h',c:'How Need Distorts Selection'},
+        {t:'p',c:'When loneliness, insecurity, or the need for validation is the primary driver of romantic choices, it significantly narrows the field of what feels like an option. You accept less because you feel you deserve less. You overlook incompatibility because the presence of attention and warmth feels so important. You mistake relief from loneliness for genuine compatibility, and a relationship that soothes a wound for one that genuinely fits your life.'},
+        {t:'call',st:'tip',ic:'💜',ttl:'Fullness Is Not Indifference',c:'Choosing from wholeness does not mean you do not want connection or that you are indifferent to whether someone chooses you. It means that your capacity for happiness is not held hostage by whether someone chooses you. You want the relationship — you do not need it to survive. That distinction changes everything about how you evaluate, communicate, and navigate.'},
+        {t:'hl',c:'The most attractive thing you can bring to a relationship is a full life that does not require a relationship to become full.'}
+       ],
+       refl:['In your most significant relationships, how much of the decision to be in them was driven by genuine compatibility vs. a need to fill something that felt empty?','What would it look like to arrive at a future relationship from a place of fullness rather than need? What would need to be true in your life for that to be the case?'],
+       chal:{t:'The Life Audit',d:'List everything in your life right now that generates meaning, connection, purpose, and enjoyment — outside of any romantic relationship. Then list what is missing. The gaps in that list are the areas your next relationship is most likely to be asked to fill. Work on filling those gaps yourself first.'},
+       tks:['Choosing from need (loneliness, insecurity, validation) narrows selection and leads to accepting less than you deserve because any attention feels like a lot.','Wholeness does not mean indifference to connection — it means your baseline happiness is not contingent on being chosen.','The gaps in your life outside of romance are the areas most likely to distort your relationship choices — filling them deliberately changes what you choose.']
+      }
+    ]}
+  ]},
+  {id:'p5',emoji:'🌟',title:'Moving Beyond Recovery',color:'var(--phase5)',modules:[
+    {id:'m13',title:'Living a Full Life',lessons:[
+      {id:'l13_1',num:'13.1',title:'Finding Purpose Beyond Romance',time:'7 min',diff:'Moderate',phase:'p5',
+       obj:['Challenge the cultural narrative that romantic love is the primary source of meaning','Identify multiple sources of purpose in your own life','Build a life rich enough to sustain you with or without a relationship'],
+       content:[
+        {t:'p',c:'One of the most quietly damaging ideas in our culture is the narrative that romantic partnership is the primary site of fulfillment, meaning, and happiness — that a life without it is incomplete. This narrative is so embedded in the culture that most people do not notice it as a narrative at all. They simply feel its absence as inadequacy.'},
+        {t:'h',c:'Multiple Sources of Meaning'},
+        {t:'p',c:'Psychologist Martin Seligman\'s research on wellbeing identifies multiple channels through which humans derive flourishing: positive emotions, engagement, relationships (not just romantic ones), meaning, and accomplishment. People with full lives draw from all of these channels. People who have collapsed meaning into romance are left vulnerable whenever that single source is unavailable.'},
+        {t:'call',st:'important',ic:'✨',ttl:'The Relationship Does Not Complete You',c:'A romantic relationship, when it is good, adds to a life. It does not complete it. The completion is your work — your purpose, your people, your pursuits, your inner life. A relationship built on two people with lives is very different from a relationship built on two people looking to each other to provide the life.'},
+        {t:'hl',c:'The goal is not to need a relationship less. The goal is to have so much that love, when it comes, enhances rather than rescues.'}
+       ],
+       refl:['Outside of romantic relationships, what are the three most consistent sources of meaning and purpose in your life?','What would your life look like if you invested as much intentionality in your non-romantic sources of meaning as you have invested in finding and keeping relationships?'],
+       chal:{t:'The Meaning Map',d:'Draw or write a map of everything that gives your life meaning — people, work, creative pursuits, service, learning, places, experiences. Then ask: if there were no romantic relationship in my life for the next two years, could I be genuinely well? If not — what needs to grow?'},
+       tks:['The cultural narrative that romantic love is the primary source of meaning is deeply embedded — and significantly distorts how people prioritize their lives.','Multiple channels of meaning (purpose, engagement, non-romantic relationships, accomplishment) create resilience that a single source cannot.','A relationship that adds to a full life is fundamentally different from a relationship that is expected to create it.']
+      },
+      {id:'l13_2',num:'13.2',title:'Building Community and Belonging',time:'6 min',diff:'Moderate',phase:'p5',
+       obj:['Understand the documented importance of community and social connection for wellbeing','Identify your current community landscape','Take concrete steps to build or deepen belonging'],
+       content:[
+        {t:'p',c:'There is a loneliness epidemic in the modern world. Despite unprecedented digital connectivity, rates of loneliness and social isolation have been rising for decades. Harvard research from an 80-year longitudinal study on happiness — the longest such study ever conducted — found that the single most reliable predictor of wellbeing, health, and longevity was not wealth, status, or genetic luck. It was the quality of close relationships.'},
+        {t:'h',c:'Community Is Not Just Friendship'},
+        {t:'p',c:'Community is the experience of belonging to something larger than yourself — a group, a place, a cause, a shared practice. It provides both practical and psychological resources: people to call in a crisis, a sense of mattering, the experience of being known over time. It is built slowly, through repeated contact, shared experience, and gradually increasing depth.'},
+        {t:'call',st:'tip',ic:'💜',ttl:'The Proximity Principle',c:'Research by social psychologist Robert Zajonc found that simply being in close proximity to people over time generates familiarity, and familiarity generates liking and connection. You do not need to engineer deep friendships — you need to show up consistently in the same spaces. Community is built through the accumulation of ordinary presence.'},
+        {t:'hl',c:'You do not have to find your people. You have to build the conditions in which people become yours — and that requires showing up, repeatedly, for ordinary things.'}
+       ],
+       refl:['Who are the three to five people you can call when things are genuinely hard? If that list feels short, what is preventing you from expanding it?','What communities or groups have you always wanted to be part of but have not yet joined? What has stopped you?'],
+       chal:{t:'The Community Investment',d:'Identify one community, group, class, or recurring gathering you could join or re-engage with. Commit to attending consistently for six weeks before evaluating whether it is the right community. The first few weeks rarely feel like belonging — belonging takes time.'},
+       tks:['Quality of close relationships is the most reliable predictor of long-term wellbeing across all demographic groups — not wealth, status, or health.','Community is built through repeated ordinary presence, not through finding the perfect group or engineering deep friendship.','Showing up consistently over time — the proximity principle — is the mechanism through which acquaintances become community.']
+      },
+      {id:'l13_3',num:'13.3',title:'Creating Balance and Enjoying Solitude',time:'6 min',diff:'Gentle',phase:'p5',
+       obj:['Understand the relationship between solitude and self-knowledge','Distinguish solitude from loneliness','Develop a healthy relationship with being alone'],
+       content:[
+        {t:'p',c:'There is a crucial difference between being alone and being lonely. Loneliness is the experience of aching for connection that is not there — it is a social pain signal. Solitude is the intentional, chosen experience of being with yourself — and it is one of the most valuable and underrated sources of self-knowledge available. People who have a productive relationship with solitude know themselves in ways that people who constantly surround themselves with others do not.'},
+        {t:'h',c:'What Solitude Offers'},
+        {t:'ul',items:['Access to your own thoughts, preferences, and desires without the influence of others','The opportunity to process experience rather than simply accumulate it','Rest from social performance — being nobody and nothing for a while','Creative and intellectual space that crowds often close off','A relationship with yourself that does not require someone else to be present']},
+        {t:'call',st:'tip',ic:'💜',ttl:'Relearning to Enjoy Your Own Company',c:'If being alone reliably feels terrible, that is worth examining rather than simply avoiding. The inability to enjoy solitude often signals that the relationship you have with yourself is uncomfortable — and that discomfort will follow you into every relationship, because you cannot escape yourself. Learning to be genuinely well in your own company is one of the most important relationship skills you can develop.'},
+        {t:'hl',c:'You will spend more time with yourself than with any other person in your entire life. That relationship deserves investment.'}
+       ],
+       refl:['How comfortable are you with solitude? What happens inside you when you are truly alone, without a phone or screen to fill the space?','What practices, when done alone, genuinely nourish you — not distract you, but actually restore or expand you?'],
+       chal:{t:'The Intentional Hour',d:'Schedule one hour this week of intentional solitude. No phone, no screens, no tasks. You can walk, sit, write, draw, or simply be. Notice what arises — what your mind does, what you feel, what you want. This hour is practice.'},
+       tks:['Solitude (chosen, intentional) is fundamentally different from loneliness (unwanted absence of connection) — and is a productive source of self-knowledge.','The ability to be well in your own company reduces the need for relationships to fill emptiness — and changes what you bring to them.','A rich inner life is not a substitute for relationships — it is what makes you genuinely interesting and fully present in them.']
+      }
+    ]},
+    {id:'m14',title:'Preparing for the Future',lessons:[
+      {id:'l14_1',num:'14.1',title:'Dating With Intention and Confidence',time:'7 min',diff:'Moderate',phase:'p5',
+       obj:['Approach future dating from the new foundation you have built','Develop a clear personal framework for intentional dating','Navigate early dating with awareness and self-respect'],
+       content:[
+        {t:'p',c:'Intentional dating is not about following rules or strategies. It is about arriving at dating as the person you have been building: someone with self-knowledge, with a clearer sense of what you need, with better tools for recognizing compatibility and red flags, and with a foundation solid enough that your choices come from preference rather than desperation.'},
+        {t:'h',c:'The New Dating Framework'},
+        {t:'ul',items:['You are evaluating as much as being evaluated — dating is a two-way assessment','Your worth is not determined by whether someone wants to see you again','Red and green flags are information, not inconveniences — you can look at them honestly now','Pace matters — you can choose how quickly to let someone in','Compatibility criteria matter more than immediate chemistry','You can enjoy someone without needing them to become your future']},
+        {t:'call',st:'important',ic:'✨',ttl:'The Energy of Confidence',c:'Confidence in dating does not look like performance or pretense. It looks like ease — the ease of someone who knows their own value, who enjoys connection without requiring it to be validated by the other person\'s response. That ease is genuinely attractive, and it is something you have now earned through the work of this course.'},
+        {t:'hl',c:'You are not auditioning. You are getting to know someone. That is a very different energy to bring.'}
+       ],
+       refl:['How has your approach to dating changed as a result of the work you\'ve done in this course? What would be different in practice?','What is the one thing you most want to remember from this course when you are in the middle of early dating excitement?'],
+       chal:{t:'The Dating Intentions Statement',d:'Write a brief, personal statement about how you intend to approach your next relationship — what you are looking for, what you will not compromise on, how you will pace things, and what you have learned. Keep it somewhere accessible. Read it when the excitement of early attraction makes clear thinking hard.'},
+       tks:['Intentional dating means arriving as someone with self-knowledge, clear criteria, and choices rooted in preference rather than need.','Confidence in dating looks like ease and clarity about your own value, not performance or strategy.','Having a written intentions statement creates an anchor for the moments when emotional intensity threatens to override your judgment.']
+      },
+      {id:'l14_2',num:'14.2',title:'Maintaining Your Identity in Partnership',time:'7 min',diff:'Moderate',phase:'p5',
+       obj:['Understand the risk of losing yourself in relationship','Learn the practices that keep your individual identity intact within a partnership','See independence and intimacy as complementary, not competing'],
+       content:[
+        {t:'p',c:'One of the quieter risks in an intimate relationship is losing yourself to it — gradually merging your preferences, your social life, your interests, and eventually your identity into the relationship until the individual you were at the beginning is no longer clearly visible. This can happen subtly, through hundreds of small accommodations that each seem reasonable, until one day you look up and notice you do not quite recognize yourself.'},
+        {t:'h',c:'Interdependence, Not Enmeshment'},
+        {t:'p',c:'Healthy partnership is not two people becoming one — it is two distinct people choosing to build a life together while remaining themselves. Interdependence (mutual reliance and care between two separate, whole people) is very different from enmeshment (where the individuals have become so intertwined that neither can function fully without the other). The former produces relationships that are both intimate and freeing. The latter produces relationships that are both intense and depleting.'},
+        {t:'call',st:'tip',ic:'💜',ttl:'The Non-Negotiables',c:'Identify the three to five elements of your life that are non-negotiable for your sense of self — things that, if you gave them up for a relationship, would leave you feeling like less of yourself. These might be creative practices, friendships, alone time, professional ambitions, physical activities. Knowing them explicitly makes it much easier to protect them.'},
+        {t:'hl',c:'The most loving thing you can bring to a relationship is a complete, distinctive self. The relationship can only flourish if two such selves are present.'}
+       ],
+       refl:['In past relationships, in what ways did you lose yourself? What did you give up, minimize, or compromise that you later regretted?','What are your non-negotiables — the three to five things that, if absent from your life, would leave you feeling diminished?'],
+       chal:{t:'The Identity Anchor',d:'Create a brief "identity document" — a list of five things that are core to who you are, five things that make your life feel like yours, and three lines about the kind of partner you want to be while remaining fully yourself. Keep it. It is a compass.'},
+       tks:['Losing yourself in a relationship happens gradually, through small accommodations — which is why conscious, proactive identity maintenance is necessary.','Interdependence (two whole people choosing each other) is different from enmeshment (two people who have merged) — the first produces vitality, the second produces depletion.','Knowing your non-negotiables before you are in the relationship is what makes them possible to protect during it.']
+      },
+      {id:'l14_3',num:'14.3',title:'Staying Emotionally Healthy in Partnership',time:'7 min',diff:'Moderate',phase:'p5',
+       obj:['Learn the ongoing practices that maintain emotional health within a relationship','Understand that growth does not stop when love arrives','Create a personal emotional health maintenance plan for future partnerships'],
+       content:[
+        {t:'p',c:'The work of this course does not end when a relationship begins. In many ways, a relationship is where the real practice starts — because all the patterns, beliefs, attachment tendencies, and communication challenges you have been examining here become most activated in the context of genuine intimacy. The tools you have built are not preparation for relationship; they are the tools you use within it.'},
+        {t:'h',c:'The Ongoing Practices'},
+        {t:'ul',items:['Regular emotional check-ins — with yourself and with your partner','Noticing when your attachment system is activated and pausing before acting from it','Maintaining the individual practices (movement, solitude, community, purpose) that sustain your baseline','Addressing small resentments before they accumulate — the practice of "turning toward"','Seeking professional support when you notice familiar patterns reasserting themselves','Celebrating growth and continuing to invest in your own development alongside the relationship']},
+        {t:'call',st:'important',ic:'✨',ttl:'Relationships Are Not the Destination',c:'A relationship is a context for growth, not a destination that ends the growth. The people who have the most fulfilling long-term relationships are those who continue to develop as individuals within them — who bring new learning, new perspective, and evolving self-knowledge to the partnership rather than arriving at "relationship" and stopping.'},
+        {t:'hl',c:'The most generous thing you can do for a future relationship is to never stop becoming.'}
+       ],
+       refl:['What are the three practices from this course that you most want to maintain once you are in a relationship?','What is your biggest risk — the pattern most likely to reassert itself under the stress of real intimacy — and what will you do when you notice it?'],
+       chal:{t:'The Maintenance Plan',d:'Write a one-page personal maintenance plan: the daily and weekly practices you commit to maintaining regardless of your relationship status, the warning signs you will watch for that signal you are falling back into old patterns, and the resources you will reach for (therapy, trusted friends, this course) when you need support.'},
+       tks:['Emotional health practices do not pause when a relationship begins — they become the tools you use within it, where the real activation happens.','Relationships are a context for growth, not a destination — people who continue developing as individuals have more fulfilling long-term partnerships.','Having a written maintenance plan — including warning signs and resources — is the most practical thing you can do to protect the future relationship from old patterns.']
+      }
+    ]},
+    {id:'m15',title:'Your Personal Philosophy',lessons:[
+      {id:'l15_1',num:'15.1',title:'Your Core Values and Relationship Standards',time:'8 min',diff:'Deep',phase:'p5',
+       obj:['Articulate your core values with precision and confidence','Translate values into concrete relationship standards','Understand standards as protections, not demands'],
+       content:[
+        {t:'p',c:'Values are not what you say you believe. They are what you demonstrate through your choices when the choices are hard. By the end of this course, you have done enough self-examination to have a clearer picture of what you actually value — not what you think you should value — and what minimum standards a relationship needs to meet to be genuinely good for your life.'},
+        {t:'h',c:'Values vs. Preferences'},
+        {t:'p',c:'It is useful to distinguish values (the deep things that define how you want to live and be treated) from preferences (things you would like but can happily flex on). You might prefer someone tall and funny — these are preferences. You need someone honest and emotionally available — these are values. Standards built on values protect you. Standards built on preferences narrow your pool unnecessarily.'},
+        {t:'call',st:'tip',ic:'💜',ttl:'Standards Are Self-Respect in Action',c:'Having clear standards is not arrogance or being "too much." It is the practical expression of self-worth. When you know what you need in a relationship and hold that clearly, you make decisions from self-knowledge rather than from hope that someone will eventually become what you need them to be.'},
+        {t:'hl',c:'Your standards are not a list of demands. They are a description of what love needs to look like to be real for you.'}
+       ],
+       refl:['List your five most important values — not the words you think sound right, but the things that, when violated, make you feel genuinely diminished or disrespected.','Translate each value into a concrete relationship standard: what does a relationship that honors this value actually look like day-to-day?'],
+       chal:{t:'The Values Document',d:'Write a single page: your five core values, your five non-negotiable relationship standards, and three things you are willing to flex on. This is your compass. Keep it where you can read it when a new connection feels exciting and you need to be honest with yourself.'},
+       tks:['Values are demonstrated through behavior under pressure, not declared in calm moments — this course has given you evidence of your real values.','The values-preferences distinction protects you from unnecessarily narrow standards and from accepting genuinely incompatible relationships out of hope.','Clear standards are the practical expression of self-worth — they protect you from the slow erosion of choosing people who cannot actually meet your real needs.']
+      },
+      {id:'l15_2',num:'15.2',title:'Your Emotional Commitments',time:'7 min',diff:'Deep',phase:'p5',
+       obj:['Articulate the emotional commitments you are making to yourself going forward','Understand commitments as ongoing practices, not one-time resolutions','Build accountability structures for your growth'],
+       content:[
+        {t:'p',c:'A commitment is different from a resolution. A resolution is a statement of intent. A commitment is a promise backed by specific behaviors, accountability structures, and a willingness to return to it after failing, rather than abandoning it when it becomes difficult. Most people know what they want to be different. Fewer create the conditions that actually make it different.'},
+        {t:'h',c:'The Five Areas of Emotional Commitment'},
+        {t:'ol',items:['Self-awareness: committing to the practice of noticing your patterns, triggers, and responses before they run to completion.','Self-compassion: committing to treating yourself as well as you would treat a struggling friend.','Honesty: committing to expressing what is true for you — in relationships, with yourself, and in your choices.','Growth: committing to continuing the work of understanding yourself, rather than treating this course as a completed event.','Standards: committing to the value of holding your limits, even when it is uncomfortable, even when you fear the response.']},
+        {t:'call',st:'important',ic:'✨',ttl:'Accountability',c:'Commitments are best kept with accountability — not through shame, but through having named them somewhere and to someone. Consider sharing your commitments with a trusted person, a therapist, or even a journal you return to regularly. The act of returning to your commitments after you have fallen short of them is not failure. It is the practice.'},
+        {t:'hl',c:'Your commitments are not what you promise when you feel strong. They are what you return to when you forget.'}
+       ],
+       refl:['Which of the five commitment areas feels most important for you to develop right now? Which feels most natural?','What accountability structure could you create to support your commitments — not as pressure, but as genuine support?'],
+       chal:{t:'The Commitment Statement',d:'Write five specific, first-person commitment statements — one for each area. Not "I will try to..." but "I commit to..." Name one concrete behavior that demonstrates each commitment. Share at least one of them with someone you trust.'},
+       tks:['Commitments require behavioral specificity and accountability structures — good intentions alone rarely sustain change.','The practice of returning to your commitments after you have failed them is not failure — it is the central act of the commitment.','Self-awareness, self-compassion, honesty, growth, and holding standards are the five foundational emotional commitments of this course.']
+      },
+      {id:'l15_3',num:'15.3',title:'Final Reflection and Graduation',time:'10 min',diff:'Gentle',phase:'p5',
+       obj:['Integrate everything learned across all five phases','Celebrate the genuine achievement of completing this course','Step into the future with a clear personal philosophy'],
+       content:[
+        {t:'p',c:'You have arrived at the end — not of growth, which never ends, but of this particular guided journey. What you have done here is not small. You have examined patterns that most people carry their entire lives without questioning. You have looked honestly at the ways fear, history, and old beliefs have shaped your relationships. And you have built something new: understanding, tools, and a clearer sense of yourself than you had when you began.'},
+        {t:'q',c:'And the day came when the risk to remain tight in a bud was more painful than the risk it took to blossom.',a:'Anaïs Nin'},
+        {t:'h',c:'What You Carry Forward'},
+        {t:'ul',items:['A working understanding of your attachment style and how it shapes your relationships','Concrete tools for emotional regulation in high-intensity moments','A clear picture of your patterns, your triggers, and your defaults — and the practices that interrupt them','A more compassionate and honest relationship with yourself','Clear values and standards for what love needs to look like to be genuinely good for your life','The understanding that growth is not a destination but an ongoing practice you have chosen']},
+        {t:'p',c:'What you do not carry forward is the old story that your patterns are your fate, that you are defined by what hurt you, or that you are somehow disqualified from the kind of love you actually want. That story was never true. You have spent this entire course replacing it with something more accurate.'},
+        {t:'call',st:'tip',ic:'🌿',ttl:'What Comes Next',c:'Growth work is never truly finished. Consider therapy if there are specific areas that feel beyond the scope of self-study. Return to modules that feel most relevant as your life changes. Be patient with yourself when old patterns resurface — they will, and their reappearance is not failure. It is the invitation to practice what you have learned.'},
+        {t:'hl',c:'You did not come this far to stop here. The person who completes Moving On 102 is exactly the person ready for what comes next.'}
+       ],
+       refl:['Read the letter you wrote to yourself in Lesson 1.3. Who were you when you wrote it? Who are you now?','What is the single most important thing you have learned about yourself in this course? What will you do differently because of it?'],
+       chal:{t:'The Philosophy Statement',d:'Write one paragraph that captures your personal philosophy for love, relationships, and your emotional life going forward — in your own voice, from everything you have learned. This is your graduation statement. It belongs entirely to you.'},
+       tks:['You have done the inner work that most people carry their entire lives without examining — that is genuinely significant.','The patterns, beliefs, and habits that shaped your past relationships are now visible — and visible patterns can be consciously changed.','Growth is not a course you complete. It is a practice you choose, again and again, with increasing skill and self-compassion.']
+      }
+    ]}
+  ]}
+]};
+
+// ═══════════════════════════════════════════════
+// COOKIE / GATE SYSTEM
+// ═══════════════════════════════════════════════
+const GATE = {
+  COOKIE_NAME: 'lane_mo101_complete',
+
+  isUnlocked() {
+    const v = `; ${document.cookie}`;
+    const p = v.split(`; ${this.COOKIE_NAME}=`);
+    return p.length === 2;
+  },
+
+  setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = `${name}=${value};expires=${d.toUTCString()};path=/;SameSite=Strict`;
+  }
+};
+
+// ═══════════════════════════════════════════════
+// STORAGE
+// ═══════════════════════════════════════════════
+const Store = {
+  k(key){return `mo102_${key}`},
+  get(key,def=null){try{const v=localStorage.getItem(this.k(key));return v!==null?JSON.parse(v):def}catch{return def}},
+  set(key,val){try{localStorage.setItem(this.k(key),JSON.stringify(val))}catch{console.warn('Storage full')}},
+  completed(){return this.get('completed',{})},
+  markDone(id){const c=this.completed();c[id]=Date.now();this.set('completed',c)},
+  isDone(id){return !!this.completed()[id]},
+  reflection(lessonId,qi){return this.get(`refl_${lessonId}_${qi}`,'')},
+  saveRefl(lessonId,qi,text){this.set(`refl_${lessonId}_${qi}`,text)},
+  journal(lessonId){return this.get(`jnl_${lessonId}`,{text:'',ts:null})},
+  saveJournal(lessonId,text){this.set(`jnl_${lessonId}`,{text,ts:Date.now()})},
+  note(){return this.get('global_note','')},
+  saveNote(text){this.set('global_note',text)},
+  bookmarks(){return this.get('bookmarks',[])},
+  toggleBookmark(id){const b=this.bookmarks();const i=b.indexOf(id);if(i>=0)b.splice(i,1);else b.push(id);this.set('bookmarks',b);return b.includes(id)},
+  isBookmarked(id){return this.bookmarks().includes(id)},
+  challenges(){return this.get('challenges',{})},
+  toggleChallenge(id){const c=this.challenges();c[id]=!c[id];this.set('challenges',c);return c[id]},
+  isChallenged(id){return !!this.challenges()[id]},
+  moods(){return this.get('moods',[])},
+  logMood(emoji,label){
+    const m=this.moods();const today=new Date().toDateString();
+    const filtered=m.filter(x=>x.date!==today);
+    filtered.push({emoji,label,date:today,ts:Date.now()});
+    this.set('moods',filtered.slice(-30));
+  },
+  todayMood(){const today=new Date().toDateString();return this.moods().find(x=>x.date===today)||null;},
+  lastLesson(){return this.get('lastLesson',null)},
+  setLastLesson(id){this.set('lastLesson',id)},
+  theme(){return this.get('theme','light')},
+  setTheme(t){this.set('theme',t)},
+  learnerName(){return this.get('learnerName','')},
+  setLearnerName(n){this.set('learnerName',n)},
+};
+
+// ═══════════════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════════════
+function getAllLessons(){
+  const ls=[];
+  COURSE.phases.forEach(p=>p.modules.forEach(m=>m.lessons.forEach(l=>ls.push(l))));
+  return ls;
+}
+function getLessonById(id){return getAllLessons().find(l=>l.id===id)}
+function getAdjacentLessons(id){
+  const all=getAllLessons();const i=all.findIndex(l=>l.id===id);
+  return{prev:i>0?all[i-1]:null,next:i<all.length-1?all[i+1]:null};
+}
+function getPhaseForLesson(l){return COURSE.phases.find(p=>p.modules.some(m=>m.lessons.some(x=>x.id===l.id)))}
+function getModuleForLesson(l){
+  for(const p of COURSE.phases)for(const m of p.modules)if(m.lessons.some(x=>x.id===l.id))return m;
+}
+function isLessonUnlocked(id){
+  const all=getAllLessons();const i=all.findIndex(l=>l.id===id);
+  if(i<=0)return true;return Store.isDone(all[i-1].id);
+}
+function completionStats(){
+  const all=getAllLessons();const done=all.filter(l=>Store.isDone(l.id)).length;
+  const journals=all.filter(l=>Store.journal(l.id).text).length;
+  const challenges=all.filter(l=>Store.isChallenged(l.id)).length;
+  const bookmarks=Store.bookmarks().length;
+  return{total:all.length,done,journals,challenges,bookmarks,pct:Math.round(done/all.length*100)};
+}
+function fmtDate(ts){if(!ts)return'';const d=new Date(ts);return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}
+
+function renderContent(blocks){
+  return(blocks||[]).map(b=>{
+    if(b.t==='p')return`<p class="lc-p">${b.c}</p>`;
+    if(b.t==='h')return`<h2 class="lc-h">${b.c}</h2>`;
+    if(b.t==='q')return`<div class="lc-q"><div class="lc-q-text">${b.c}</div>${b.a?`<div class="lc-q-auth">— ${b.a}</div>`:''}</div>`;
+    if(b.t==='call')return`<div class="lc-call ${b.st||'tip'}"><span class="call-icon">${b.ic||'💡'}</span><div class="call-body"><div class="call-ttl">${b.ttl||''}</div><div class="call-txt">${b.c}</div></div></div>`;
+    if(b.t==='ul')return`<ul class="lc-ul">${(b.items||[]).map(i=>`<li>${i}</li>`).join('')}</ul>`;
+    if(b.t==='ol')return`<ol class="lc-ol">${(b.items||[]).map(i=>`<li>${i}</li>`).join('')}</ol>`;
+    if(b.t==='hl')return`<div class="lc-hl">${b.c}</div>`;
+    if(b.t==='div')return`<hr class="lc-div">`;
+    return'';
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════
+// CERTIFICATE GENERATOR
+// ═══════════════════════════════════════════════
+const Cert = {
+  generate(name) {
+    const canvas = document.getElementById('certCanvas');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
+
+    // Background gradient
+    const bg = ctx.createLinearGradient(0, 0, W, H);
+    bg.addColorStop(0, '#1A0F2E');
+    bg.addColorStop(0.5, '#0F1A2E');
+    bg.addColorStop(1, '#0F2218');
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, W, H);
+
+    // Outer border
+    ctx.strokeStyle = '#9B78D4';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(24, 24, W - 48, H - 48);
+
+    // Inner border
+    ctx.strokeStyle = 'rgba(155,120,212,0.35)';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(36, 36, W - 72, H - 72);
+
+    // Corner ornaments
+    const corners = [[48,48],[W-48,48],[48,H-48],[W-48,H-48]];
+    corners.forEach(([cx,cy]) => {
+      ctx.beginPath();
+      ctx.arc(cx, cy, 6, 0, Math.PI*2);
+      ctx.fillStyle = '#9B78D4';
+      ctx.fill();
+    });
+
+    // Top decorative line pattern
+    for (let i = 0; i < 3; i++) {
+      ctx.beginPath();
+      ctx.moveTo(60, 80 + i*3);
+      ctx.lineTo(W-60, 80 + i*3);
+      ctx.strokeStyle = `rgba(155,120,212,${0.6 - i*0.15})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    // Bottom decorative lines
+    for (let i = 0; i < 3; i++) {
+      ctx.beginPath();
+      ctx.moveTo(60, H - 80 - i*3);
+      ctx.lineTo(W-60, H - 80 - i*3);
+      ctx.strokeStyle = `rgba(155,120,212,${0.6 - i*0.15})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    // Subtle radial glow center
+    const glow = ctx.createRadialGradient(W/2, H/2, 0, W/2, H/2, 280);
+    glow.addColorStop(0, 'rgba(155,120,212,0.08)');
+    glow.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, 0, W, H);
+
+    // "LANE ACADEMY" header
+    ctx.fillStyle = 'rgba(155,120,212,0.9)';
+    ctx.font = '600 13px Inter, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.letterSpacing = '0.15em';
+    ctx.fillText('LANE ACADEMY', W/2, 112);
+
+    // Decorative dots beside header
+    ctx.fillStyle = 'rgba(155,120,212,0.6)';
+    ctx.beginPath(); ctx.arc(W/2 - 100, 108, 2.5, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(W/2 + 100, 108, 2.5, 0, Math.PI*2); ctx.fill();
+
+    // "Certificate of Completion"
+    ctx.fillStyle = '#EDE9FA';
+    ctx.font = '300 36px Georgia, serif';
+    ctx.letterSpacing = '0';
+    ctx.fillText('Certificate of Completion', W/2, 165);
+
+    // Thin rule
+    const rule = ctx.createLinearGradient(200, 190, W-200, 190);
+    rule.addColorStop(0, 'rgba(155,120,212,0)');
+    rule.addColorStop(0.5, 'rgba(155,120,212,0.8)');
+    rule.addColorStop(1, 'rgba(155,120,212,0)');
+    ctx.strokeStyle = rule;
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(200, 190); ctx.lineTo(W-200, 190); ctx.stroke();
+
+    // "This certifies that"
+    ctx.fillStyle = 'rgba(155,120,212,0.7)';
+    ctx.font = 'italic 15px Georgia, serif';
+    ctx.fillText('This certifies that', W/2, 228);
+
+    // Name
+    const displayName = name || 'A Dedicated Learner';
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '300 52px Georgia, serif';
+    ctx.fillText(displayName, W/2, 298);
+
+    // Name underline
+    const nameWidth = ctx.measureText(displayName).width;
+    const nlx = W/2 - nameWidth/2;
+    const nrx = W/2 + nameWidth/2;
+    ctx.strokeStyle = 'rgba(155,120,212,0.5)';
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(nlx, 310); ctx.lineTo(nrx, 310); ctx.stroke();
+
+    // "has successfully completed"
+    ctx.fillStyle = 'rgba(237,233,250,0.7)';
+    ctx.font = 'italic 15px Georgia, serif';
+    ctx.fillText('has successfully completed', W/2, 345);
+
+    // Course name box
+    const cboxY = 360, cboxH = 52;
+    const cboxX = W/2 - 260;
+    const cboxGrad = ctx.createLinearGradient(cboxX, cboxY, cboxX+520, cboxY+cboxH);
+    cboxGrad.addColorStop(0, 'rgba(155,120,212,0.08)');
+    cboxGrad.addColorStop(0.5, 'rgba(155,120,212,0.18)');
+    cboxGrad.addColorStop(1, 'rgba(155,120,212,0.08)');
+    ctx.fillStyle = cboxGrad;
+    ctx.beginPath();
+    ctx.roundRect(cboxX, cboxY, 520, cboxH, 8);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(155,120,212,0.4)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    ctx.fillStyle = '#9B78D4';
+    ctx.font = '400 26px Georgia, serif';
+    ctx.fillText('Moving On 102', W/2, cboxY + 22);
+    ctx.fillStyle = 'rgba(155,120,212,0.8)';
+    ctx.font = '400 13px Inter, sans-serif';
+    ctx.fillText('Breaking Patterns & Building Emotional Strength', W/2, cboxY + 41);
+
+    // Stats row
+    const s = completionStats();
+    const stats = [
+      { label: 'LESSONS', value: s.total },
+      { label: 'PHASES', value: 5 },
+      { label: 'REFLECTIONS', value: s.journals },
+      { label: 'CHALLENGES', value: s.challenges }
+    ];
+    const statY = 450, statW = 110, statGap = 130;
+    const statStartX = W/2 - (stats.length-1)*statGap/2;
+    stats.forEach((st, i) => {
+      const sx = statStartX + i * statGap;
+      // Pill bg
+      ctx.fillStyle = 'rgba(155,120,212,0.12)';
+      ctx.beginPath();
+      ctx.roundRect(sx - statW/2, statY - 26, statW, 48, 24);
+      ctx.fill();
+      // Value
+      ctx.fillStyle = '#9B78D4';
+      ctx.font = '300 22px Georgia, serif';
+      ctx.fillText(st.value, sx, statY);
+      // Label
+      ctx.fillStyle = 'rgba(155,120,212,0.65)';
+      ctx.font = '600 9px Inter, sans-serif';
+      ctx.fillText(st.label, sx, statY + 14);
+    });
+
+    // Date
+    const dateStr = new Date().toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'});
+    ctx.fillStyle = 'rgba(155,120,212,0.65)';
+    ctx.font = '400 12px Inter, sans-serif';
+    ctx.fillText(`Completed ${dateStr}`, W/2, 524);
+
+    // Bottom rule
+    const rule2 = ctx.createLinearGradient(200, 542, W-200, 542);
+    rule2.addColorStop(0, 'rgba(155,120,212,0)');
+    rule2.addColorStop(0.5, 'rgba(155,120,212,0.6)');
+    rule2.addColorStop(1, 'rgba(155,120,212,0)');
+    ctx.strokeStyle = rule2;
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(200, 542); ctx.lineTo(W-200, 542); ctx.stroke();
+
+    // Signature area
+    ctx.fillStyle = 'rgba(155,120,212,0.5)';
+    ctx.font = 'italic 13px Georgia, serif';
+    ctx.fillText('Lane Academy · Intentional learning for real life', W/2, 572);
+
+    // Seal emoji area - circular ornament
+    ctx.fillStyle = 'rgba(155,120,212,0.15)';
+    ctx.beginPath(); ctx.arc(W/2, 600, 18, 0, Math.PI*2); ctx.fill();
+    ctx.strokeStyle = 'rgba(155,120,212,0.5)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    ctx.font = '20px serif';
+    ctx.fillStyle = '#fff';
+    ctx.fillText('🌿', W/2, 608);
+  }
+};
+
+// ═══════════════════════════════════════════════
+// APP
+// ═══════════════════════════════════════════════
+const app = {
+  currentLesson: null,
+  panelOpen: false,
+  activeTab: 'nt',
+  reflTimers: {},
+  journalTimer: null,
+
+  init() {
+    // GATE CHECK
+    if (!GATE.isUnlocked()) {
+      document.getElementById('gateScreen').style.display = 'flex';
+      return;
+    }
+    this.launch();
+  },
+
+  launch() {
+    document.getElementById('gateScreen').style.display = 'none';
+    const t = Store.theme();
+    document.documentElement.setAttribute('data-theme', t);
+    document.getElementById('themeBtn').textContent = t === 'dark' ? '☀️' : '🌙';
+    if (Store.get('sbClosed', false) && window.innerWidth > 1024) {
+      document.body.classList.add('sb-closed');
+    }
+    this.renderSidebar();
+    this.goHome();
+  },
+
+  // ── NAVIGATION ──────────────────────────────
+  goHome() {
+    document.getElementById('homeView').classList.add('act');
+    document.getElementById('lessonView').classList.remove('act');
+    document.getElementById('compView').classList.remove('act');
+    document.getElementById('sbHomeBtn').classList.add('act');
+    document.querySelectorAll('.ll.cur').forEach(el => el.classList.remove('cur'));
+    this.currentLesson = null;
+    this.renderHome();
+    this.updateProgress();
+    window.scrollTo(0, 0);
+    if (window.innerWidth <= 1024) this.closeSidebar();
+  },
+
+  goLesson(id) {
+    const lesson = getLessonById(id);
+    if (!lesson) return;
+    if (!isLessonUnlocked(id)) {
+      this.toast('🔒 Complete the previous lesson first.');
+      return;
+    }
+    this.currentLesson = id;
+    Store.setLastLesson(id);
+    document.getElementById('homeView').classList.remove('act');
+    document.getElementById('lessonView').classList.add('act');
+    document.getElementById('compView').classList.remove('act');
+    document.getElementById('sbHomeBtn').classList.remove('act');
+    this.renderLesson(lesson);
+    this.updateProgress();
+    this.updateSidebarHighlight(id);
+    window.scrollTo(0, 0);
+    if (window.innerWidth <= 1024) this.closeSidebar();
+  },
+
+  prevLesson() {
+    if (!this.currentLesson) return;
+    const { prev } = getAdjacentLessons(this.currentLesson);
+    if (prev) this.goLesson(prev.id);
+  },
+
+  nextLesson() {
+    if (!this.currentLesson) return;
+    const { next } = getAdjacentLessons(this.currentLesson);
+    if (next) this.goLesson(next.id);
+    else this.showCompletion();
+  },
+
+  showCompletion() {
+    document.getElementById('homeView').classList.remove('act');
+    document.getElementById('lessonView').classList.remove('act');
+    document.getElementById('compView').classList.add('act');
+    const s = completionStats();
+    document.getElementById('compStats').innerHTML = `
+      <div class="cs"><div class="cs-v">${s.done}</div><div class="cs-l">Lessons Complete</div></div>
+      <div class="cs"><div class="cs-v">${s.journals}</div><div class="cs-l">Journal Entries</div></div>
+      <div class="cs"><div class="cs-v">${s.challenges}</div><div class="cs-l">Challenges Done</div></div>
+    `;
+    // Save completion cookie
+    GATE.setCookie('lane_mo102_complete', '1', 365);
+    window.scrollTo(0, 0);
+  },
+
+  resumeLesson() {
+    const id = Store.lastLesson();
+    if (id) this.goLesson(id);
+  },
+
+  // ── SIDEBAR ──────────────────────────────────
+  renderSidebar() {
+    const tree = document.getElementById('sbTree');
+    tree.innerHTML = COURSE.phases.map(phase => `
+      <div class="phase-lbl">
+        <span class="phase-dot" style="background:${phase.color}"></span>
+        ${phase.emoji} ${phase.title}
+      </div>
+      ${phase.modules.map(mod => {
+        const allDone = mod.lessons.every(l => Store.isDone(l.id));
+        return `<div class="mod-group">
+          <button class="mod-hd${allDone ? ' done' : ''}" onclick="app.toggleMod(this)">
+            <span>${mod.title}</span>
+            <span class="mod-chev">›</span>
+          </button>
+          <div class="mod-lessons">
+            ${mod.lessons.map(l => {
+              const done = Store.isDone(l.id);
+              const locked = !isLessonUnlocked(l.id);
+              const bk = Store.isBookmarked(l.id);
+              return `<button class="ll${done ? ' done' : ''}${locked ? ' locked' : ''}" data-id="${l.id}" onclick="app.goLesson('${l.id}')">
+                <span class="ll-num">${locked ? '' : l.num}</span>
+                <span class="ll-name">${l.title}</span>
+                <span class="ll-ic${done ? ' ok' : bk ? ' bk' : ''}">${done ? '✓' : bk ? '🔖' : locked ? '🔒' : '·'}</span>
+              </button>`;
+            }).join('')}
+          </div>
+        </div>`;
+      }).join('')}
+    `).join('');
+    this.updateSidebarProgress();
+  },
+
+  toggleMod(btn) {
+    btn.classList.toggle('open');
+    btn.nextElementSibling.classList.toggle('open');
+  },
+
+  updateSidebarHighlight(id) {
+    document.querySelectorAll('.ll').forEach(el => {
+      el.classList.toggle('cur', el.dataset.id === id);
+      if (el.dataset.id === id) {
+        const modLessons = el.closest('.mod-lessons');
+        if (modLessons && !modLessons.classList.contains('open')) {
+          modLessons.classList.add('open');
+          modLessons.previousElementSibling.classList.add('open');
+        }
+      }
+    });
+  },
+
+  updateSidebarProgress() {
+    const s = completionStats();
+    document.getElementById('sbProgFill').style.width = s.pct + '%';
+    document.getElementById('sbProgPct').textContent = s.pct + '%';
+  },
+
+  toggleSidebar() {
+    if (window.innerWidth > 1024) {
+      const closed = document.body.classList.toggle('sb-closed');
+      Store.set('sbClosed', closed);
+    } else {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('sbOv').classList.toggle('on');
+    }
+  },
+
+  closeSidebar() {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('sbOv').classList.remove('on');
+  },
+
+  // ── HOME ─────────────────────────────────────
+  renderHome() {
+    const s = completionStats();
+    document.getElementById('homeStats').innerHTML = `
+      <div class="stat"><div class="stat-val">${s.pct}%</div><div class="stat-lbl">Complete</div></div>
+      <div class="stat"><div class="stat-val">${s.done}/${s.total}</div><div class="stat-lbl">Lessons</div></div>
+      <div class="stat"><div class="stat-val">${s.journals}</div><div class="stat-lbl">Journal Entries</div></div>
+      <div class="stat"><div class="stat-val">${s.challenges}</div><div class="stat-lbl">Challenges</div></div>
+    `;
+    const lastId = Store.lastLesson();
+    const resumeBar = document.getElementById('resumeBar');
+    if (lastId && !Store.isDone(lastId)) {
+      const last = getLessonById(lastId);
+      if (last) {
+        document.getElementById('resumeLessonName').textContent = `${last.num} — ${last.title}`;
+        resumeBar.style.display = 'flex';
+      }
+    } else { resumeBar.style.display = 'none'; }
+
+    const todayM = Store.todayMood();
+    const moodOpts = document.getElementById('homeMoodOpts');
+    const doneMsgEl = document.getElementById('moodDoneMsg');
+    if (todayM) {
+      moodOpts.querySelectorAll('.mood-btn').forEach(b => b.classList.toggle('sel', b.dataset.mood === todayM.emoji));
+      doneMsgEl.style.display = 'block';
+      doneMsgEl.textContent = `${todayM.emoji} ${todayM.label} — logged ✓`;
+    }
+    const moods = Store.moods();
+    document.getElementById('moodHist').innerHTML = moods.slice(-7).reverse().map(m => `
+      <div class="mhi"><div class="mhi-em">${m.emoji}</div><div class="mhi-d">${m.date.split(' ')[1]}</div></div>
+    `).join('');
+
+    document.getElementById('homePhases').innerHTML = COURSE.phases.map(phase => {
+      const allLessons = phase.modules.flatMap(m => m.lessons);
+      const doneCnt = allLessons.filter(l => Store.isDone(l.id)).length;
+      return `<div class="phase-sec">
+        <div class="phase-sec-hd">
+          <span class="phase-em">${phase.emoji}</span>
+          <span class="phase-sec-title" style="color:${phase.color}">${phase.title}</span>
+          <span class="phase-sec-count">${doneCnt}/${allLessons.length} lessons</span>
+        </div>
+        <div class="modules-row">
+          ${phase.modules.map(mod => {
+            const modDone = mod.lessons.filter(l => Store.isDone(l.id)).length;
+            const pct = Math.round(modDone / mod.lessons.length * 100);
+            const firstLocked = mod.lessons.find(l => !isLessonUnlocked(l.id));
+            const allLocked = !isLessonUnlocked(mod.lessons[0].id);
+            return `<div class="mod-card${allLocked ? ' locked' : ''}" onclick="${allLocked ? '' : `app.goLesson('${mod.lessons[0].id}')`}">
+              <div class="mod-card-num">Module ${mod.lessons[0].num.split('.')[0]}</div>
+              <div class="mod-card-title">${mod.title}</div>
+              <div class="mod-card-prog">
+                <div class="mcp-bar"><div class="mcp-fill" style="width:${pct}%;background:${phase.color}"></div></div>
+                <span class="mcp-txt">${modDone}/${mod.lessons.length}</span>
+              </div>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>`;
+    }).join('');
+  },
+
+  // ── LESSON ───────────────────────────────────
+  renderLesson(lesson) {
+    const phase = getPhaseForLesson(lesson);
+    const mod = getModuleForLesson(lesson);
+    document.getElementById('lBc').innerHTML = `
+      <span class="l-bc-link" onclick="app.goHome()">🏠 Overview</span>
+      <span class="l-bc-sep">›</span>
+      <span style="color:${phase.color}">${phase.emoji} ${phase.title}</span>
+      <span class="l-bc-sep">›</span>
+      <span>${mod.title}</span>
+    `;
+    document.getElementById('lMeta').innerHTML = `
+      <span class="l-num">${lesson.num}</span>
+      <span class="badge badge-time">⏱ ${lesson.time}</span>
+      <span class="badge badge-diff">${lesson.diff}</span>
+    `;
+    document.getElementById('lStripe').style.setProperty('--phase-color', phase.color);
+    document.getElementById('lTitle').textContent = lesson.title;
+
+    const done = Store.isDone(lesson.id);
+    const cplBtn = document.getElementById('cplBtn');
+    cplBtn.textContent = done ? '✓ Completed' : '✓ Mark Complete';
+    cplBtn.classList.toggle('done', done);
+
+    const bk = Store.isBookmarked(lesson.id);
+    document.getElementById('bkBtn').textContent = bk ? '🔖 Saved' : '🔖 Bookmark';
+
+    document.getElementById('lObjs').innerHTML = (lesson.obj || []).map(o => `<li>${o}</li>`).join('');
+    document.getElementById('lContent').innerHTML = renderContent(lesson.content);
+
+    const reflContainer = document.getElementById('lRefl');
+    reflContainer.innerHTML = '';
+    (lesson.refl || []).forEach((q, qi) => {
+      const saved = Store.reflection(lesson.id, qi);
+      const div = document.createElement('div');
+      div.className = 'refl-q';
+      div.innerHTML = `
+        <div class="q-lbl">${q}</div>
+        <textarea class="refl-ta" placeholder="Write your reflection..." data-qi="${qi}">${saved}</textarea>
+        <div class="save-ind" id="reflSave_${qi}"></div>
+      `;
+      reflContainer.appendChild(div);
+      const ta = div.querySelector('textarea');
+      ta.addEventListener('input', () => this.scheduleReflSave(lesson.id, qi, ta));
+    });
+
+    const jnl = Store.journal(lesson.id);
+    document.getElementById('lJournal').value = jnl.text || '';
+    document.getElementById('lJournalTs').textContent = jnl.ts ? `Last saved ${fmtDate(jnl.ts)}` : '';
+    document.getElementById('lJournal').addEventListener('input', e => {
+      clearTimeout(this.journalTimer);
+      document.getElementById('lJournalSave').textContent = 'Saving...';
+      this.journalTimer = setTimeout(() => {
+        Store.saveJournal(lesson.id, e.target.value);
+        document.getElementById('lJournalSave').textContent = 'Saved ✓';
+        setTimeout(() => { document.getElementById('lJournalSave').textContent = ''; }, 2000);
+      }, 800);
+    });
+
+    const chal = lesson.chal || {};
+    document.getElementById('chalTitle').textContent = chal.t || '';
+    document.getElementById('chalDesc').textContent = chal.d || '';
+    const chalDone = Store.isChallenged(lesson.id);
+    const cb = document.getElementById('chalCb');
+    cb.textContent = chalDone ? '✓' : '';
+    cb.classList.toggle('done', chalDone);
+
+    document.getElementById('lTk').innerHTML = (lesson.tks || []).map(t => `<li>${t}</li>`).join('');
+
+    const { prev, next } = getAdjacentLessons(lesson.id);
+    document.getElementById('prevBtn').style.visibility = prev ? 'visible' : 'hidden';
+    document.getElementById('nextBtn').textContent = next ? 'Next →' : '🎓 Finish Course';
+  },
+
+  scheduleReflSave(lessonId, qi, ta) {
+    const key = `${lessonId}_${qi}`;
+    const ind = document.getElementById(`reflSave_${qi}`);
+    if (ind) ind.textContent = 'Saving...';
+    clearTimeout(this.reflTimers[key]);
+    this.reflTimers[key] = setTimeout(() => {
+      Store.saveRefl(lessonId, qi, ta.value);
+      if (ind) { ind.textContent = 'Saved ✓'; setTimeout(() => { if(ind) ind.textContent = ''; }, 2000); }
+    }, 800);
+  },
+
+  markComplete() {
+    if (!this.currentLesson) return;
+    Store.markDone(this.currentLesson);
+    const cplBtn = document.getElementById('cplBtn');
+    cplBtn.textContent = '✓ Completed';
+    cplBtn.classList.add('done');
+    this.renderSidebar();
+    this.updateProgress();
+    this.updateSidebarHighlight(this.currentLesson);
+    this.toast('✓ Lesson marked complete!');
+  },
+
+  toggleChallenge() {
+    if (!this.currentLesson) return;
+    const done = Store.toggleChallenge(this.currentLesson);
+    const cb = document.getElementById('chalCb');
+    cb.textContent = done ? '✓' : '';
+    cb.classList.toggle('done', done);
+    if (done) this.toast('⚡ Challenge completed!');
+  },
+
+  toggleBookmark() {
+    if (!this.currentLesson) return;
+    const bk = Store.toggleBookmark(this.currentLesson);
+    document.getElementById('bkBtn').textContent = bk ? '🔖 Saved' : '🔖 Bookmark';
+    this.renderSidebar();
+    this.updateSidebarHighlight(this.currentLesson);
+    this.toast(bk ? '🔖 Lesson bookmarked!' : 'Bookmark removed');
+  },
+
+  updateProgress() {
+    const s = completionStats();
+    document.getElementById('progFill').style.width = s.pct + '%';
+    this.updateSidebarProgress();
+  },
+
+  // ── CERTIFICATE ──────────────────────────────
+  showCertificate() {
+    const name = Store.learnerName() || prompt('Enter your name for the certificate (optional):') || '';
+    if (name) Store.setLearnerName(name);
+    Cert.generate(name);
+    document.getElementById('certOverlay').classList.add('on');
+  },
+
+  closeCert() {
+    document.getElementById('certOverlay').classList.remove('on');
+  },
+
+  downloadCert() {
+    const canvas = document.getElementById('certCanvas');
+    const link = document.createElement('a');
+    link.download = 'MovingOn102_Certificate.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    this.toast('📥 Certificate downloaded!');
+  },
+
+  // ── PANELS ───────────────────────────────────
+  openPanel(tab) {
+    document.getElementById('slidePanel').classList.add('open');
+    this.panelOpen = true;
+    this.switchTab(tab);
+  },
+
+  closePanel() {
+    document.getElementById('slidePanel').classList.remove('open');
+    this.panelOpen = false;
+  },
+
+  switchTab(tab) {
+    this.activeTab = tab;
+    document.querySelectorAll('.ptab').forEach(b => b.classList.toggle('act', b.dataset.tab === tab));
+    const body = document.getElementById('panelBody');
+    document.getElementById('panelTitle').textContent = tab === 'nt' ? 'Notes' : tab === 'jn' ? 'Journal' : 'Bookmarks';
+    if (tab === 'nt') {
+      const saved = Store.note();
+      body.innerHTML = `<textarea class="refl-ta" style="min-height:300px;width:100%" placeholder="Write notes here...">${saved}</textarea><div class="save-ind" id="noteSaveInd"></div>`;
+      const ta = body.querySelector('textarea');
+      ta.addEventListener('input', () => {
+        document.getElementById('noteSaveInd').textContent = 'Saving...';
+        clearTimeout(this.noteTimer);
+        this.noteTimer = setTimeout(() => {
+          Store.saveNote(ta.value);
+          document.getElementById('noteSaveInd').textContent = 'Saved ✓';
+          setTimeout(() => { const el = document.getElementById('noteSaveInd'); if(el) el.textContent = ''; }, 2000);
+        }, 800);
+      });
+    } else if (tab === 'jn') {
+      const all = getAllLessons();
+      const entries = all.map(l => ({l, j: Store.journal(l.id)})).filter(x => x.j.text);
+      if (!entries.length) { body.innerHTML = `<p style="color:var(--text-3);font-size:.84rem;padding:20px 0;font-family:var(--fl)">No journal entries yet. Complete a lesson to add one.</p>`; return; }
+      body.innerHTML = entries.map(({l,j}) => `
+        <div style="margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--border)">
+          <div style="font-size:.72rem;font-weight:600;color:var(--primary);margin-bottom:4px">${l.num} — ${l.title}</div>
+          <div style="font-size:.83rem;color:var(--text-2);line-height:1.65;font-family:var(--fl);white-space:pre-wrap">${j.text}</div>
+          <div style="font-size:.66rem;color:var(--text-3);margin-top:4px">${fmtDate(j.ts)}</div>
+        </div>
+      `).join('');
+    } else if (tab === 'bk') {
+      const bks = Store.bookmarks();
+      if (!bks.length) { body.innerHTML = `<p style="color:var(--text-3);font-size:.84rem;padding:20px 0;font-family:var(--fl)">No bookmarks yet.</p>`; return; }
+      body.innerHTML = bks.map(id => {
+        const l = getLessonById(id);
+        return l ? `<button onclick="app.closePanel();app.goLesson('${id}')" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 6px;border:none;background:none;color:var(--text-2);font-size:.83rem;border-radius:var(--r-sm);cursor:pointer;text-align:left" onmouseover="this.style.background='var(--surface-2)'" onmouseout="this.style.background='none'">
+          <span style="color:var(--amber)">🔖</span>
+          <span>${l.num} — ${l.title}</span>
+        </button>` : '';
+      }).join('');
+    }
+  },
+
+  // ── MOOD ─────────────────────────────────────
+  openMoodModal() {
+    document.getElementById('moodModal').classList.add('on');
+    const todayM = Store.todayMood();
+    document.querySelectorAll('#modalMoodOpts .mood-btn').forEach(b => {
+      b.classList.toggle('sel', todayM && b.dataset.mood === todayM.emoji);
+    });
+  },
+
+  logMood(emoji, label, btn, fromModal) {
+    Store.logMood(emoji, label);
+    const container = btn.closest('.mood-opts');
+    container.querySelectorAll('.mood-btn').forEach(b => b.classList.remove('sel'));
+    btn.classList.add('sel');
+    const doneMsgEl = document.getElementById('moodDoneMsg');
+    if (doneMsgEl) { doneMsgEl.style.display = 'block'; doneMsgEl.textContent = `${emoji} ${label} — logged ✓`; }
+    if (fromModal) { setTimeout(() => this.closeModal('moodModal'), 600); }
+    this.toast(`${emoji} Mood logged!`);
+  },
+
+  // ── MODALS ───────────────────────────────────
+  closeModal(id) {
+    document.getElementById(id).classList.remove('on');
+  },
+
+  // ── THEME ────────────────────────────────────
+  toggleTheme() {
+    const cur = document.documentElement.getAttribute('data-theme') || 'light';
+    const nxt = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', nxt);
+    Store.setTheme(nxt);
+    document.getElementById('themeBtn').textContent = nxt === 'dark' ? '☀️' : '🌙';
+  },
+
+  // ── TOAST ────────────────────────────────────
+  toast(msg, dur = 2600) {
+    const wrap = document.getElementById('toastWrap');
+    const t = document.createElement('div');
+    t.className = 'toast';
+    t.textContent = msg;
+    wrap.appendChild(t);
+    setTimeout(() => t.style.opacity = '0', dur - 300);
+    setTimeout(() => t.remove(), dur);
+  }
+};
+
+// ── BOOT ─────────────────────────────────────
+app.init();
+</script>
+</body>
+</html>
