@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lane Academy — Learn the Skills Life Doesn't Always Teach</title>
+<meta name="description" content="Practical, self-paced courses on relationships, communication, money, and personal growth. No account. No tracking. Everything stays on your device.">
+<link rel="icon" type="image/x-icon" href="https://github.com/Landing749/Lane-Academy/blob/main/app/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+:root{
+  --bg:#F6F3EE;
+  --surface:#FDFCFB;
+  --border:#D9D4CA;
+  --text:#241F18;
+  --text-2:#5C5448;
+  --text-3:#9A9188;
+  --green:#3A6B45;
+  --green-h:#2E5537;
+  --green-l:#E8F0EA;
+  --green-m:rgba(58,107,69,.10);
+  --nav-h:56px;
+  --fd:'Fraunces','Georgia',serif;
+  --fb:'Inter',-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(253,252,251,.92);border-bottom:1px solid var(--border);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 24px;z-index:100}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+.nav-logo{width:30px;height:30px;border-radius:50%;overflow:hidden;flex-shrink:0;box-shadow:0 2px 8px rgba(58,107,69,.2)}
+.nav-logo img{width:100%;height:100%;object-fit:cover;display:block}
+.nav-name{font-family:var(--fd);font-weight:300;font-size:.95rem;letter-spacing:.01em}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{color:var(--text-2);text-decoration:none;font-size:.83rem;font-weight:500;padding:6px 12px;border-radius:6px;transition:background .15s,color .15s}
+.nav-links a:hover{background:var(--green-l);color:var(--green)}
+.nav-links a.cta{background:var(--green);color:#fff;padding:7px 14px}
+.nav-links a.cta:hover{background:var(--green-h)}
+
+/* ── HERO ── */
+.hero{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:calc(var(--nav-h) + 60px) 24px 80px;flex-direction:column}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--green);background:var(--green-l);padding:5px 13px;border-radius:20px;margin-bottom:28px;border:1px solid rgba(58,107,69,.15)}
+.hero-logo{width:88px;height:88px;border-radius:50%;overflow:hidden;margin:0 auto 32px;box-shadow:0 8px 32px rgba(58,107,69,.2),0 2px 8px rgba(58,107,69,.15);border:3px solid rgba(58,107,69,.12)}
+.hero-logo img{width:100%;height:100%;object-fit:cover;display:block}
+h1{font-family:var(--fd);font-size:clamp(2.2rem,5vw,3.4rem);font-weight:300;line-height:1.15;color:var(--text);letter-spacing:-.025em;margin-bottom:18px;max-width:640px}
+h1 em{font-style:italic;color:var(--green)}
+.hero-sub{font-size:1rem;color:var(--text-2);max-width:500px;line-height:1.7;margin-bottom:36px}
+.hero-cta{display:inline-flex;align-items:center;gap:9px;background:var(--green);color:#fff;text-decoration:none;font-weight:600;font-size:.9rem;padding:13px 26px;border-radius:10px;transition:background .2s var(--ease),transform .2s var(--ease),box-shadow .2s var(--ease);box-shadow:0 4px 16px rgba(58,107,69,.3)}
+.hero-cta:hover{background:var(--green-h);transform:translateY(-2px);box-shadow:0 8px 24px rgba(58,107,69,.35)}
+.hero-cta:active{transform:translateY(0)}
+.hero-cta-arrow{font-size:1.1rem;transition:transform .2s var(--ease)}
+.hero-cta:hover .hero-cta-arrow{transform:translateX(3px)}
+.hero-note{margin-top:16px;font-size:.75rem;color:var(--text-3)}
+
+/* ── PILLS ── */
+.trust-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:44px}
+.trust-pill{display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--text-2);background:var(--surface);border:1px solid var(--border);padding:5px 12px;border-radius:20px}
+.trust-pill span{color:var(--green);font-weight:600}
+
+/* ── FOOTER ── */
+footer{background:var(--surface);border-top:1px solid var(--border);padding:20px 24px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;font-size:.72rem;color:var(--text-3)}
+footer a{color:var(--text-3);text-decoration:none;transition:color .15s}
+footer a:hover{color:var(--green)}
+.footer-sep{color:var(--border)}
+
+/* ── ANIMATION ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-logo{animation:fadeUp .5s var(--ease) both}
+.hero-eyebrow{animation:fadeUp .5s .1s var(--ease) both}
+h1{animation:fadeUp .55s .15s var(--ease) both}
+.hero-sub{animation:fadeUp .55s .22s var(--ease) both}
+.hero-cta{animation:fadeUp .5s .3s var(--ease) both}
+.trust-row{animation:fadeUp .5s .38s var(--ease) both}
+
+@media(max-width:600px){
+  .nav-links a:not(.cta){display:none}
+  h1{font-size:1.9rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="https://landing749.github.io/Lane-Academy/">
+    <div class="nav-logo"><img src="https://landing749.github.io/Lane-Academy/logo.png" alt="Lane Academy"></div>
+    <span class="nav-name">Lane Academy</span>
+  </a>
+  <div class="nav-links">
+    <a href="https://landing749.github.io/Lane-Academy/">Home</a>
+    <a href="https://landing749.github.io/Lane-Academy/courses/">Courses</a>
+    <a href="https://landing749.github.io/Lane-Academy/about/">About</a>
+    <a href="https://landing749.github.io/Lane-Academy/courses/" class="cta">Browse Courses →</a>
+  </div>
+</nav>
+
+<main class="hero">
+  <div class="hero-logo">
+    <img src="https://landing749.github.io/Lane-Academy/logo.png" alt="Lane Academy">
+  </div>
+  <div class="hero-eyebrow">🌱 Privacy-first learning</div>
+  <h1>Learn the skills life<br><em>doesn't always teach.</em></h1>
+  <p class="hero-sub">Practical, self-paced courses on relationships, emotions, communication, careers, finances, and personal growth. No account. No tracking.</p>
+  <a class="hero-cta" href="https://landing749.github.io/Lane-Academy/">
+    Go to Lane Academy
+    <span class="hero-cta-arrow">→</span>
+  </a>
+  <p class="hero-note">You'll be taken to the full site</p>
+  <div class="trust-row">
+    <div class="trust-pill"><span>✓</span> No account needed</div>
+    <div class="trust-pill"><span>✓</span> Your data stays private</div>
+    <div class="trust-pill"><span>✓</span> Learn at your own pace</div>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 Lane Academy</span>
+  <span class="footer-sep">·</span>
+  <a href="https://landing749.github.io/Lane-Academy/">Home</a>
+  <span class="footer-sep">·</span>
+  <a href="https://landing749.github.io/Lane-Academy/courses/">Courses</a>
+  <span class="footer-sep">·</span>
+  <a href="https://landing749.github.io/Lane-Academy/privacy/">Privacy</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — Lane Academy</title>
+<meta name="description" content="This page doesn't exist. Head back to Lane Academy to find what you're looking for.">
+<link rel="icon" type="image/x-icon" href="https://github.com/Landing749/Lane-Academy/blob/main/app/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+:root{
+  --bg:#F6F3EE;
+  --surface:#FDFCFB;
+  --surface-2:#EDE9E1;
+  --border:#D9D4CA;
+  --text:#241F18;
+  --text-2:#5C5448;
+  --text-3:#9A9188;
+  --green:#3A6B45;
+  --green-h:#2E5537;
+  --green-l:#E8F0EA;
+  --green-m:rgba(58,107,69,.10);
+  --nav-h:56px;
+  --fd:'Fraunces','Georgia',serif;
+  --fb:'Inter',-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(253,252,251,.92);border-bottom:1px solid var(--border);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 24px;z-index:100}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+.nav-logo{width:30px;height:30px;border-radius:50%;overflow:hidden;flex-shrink:0;box-shadow:0 2px 8px rgba(58,107,69,.2)}
+.nav-logo img{width:100%;height:100%;object-fit:cover;display:block}
+.nav-name{font-family:var(--fd);font-weight:300;font-size:.95rem;letter-spacing:.01em}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{color:var(--text-2);text-decoration:none;font-size:.83rem;font-weight:500;padding:6px 12px;border-radius:6px;transition:background .15s,color .15s}
+.nav-links a:hover{background:var(--green-l);color:var(--green)}
+.nav-links a.cta{background:var(--green);color:#fff;padding:7px 14px}
+.nav-links a.cta:hover{background:var(--green-h)}
+
+/* ── MAIN ── */
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:calc(var(--nav-h) + 40px) 24px 80px;flex-direction:column;text-align:center}
+
+/* ── 404 NUMBER ── */
+.four-oh-four{position:relative;margin-bottom:8px;line-height:1;user-select:none}
+.four-oh-four-num{font-family:var(--fd);font-size:clamp(7rem,18vw,11rem);font-weight:300;font-style:italic;color:transparent;-webkit-text-stroke:2px var(--border);letter-spacing:-.04em;line-height:1}
+.four-oh-four-logo{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:clamp(56px,10vw,80px);height:clamp(56px,10vw,80px);border-radius:50%;overflow:hidden;border:3px solid var(--bg);box-shadow:0 4px 20px rgba(58,107,69,.25),0 0 0 1px rgba(58,107,69,.1)}
+.four-oh-four-logo img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ── CONTENT ── */
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:18px}
+h1{font-family:var(--fd);font-size:clamp(1.6rem,4vw,2.4rem);font-weight:400;color:var(--text);letter-spacing:-.02em;line-height:1.2;margin-bottom:12px}
+h1 em{font-style:italic;color:var(--green)}
+.sub{font-size:.95rem;color:var(--text-2);max-width:420px;line-height:1.7;margin:0 auto 36px}
+
+/* ── ACTIONS ── */
+.actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:52px}
+.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;text-decoration:none;font-weight:600;font-size:.88rem;padding:11px 22px;border-radius:9px;transition:background .2s,transform .2s,box-shadow .2s;box-shadow:0 4px 14px rgba(58,107,69,.28)}
+.btn-p:hover{background:var(--green-h);transform:translateY(-1px);box-shadow:0 6px 20px rgba(58,107,69,.33)}
+.btn-s{display:inline-flex;align-items:center;gap:8px;background:var(--surface);color:var(--text-2);text-decoration:none;font-weight:500;font-size:.88rem;padding:11px 22px;border-radius:9px;border:1.5px solid var(--border);transition:background .2s,border-color .2s,color .2s}
+.btn-s:hover{background:var(--surface-2);border-color:var(--green);color:var(--green)}
+
+/* ── QUICK LINKS ── */
+.quick{width:100%;max-width:480px}
+.quick-label{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px}
+.quick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.quick-card{background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:14px 16px;text-decoration:none;color:var(--text);text-align:left;transition:border-color .18s,background .18s,transform .18s;display:flex;align-items:center;gap:10px}
+.quick-card:hover{border-color:var(--green);background:var(--green-l);transform:translateY(-1px)}
+.quick-card-ic{font-size:18px;flex-shrink:0}
+.quick-card-txt{}
+.quick-card-name{font-size:.84rem;font-weight:600;color:var(--text);line-height:1.2}
+.quick-card-desc{font-size:.72rem;color:var(--text-3);margin-top:1px}
+
+/* ── FOOTER ── */
+footer{background:var(--surface);border-top:1px solid var(--border);padding:20px 24px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;font-size:.72rem;color:var(--text-3)}
+footer a{color:var(--text-3);text-decoration:none;transition:color .15s}
+footer a:hover{color:var(--green)}
+.footer-sep{color:var(--border)}
+
+/* ── ANIMATION ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes popIn{from{opacity:0;transform:translate(-50%,-50%) scale(.6)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+.four-oh-four-num{animation:fadeUp .5s var(--ease) both}
+.four-oh-four-logo{animation:popIn .5s .15s cubic-bezier(.34,1.56,.64,1) both}
+.tag{animation:fadeUp .45s .2s var(--ease) both}
+h1{animation:fadeUp .5s .25s var(--ease) both}
+.sub{animation:fadeUp .5s .3s var(--ease) both}
+.actions{animation:fadeUp .5s .35s var(--ease) both}
+.quick{animation:fadeUp .5s .42s var(--ease) both}
+
+@media(max-width:600px){
+  .nav-links a:not(.cta){display:none}
+  .quick-grid{grid-template-columns:1fr}
+  .four-oh-four-num{font-size:7rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="https://landing749.github.io/Lane-Academy/">
+    <div class="nav-logo"><img src="https://landing749.github.io/Lane-Academy/logo.png" alt="Lane Academy"></div>
+    <span class="nav-name">Lane Academy</span>
+  </a>
+  <div class="nav-links">
+    <a href="https://landing749.github.io/Lane-Academy/">Home</a>
+    <a href="https://landing749.github.io/Lane-Academy/courses/">Courses</a>
+    <a href="https://landing749.github.io/Lane-Academy/about/">About</a>
+    <a href="https://landing749.github.io/Lane-Academy/courses/" class="cta">Browse Courses →</a>
+  </div>
+</nav>
+
+<main>
+  <div class="four-oh-four">
+    <div class="four-oh-four-num">404</div>
+    <div class="four-oh-four-logo">
+      <img src="https://landing749.github.io/Lane-Academy/logo.png" alt="Lane Academy">
+    </div>
+  </div>
+
+  <div class="tag">Page not found</div>
+  <h1>You didn't find what<br>you <em>were looking for.</em></h1>
+  <p class="sub">This page doesn't exist — or it may have moved. Let's get you back to somewhere useful.</p>
+
+  <div class="actions">
+    <a class="btn-p" href="https://landing749.github.io/Lane-Academy/">← Back to Home</a>
+    <a class="btn-s" href="https://landing749.github.io/Lane-Academy/courses/">Browse Courses</a>
+  </div>
+
+  <div class="quick">
+    <div class="quick-label">Where would you like to go?</div>
+    <div class="quick-grid">
+      <a class="quick-card" href="https://landing749.github.io/Lane-Academy/courses/">
+        <span class="quick-card-ic">📚</span>
+        <div class="quick-card-txt">
+          <div class="quick-card-name">All Courses</div>
+          <div class="quick-card-desc">Browse everything we offer</div>
+        </div>
+      </a>
+      <a class="quick-card" href="https://landing749.github.io/Lane-Academy/about/">
+        <span class="quick-card-ic">🌱</span>
+        <div class="quick-card-txt">
+          <div class="quick-card-name">About</div>
+          <div class="quick-card-desc">What Lane Academy is about</div>
+        </div>
+      </a>
+      <a class="quick-card" href="https://landing749.github.io/Lane-Academy/privacy/">
+        <span class="quick-card-ic">🔒</span>
+        <div class="quick-card-txt">
+          <div class="quick-card-name">Privacy Policy</div>
+          <div class="quick-card-desc">How we keep your data safe</div>
+        </div>
+      </a>
+      <a class="quick-card" href="https://landing749.github.io/Lane-Academy/">
+        <span class="quick-card-ic">🏠</span>
+        <div class="quick-card-txt">
+          <div class="quick-card-name">Home</div>
+          <div class="quick-card-desc">Start fresh from the top</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 Lane Academy</span>
+  <span class="footer-sep">·</span>
+  <a href="https://landing749.github.io/Lane-Academy/">Home</a>
+  <span class="footer-sep">·</span>
+  <a href="https://landing749.github.io/Lane-Academy/courses/">Courses</a>
+  <span class="footer-sep">·</span>
+  <a href="https://landing749.github.io/Lane-Academy/privacy/">Privacy</a>
+</footer>
+
+</body>
+</html>
