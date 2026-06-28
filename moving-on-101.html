@@ -64,7 +64,7 @@ textarea{font-family:var(--fb)}
 body.sb-closed .sidebar{transform:translateX(-100%)}
 body.sb-closed .main{margin-left:0}
 /* Sidebar edge toggle tab */
-.sb-toggle{position:fixed;top:calc(var(--nav-h) + var(--prog-h) + 56px);left:var(--sidebar-w);z-index:101;width:16px;height:44px;background:var(--surface);border:1px solid var(--border);border-left:none;border-radius:0 var(--r-sm) var(--r-sm) 0;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:left var(--dur) var(--ease),background var(--dur) var(--ease),color var(--dur) var(--ease);box-shadow:2px 0 6px rgba(0,0,0,.07);padding:0}
+.sb-toggle{position:fixed;top:calc(var(--nav-h) + var(--prog-h) + 56px);left:var(--sidebar-w);z-index:101;width:16px;height:44px;background:var(--surface);border:1px solid var(--border);border-left:none;border-radius:0 var(--r-sm) var(--r-sm) 0;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:left .3s cubic-bezier(.22,1,.36,1),background var(--dur) var(--ease),color var(--dur) var(--ease);box-shadow:2px 0 6px rgba(0,0,0,.07);padding:0}
 .sb-toggle:hover{background:var(--surface-2);color:var(--text)}
 .sb-toggle-ic{font-size:10px;color:var(--text-3);line-height:1;transition:transform .2s var(--ease);display:block;font-style:normal}
 body.sb-closed .sb-toggle{left:0}
@@ -75,7 +75,7 @@ body.sb-closed .sb-toggle-ic{transform:rotate(180deg)}
 /* LAYOUT */
 .layout{display:flex;min-height:100vh;padding-top:calc(var(--nav-h) + var(--prog-h))}
 /* SIDEBAR */
-.sidebar{width:var(--sidebar-w);background:var(--surface);border-right:1px solid var(--border);position:fixed;top:calc(var(--nav-h) + var(--prog-h));left:0;bottom:0;overflow-y:auto;z-index:100;transition:transform var(--dur) var(--ease);padding-bottom:60px}
+.sidebar{width:var(--sidebar-w);background:var(--surface);border-right:1px solid var(--border);position:fixed;top:calc(var(--nav-h) + var(--prog-h));left:0;bottom:0;overflow-y:auto;z-index:100;transition:transform .3s cubic-bezier(.22,1,.36,1);padding-bottom:60px}
 .sb-head{padding:14px 14px 10px;border-bottom:1px solid var(--border)}
 .sb-label{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:3px}
 .sb-course-name{font-size:.82rem;font-weight:500;color:var(--text);line-height:1.3;margin-bottom:6px}
@@ -93,8 +93,8 @@ body.sb-closed .sb-toggle-ic{transform:rotate(180deg)}
 .mod-hd.done{color:var(--primary)}
 .mod-chev{margin-left:auto;transition:transform .18s;font-size:11px;color:var(--text-3)}
 .mod-hd.open .mod-chev{transform:rotate(90deg)}
-.mod-lessons{padding:0 0 4px 10px;display:none}
-.mod-lessons.open{display:block}
+.mod-lessons{padding:0 0 4px 10px;max-height:0;overflow:hidden;transition:max-height .28s cubic-bezier(.22,1,.36,1)}
+.mod-lessons.open{max-height:600px}
 .ll{display:flex;align-items:center;gap:7px;padding:5px 8px;border:none;background:none;color:var(--text-3);font-size:.76rem;border-radius:var(--r-sm);width:100%;text-align:left;transition:background var(--dur) var(--ease),color var(--dur) var(--ease);user-select:none;line-height:1.3}
 .ll:hover{background:var(--surface-2);color:var(--text-2)}
 .ll.cur{background:var(--primary-l);color:var(--primary);font-weight:500}
@@ -108,13 +108,12 @@ body.sb-closed .sb-toggle-ic{transform:rotate(180deg)}
 .ll-num{font-family:var(--fd);font-style:italic;font-size:.68rem;color:var(--text-3);min-width:22px}
 .ll-name{flex:1;line-height:1.35}
 /* MAIN */
-.main{flex:1;margin-left:var(--sidebar-w);min-height:100vh;max-width:100%;transition:margin-left var(--dur) var(--ease)}
+.main{flex:1;margin-left:var(--sidebar-w);min-height:100vh;max-width:100%;transition:margin-left .3s cubic-bezier(.22,1,.36,1)}
 /* HOME */
-.home{max-width:820px;margin:0 auto;padding:44px 36px 80px;display:none}
-.home.act{display:block}
+.home{max-width:820px;margin:0 auto;padding:44px 36px 80px}
 /* Course hero */
 .hero{display:flex;align-items:flex-start;gap:28px;margin-bottom:40px}
-.hero-cover{width:140px;height:176px;background:linear-gradient(145deg,#3A6B45 0%,#2A4E32 60%,#1E3A24 100%);border-radius:var(--r-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;box-shadow:var(--sh-md);position:relative;overflow:hidden}
+.hero-cover{width:140px;height:140px;background:linear-gradient(145deg,#3A6B45 0%,#2A4E32 60%,#1E3A24 100%);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;box-shadow:var(--sh-md);position:relative;overflow:hidden}
 .hero-cover::before{content:'';position:absolute;top:-32px;right:-32px;width:100px;height:100px;background:rgba(255,255,255,.05);border-radius:50%}
 .cover-em{font-size:40px;margin-bottom:6px;filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))}
 .cover-badge{font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);font-family:var(--fb);font-weight:600}
@@ -177,8 +176,7 @@ body.sb-closed .sb-toggle-ic{transform:rotate(180deg)}
 .mhi-em{font-size:16px}
 .mhi-d{font-size:.58rem;color:var(--text-3)}
 /* LESSON VIEW */
-.lesson{max-width:700px;margin:0 auto;padding:40px 36px 100px;display:none}
-.lesson.act{display:block}
+.lesson{max-width:700px;margin:0 auto;padding:40px 36px 100px}
 .l-bc{font-size:.72rem;color:var(--text-3);margin-bottom:16px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
 .l-bc-sep{color:var(--border)}
 .l-bc-link{cursor:pointer;transition:color var(--dur)}
@@ -317,7 +315,6 @@ body.sb-closed .sb-toggle-ic{transform:rotate(180deg)}
 .search-bar:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-m);background:var(--surface)}
 /* MODAL */
 .modal-ov{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:1100;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px);padding:20px}
-.modal-ov.open{display:flex}
 .modal{background:var(--surface);border-radius:var(--r-xl);padding:32px;max-width:520px;width:100%;box-shadow:var(--sh-lg);max-height:85vh;overflow-y:auto;position:relative}
 .modal-ttl{font-family:var(--fd);font-size:1.45rem;font-weight:400;color:var(--text);margin-bottom:6px}
 .modal-sub{font-size:.86rem;color:var(--text-2);margin-bottom:22px;font-family:var(--fl)}
@@ -325,8 +322,7 @@ body.sb-closed .sb-toggle-ic{transform:rotate(180deg)}
 .modal-cls{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--text-3);font-size:22px;cursor:pointer;transition:color var(--dur)}
 .modal-cls:hover{color:var(--text)}
 /* Completion */
-.comp{text-align:center;padding:70px 36px 80px;max-width:580px;margin:0 auto;display:none}
-.comp.act{display:block}
+.comp{text-align:center;padding:70px 36px 80px;max-width:580px;margin:0 auto}
 .comp-em{font-size:68px;margin-bottom:20px}
 .comp-title{font-family:var(--fd);font-size:2.4rem;font-weight:400;color:var(--text);margin-bottom:8px}
 .comp-sub{font-size:1.02rem;color:var(--text-2);margin-bottom:36px;font-family:var(--fd);font-style:italic}
@@ -358,7 +354,7 @@ body.sb-closed .sb-toggle-ic{transform:rotate(180deg)}
 .lesson{padding:30px 22px 90px}
 .stats{grid-template-columns:repeat(2,1fr)}
 .hero{flex-direction:column;gap:18px}
-.hero-cover{width:100%;height:120px;flex-direction:row;gap:14px}
+.hero-cover{width:100px;height:100px;flex-direction:row;gap:14px}
 }
 @media(max-width:600px){
 .hero-title{font-size:1.8rem}
@@ -374,7 +370,7 @@ body.sb-closed .sb-toggle-ic{transform:rotate(180deg)}
 @media print{
 .nav,.prog-wrap,.sidebar,.panel,.toast-wrap,.footer,.l-nav,.sb-ov{display:none!important}
 .main{margin-left:0!important}
-.lesson,.home{padding:0!important;display:block!important}
+.lesson,.home{padding:0!important;opacity:1!important;pointer-events:auto!important;transform:none!important}
 }
 
 /* ═══ SUBMODULE TABS ════════════════════════════════════════════════════ */
@@ -391,9 +387,55 @@ body.sb-closed .sb-toggle-ic{transform:rotate(180deg)}
 .sm-tab.act .sm-tab-dot{background:var(--phase-col,var(--primary))}
 
 /* Submodule panels */
-.sm-panel{display:none;animation:smIn .18s var(--ease)}
+.sm-panel{display:none;animation:smIn .32s var(--ease)}
 .sm-panel.act{display:block}
-@keyframes smIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@keyframes smIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── VIEW TRANSITIONS ─────────────────────────── */
+.main{position:relative}
+.home,.lesson,.comp{
+  position:absolute;
+  top:0; left:0; right:0;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease, transform .25s cubic-bezier(.22,1,.36,1);
+  transform:translateY(10px);
+}
+.home.act,.lesson.act,.comp.act{
+  position:relative;
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+.view-leaving{
+  position:absolute !important;
+  top:0; left:0; right:0;
+  opacity:0 !important;
+  transform:translateY(-6px) !important;
+  transition:opacity .15s ease, transform .15s ease !important;
+  pointer-events:none !important;
+}
+
+/* ── MODAL TRANSITIONS ────────────────────────── */
+.modal-ov{
+  opacity:0;
+  transition:opacity .22s var(--ease);
+  pointer-events:none;
+}
+.modal-ov.open{
+  display:flex;
+  opacity:1;
+  pointer-events:auto;
+}
+.modal{
+  transform:translateY(18px) scale(.97);
+  transition:transform .3s cubic-bezier(.22,1,.36,1), opacity .3s var(--ease);
+  opacity:0;
+}
+.modal-ov.open .modal{
+  transform:translateY(0) scale(1);
+  opacity:1;
+}
 
 /* Overview submodule */
 .sm-overview-hd{font-family:var(--fd);font-size:.78rem;font-weight:400;color:var(--text-3);letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px}
@@ -476,7 +518,7 @@ body.sb-closed .sb-toggle-ic{transform:rotate(180deg)}
   <section class="home" id="homeView">
     <div class="hero">
       <div class="hero-cover">
-        <img src="logo.png" alt="Lane Academy" style="width:80px;height:80px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.2))">
+        <img src="logo.png" alt="Lane Academy" style="width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div class="hero-txt">
         <span class="hero-tag">✨ Self-Growth Course</span>
@@ -1803,16 +1845,38 @@ const app={
   },
 
   // ── NAVIGATION ──────────────────────────────
+  _views(){return['homeView','lessonView','compView'].map(id=>document.getElementById(id))},
+
+  _switchView(targetId, callback){
+    const FADE_OUT=180;
+    const views=this._views();
+    const current=views.find(v=>v.classList.contains('act'));
+    const target=document.getElementById(targetId);
+    if(current&&current!==target){
+      current.classList.add('view-leaving');
+      current.classList.remove('act');
+      setTimeout(()=>{
+        current.classList.remove('view-leaving');
+        callback();
+        target.classList.add('act');
+        window.scrollTo({top:0,behavior:'smooth'});
+      },FADE_OUT);
+    } else {
+      views.forEach(v=>v.classList.remove('act','view-leaving'));
+      callback();
+      target.classList.add('act');
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+  },
+
   goHome(){
-    document.getElementById('homeView').classList.add('act');
-    document.getElementById('lessonView').classList.remove('act');
-    document.getElementById('compView').classList.remove('act');
-    document.getElementById('sbHomeBtn').classList.add('act');
-    document.querySelectorAll('.ll.cur').forEach(el=>el.classList.remove('cur'));
-    this.currentLesson=null;
-    this.renderHome();
-    this.updateProgress();
-    window.scrollTo(0,0);
+    this._switchView('homeView',()=>{
+      document.getElementById('sbHomeBtn').classList.add('act');
+      document.querySelectorAll('.ll.cur').forEach(el=>el.classList.remove('cur'));
+      this.currentLesson=null;
+      this.renderHome();
+      this.updateProgress();
+    });
     if(window.innerWidth<=1024)this.closeSidebar();
   },
 
@@ -1823,16 +1887,14 @@ const app={
       this.toast('🔒 Complete the previous lesson first to unlock this one.');
       return;
     }
-    this.currentLesson=id;
-    Store.setLastLesson(id);
-    document.getElementById('homeView').classList.remove('act');
-    document.getElementById('lessonView').classList.add('act');
-    document.getElementById('compView').classList.remove('act');
-    document.getElementById('sbHomeBtn').classList.remove('act');
-    this.renderLesson(lesson);
-    this.updateProgress();
-    this.updateSidebarHighlight(id);
-    window.scrollTo(0,0);
+    this._switchView('lessonView',()=>{
+      this.currentLesson=id;
+      Store.setLastLesson(id);
+      document.getElementById('sbHomeBtn').classList.remove('act');
+      this.renderLesson(lesson);
+      this.updateProgress();
+      this.updateSidebarHighlight(id);
+    });
     if(window.innerWidth<=1024)this.closeSidebar();
   },
 
@@ -1850,16 +1912,14 @@ const app={
   },
 
   showCompletion(){
-    document.getElementById('homeView').classList.remove('act');
-    document.getElementById('lessonView').classList.remove('act');
-    document.getElementById('compView').classList.add('act');
-    const s=completionStats();
-    document.getElementById('compStats').innerHTML=`
-      <div class="cs"><div class="cs-v">${s.done}</div><div class="cs-l">Lessons Complete</div></div>
-      <div class="cs"><div class="cs-v">${s.journals}</div><div class="cs-l">Journal Entries</div></div>
-      <div class="cs"><div class="cs-v">${s.challenges}</div><div class="cs-l">Challenges Done</div></div>
-    `;
-    window.scrollTo(0,0);
+    this._switchView('compView',()=>{
+      const s=completionStats();
+      document.getElementById('compStats').innerHTML=`
+        <div class="cs"><div class="cs-v">${s.done}</div><div class="cs-l">Lessons Complete</div></div>
+        <div class="cs"><div class="cs-v">${s.journals}</div><div class="cs-l">Journal Entries</div></div>
+        <div class="cs"><div class="cs-v">${s.challenges}</div><div class="cs-l">Challenges Done</div></div>
+      `;
+    });
   },
 
   resumeLesson(){
@@ -2171,7 +2231,7 @@ const app={
       t.classList.toggle('act',i===idx);
       t.classList.toggle('done',visited.includes(i)&&i!==idx);
     });
-    window.scrollTo(0,0);
+    window.scrollTo({top:0,behavior:'smooth'});
   },
 
   // ── LESSON ACTIONS ───────────────────────────
@@ -2374,8 +2434,8 @@ const app={
 
   // ── MOOD ─────────────────────────────────────
   openMoodModal(){
+    this.openModal('moodModal');
     const modal=document.getElementById('moodModal');
-    modal.classList.add('open');
     const tm=Store.todayMood();
     if(tm)modal.querySelectorAll('.mood-btn').forEach(b=>b.classList.toggle('sel',b.dataset.mood===tm.emoji));
     const hist=Store.moods().slice(-7).reverse();
@@ -2399,13 +2459,21 @@ const app={
   },
 
   // ── MODAL ────────────────────────────────────
+  openModal(id){
+    const ov=document.getElementById(id);
+    ov.style.display='flex';
+    requestAnimationFrame(()=>ov.classList.add('open'));
+  },
+
   closeModal(id){
-    document.getElementById(id).classList.remove('open');
+    const ov=document.getElementById(id);
+    ov.classList.remove('open');
+    setTimeout(()=>{ov.style.display='none';},240);
   },
 
   // ── EXPORT ───────────────────────────────────
   openExport(){
-    document.getElementById('exportModal').classList.add('open');
+    this.openModal('exportModal');
   },
 
   exportWorkbook(){
